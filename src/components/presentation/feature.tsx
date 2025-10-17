@@ -29,25 +29,25 @@ const features = [
     icon: (
       <img className="w-32 mx-auto mb-4" src="icon1.png" />
     ),
-    title: "For Designers",
+    title: "Procedimientos Faciales",
     description:
-      "This template comes packed with designer files based on Figma.",
+      "Nos dedicamos a realzar tu belleza natural y rejuvenecer tu rostro.",
   },
   {
     icon: (
       <img className="w-32 mx-auto mb-4" src="icon2.png" />
     ),
-    title: "For Developers",
+    title: "Procedimientos Corporales",
     description:
-      "Save months of work when you use our fully coded components and pages.",
+      "Tratamientos especializados para moldear y mejorar tu figura.",
   },
   {
     icon: (
       <img className="w-32 mx-auto mb-4" src="icon3.png" />
     ),
-    title: "For Store Owners",
+    title:"Tratamientos Láser",
     description:
-      "Save time and money by helping your team focus on customization and features.",
+      "Soluciones innovadoras para mejorar tu apariencia y bienestar.",
   }
 ];
 

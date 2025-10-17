@@ -33,6 +33,14 @@ module.exports = withMT({
           DEFAULT: "#1E293B",
           500: "#0F172A",
         },
+        rose: {
+          DEFAULT: "#d8a194",
+          500: "#d8a194",
+        },
+        rosita: {
+          DEFAULT: "#F4EFEB",
+          500: "#F4EFEB",
+        },
       },
     },
   },

@@ -24,7 +24,10 @@ import {
   PowerIcon,
   Bars2Icon,
 } from "@heroicons/react/24/outline";
- 
+
+
+import imgLogo from "../assets/logoSkinAndShape.svg";
+
 // profile menu component
 const profileMenuItems = [
   {
@@ -48,11 +51,11 @@ const profileMenuItems = [
     icon: PowerIcon,
   },
 ];
- 
+
 function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const closeMenu = () => setIsMenuOpen(false);
- 
+
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
       <MenuHandler>
@@ -108,42 +111,51 @@ function ProfileMenu() {
     </Menu>
   );
 }
- 
+
 // account pages menu
 const accountItems = [
   {
     title: "Login",
-    href: "/astro-launch-ui/login"
+    href: "/login",
   },
   {
     title: "Sign Up",
-    href: "/astro-launch-ui/signup"
-  }
+    href: "/signup",
+  },
 ];
 
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = accountItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -181,41 +193,50 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "About Us",
-    href: "/astro-launch-ui/about"
+    href: "/about",
   },
   {
     title: "Landing Page",
-    href: "/astro-launch-ui/landing"
+    href: "/landing",
   },
   {
     title: "404",
-    href: "/astro-launch-ui/404"
+    href: "/404",
   },
 ];
- 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -248,7 +269,7 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
- 
+
 // nav list component
 const navListItems = [
   {
@@ -256,7 +277,7 @@ const navListItems = [
     icon: CodeBracketSquareIcon,
   },
 ];
- 
+
 function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
@@ -281,13 +302,13 @@ function NavList() {
     </ul>
   );
 }
- 
+
 export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [shouldShowBorder, setShouldShowBorder] = React.useState(false);
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
- 
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -310,7 +331,8 @@ export default function ComplexNavbar() {
       () => window.innerWidth >= 960 && setIsNavOpen(false)
     );
   }, []);
- 
+
+
   return (
     <Navbar
       className={`sticky inset-0 z-10 mx-auto max-w-screen-2xl p-2 lg:pl-6 mt-4 transition-shadow ${
@@ -323,7 +345,7 @@ export default function ComplexNavbar() {
           href="/"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
-          AstroLaunch UI
+          <img src={imgLogo.src} alt="logo" className="h-[35px]" />
         </Typography>
         <div className="hidden lg:flex ml-auto">
           <NavList />
@@ -339,16 +361,25 @@ export default function ComplexNavbar() {
         </IconButton>
         <a href="https://discord.gg/WCvQWMwT" target="_blank">
           <Button size="sm" color="dark" variant="text">
-            <i className="fab fa-discord text-lg leading-none" aria-hidden="true"></i>
+            <i
+              className="fab fa-discord text-lg leading-none"
+              aria-hidden="true"
+            ></i>
           </Button>
         </a>
-        <a href="https://github.com/creativetimofficial/astro-launch-ui" target="_blank">
+        <a
+          href="https://github.com/creativetimofficial/astro-launch-ui"
+          target="_blank"
+        >
           <Button size="sm" color="dark" variant="text">
-            <i className="fab fa-github text-xl leading-none" aria-hidden="true"></i>
+            <i
+              className="fab fa-github text-xl leading-none"
+              aria-hidden="true"
+            ></i>
           </Button>
         </a>
-        <a href="/astro-launch-ui/#examplePages">
-          <Button color="dark">Get started</Button>
+        <a href="/contacto">
+          <Button color="dark">Contacto</Button>
         </a>
       </div>
       <Collapse open={isNavOpen} className="overflow-scroll">

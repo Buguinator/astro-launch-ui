@@ -4,22 +4,50 @@ import {
   Typography
 } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import {
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
+import imgLaser from "../../assets/p-laserVi.webp";
+
+function StatsCard({ title, desc }) {
+  return (
+    <li className="font-medium text-lg italic">
+      {title}
+    </li>
+  );
+}
+
+const stats = [
+  {
+    title: "Masaje postquirúrgicos",
+    desc: "From buttons, to inputs, navbars, alerts, tabels, cards or charts.",
+  },
+  {
+    title: "Radiofrecuencia",
+    desc: "Save months of work when you use our pre-made pages.",
+  },
+  {
+    title: "Masaje linfático",
+    desc: "Mix the already made sections and unleash your creativity.",
+  },
+  {
+    title: "Ultrasonido",
+    desc: "Colors, typography system, shadows, and blur effects are ready to be used.",
+  },
+  {
+    title: "LPG-Endermologie corporal",
+    desc: "Colors, typography system, shadows, and blur effects are ready to be used.",
+  },
+];
 
 export function CodePresentation() {
  
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-8">
+      <div className="h-full w-screen place-items-center px-8 pb-8 pt-24 bg-rosita">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <Typography
-              color="blue"
-              className="flex items-center justify-center lg:justify-start font-bold text-lg mb-5"
+              className="flex items-center justify-center lg:justify-start font-bold text-lg mb-5 text-rose"
             >
-              By developers, for entrepreneurs
+              Láser Vydence 
             </Typography>
 
             <Typography
@@ -27,18 +55,30 @@ export function CodePresentation() {
               color="blue-gray"
               className="mb-8 leading-tight"
             >
-              Don't write from scratch. Coded examples are included.
+              Tratamientos Láser
             </Typography>
             <Typography color="blue-gray" className="lg:pr-20">
-              Using our ecommerce starter template will save a lot of coding time , as it provides a solid foundation for the Online Store, allowing your team to focus on customizing and adding specific features to meet the needs of your particular project.
+              Descubre el poder de la tecnología láser Vydence, diseñada para tratar una amplia gama
+              de afecciones cutáneas con precisión y eficacia. Con Vydence, te ofrecemos soluciones
+              personalizadas para que luzcas una piel radiante y saludable.
             </Typography>
-            <a href="https://www.creative-tim.com/learning-lab/astro/overview/astro-launch-ui">
-              <Button color="dark" variant="text" size="sm" className="flex items-center mx-auto md:mr-auto lg:ml-0 gap-2 mt-4">
-                Documentation <ArrowRightIcon strokeWidth={2} className="h-5 w-5" />
-              </Button>
-            </a>
+            <div className="mt-10">
+                  <h6 className="font-bold text-lg mb-5">
+                    Servicios:
+                  </h6>
+              <ul className="list-disc list-inside">
+                {stats.map((props, key) => (
+                  <StatsCard key={key} {...props} />
+                ))}
+              </ul>
+            </div>
           </div>
-            <img src="code.png" alt="iphone" className="max-w-2xl rounded-3xl hidden md:flex mx-auto" />
+            <img 
+              src={imgLaser.src} 
+              alt="Láser Vydence" 
+              className="rounded-3xl hidden md:flex mx-auto max-w-[25rem]" 
+              style={{ boxShadow: '0 4px 12px -2px rgba(248, 187, 217, 0.5)' }}
+            />
         </div>
       </div>
     </ThemeProvider>

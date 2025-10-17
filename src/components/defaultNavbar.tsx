@@ -39,11 +39,11 @@ const colors = {
 const accountItems = [
   {
     title: "Login",
-    href: "/astro-launch-ui/login"
+    href: "/login"
   },
   {
     title: "Sign Up",
-    href: "/astro-launch-ui/signup"
+    href: "/signup"
   }
 ];
 
@@ -107,15 +107,15 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "About Us",
-    href: "/astro-launch-ui/about"
+    href: "/about"
   },
   {
     title: "Landing Page",
-    href: "/astro-launch-ui/landing"
+    href: "/landing"
   },
   {
     title: "404",
-    href: "/astro-launch-ui/404"
+    href: "/404"
   }
 ];
  
@@ -212,7 +212,7 @@ export default function Example() {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
-            href="/astro-launch-ui/"
+            href="/"
             variant="h6"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
@@ -224,10 +224,10 @@ export default function Example() {
           <div className="hidden gap-2 lg:flex">
             <a href="./login">
               <Button variant="text" size="sm" color="blue-gray">
-                Sign In
+                Sign In|
               </Button>
             </a>
-            <a href="/astro-launch-ui/signup">
+            <a href="/signup">
               <Button size="sm" color="dark">
                 Sign Up
               </Button>
@@ -249,12 +249,12 @@ export default function Example() {
         <Collapse open={openNav}>
           <NavList />
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            <a href="/astro-launch-ui/login">
+            <a href="/login">
               <Button variant="outlined" size="sm" color="dark" fullWidth>
                 Sign In
               </Button>
             </a>
-            <a href="/astro-launch-ui/signup">
+            <a href="/signup">
               <Button size="sm" fullWidth color="dark">
                 Sign Up
               </Button>
