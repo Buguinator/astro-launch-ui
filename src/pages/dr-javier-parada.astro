@@ -7,8 +7,13 @@ import TestimonialAbout from "../components/dr/testimonials"
 import FooterFreePresentation from "../components/presentation/footerFree"
 import ServiceAbout from "../components/dr/service"
 import ServiceRight from "../components/dr/serviceright"
+import imgCorporal from "../assets/dr-corporal.jpeg";
+import imgFacial from "../assets/dr-facial.jpeg";
+import imgMamas from "../assets/dr-mamas.jpeg";
+import imgHombres from "../assets/drhombres.jpeg";
+import imgAparato from "../assets/dr-aparatos.jpeg";
 
-import { servicioCorporal, servicioFacial, servicioMamas, servicioHombres, servicioAparato } from "../components/dr/const/services.js"
+import { servicioCorporal, servicioFacial, servicioMamas, servicioHombres, servicioAparato } from "../components/dr/const/services.js";
 ---
 
 
@@ -17,11 +22,11 @@ import { servicioCorporal, servicioFacial, servicioMamas, servicioHombres, servi
     <HeaderAbout client:only="react" />
     <TestimonialAbout client:only="react" />
     <FeaturesAbout client:only="react" />
-    <ServiceAbout client:only="react" service={servicioCorporal} />
-    <ServiceRight client:only="react" service={servicioFacial} />
-    <ServiceAbout client:only="react" service={servicioMamas} />
-    <ServiceRight client:only="react" service={servicioHombres} />
-    <ServiceAbout client:only="react" service={servicioAparato} />
+    <ServiceAbout client:only="react" service={servicioCorporal} img={imgCorporal.src} />
+    <ServiceRight client:only="react" service={servicioFacial} img={imgFacial.src} />
+    <ServiceAbout client:only="react" service={servicioMamas} img={imgMamas.src} />
+    <ServiceRight client:only="react" service={servicioHombres} img={imgHombres.src} />
+    <ServiceAbout client:only="react" service={servicioAparato} img={imgAparato.src} />
     <div class="h-[150px]"></div>
     <FooterFreePresentation client:only="react" />
   </main>

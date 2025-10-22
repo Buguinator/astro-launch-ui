@@ -1,5 +1,7 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import logoDr from "../../assets/logoDrJP.webp";
+import imgPerfil from "../../assets/dr-perfil.jpeg";
+
 
 export function TestimonialSectionTwo() {
   return (
@@ -57,9 +59,9 @@ export function TestimonialSectionTwo() {
             </div>
             <div className="relative mx-auto grid shrink-0 place-items-center lg:ml-auto">
               <img
-                src="avatars/avatar6.jpg"
+                src={imgPerfil.src}
                 alt="testimonial image"
-                className="h-80 w-80 rounded-full object-cover"
+                className="h-96 w-96 rounded-full object-cover"
               />
             </div>
           </CardBody>

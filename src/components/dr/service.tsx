@@ -11,10 +11,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import imgFacial from "../../assets/p-facial.jpg";
-
 export function ServiceAbout({
   service,
+  img,
 }: {
   service: {
     title: string;
@@ -22,6 +21,7 @@ export function ServiceAbout({
     subtitle: string;
     services: Array<any>;
   };
+  img: string;
 }) {
   const imgRef = useRef(null);
 
@@ -122,7 +122,7 @@ export function ServiceAbout({
             <div className="lg:w-1/2 flex justify-center">
               <img
                 ref={imgRef}
-                src={imgFacial.src}
+                src={img}
                 alt="Procedimientos faciales"
                 className="lg:max-w-[25rem] rounded-3xl hidden md:flex ml-auto lg:absolute -top-5 mt-[-10rem]"
                 style={{

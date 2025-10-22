@@ -11,10 +11,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import imgCorporal from "../../assets/p-corporal.webp";
-
 export function ServiceRight({
   service,
+  img,
 }: {
   service: {
     title: string;
@@ -22,6 +21,7 @@ export function ServiceRight({
     subtitle: string;
     services: Array<any>;
   };
+  img: string;
 }) {
   const imgRef = useRef(null);
 
@@ -56,7 +56,7 @@ export function ServiceRight({
           <div className="hidden lg:flex">
             <img
               ref={imgRef}
-              src={imgCorporal.src}
+              src={img}
               alt="Procedimientos corporales"
               className="rounded-3xl mx-auto max-w-[25rem]"
               style={{
