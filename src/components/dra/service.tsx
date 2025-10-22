@@ -15,6 +15,7 @@ import imgFacial from "../../assets/p-facial.jpg";
 
 export function ServiceAbout({
   service,
+  img,
 }: {
   service: {
     title: string;
@@ -23,6 +24,7 @@ export function ServiceAbout({
     description2: string;
     services: Array<any>;
   };
+  img: string;
 }) {
   const imgRef = useRef(null);
 
@@ -123,12 +125,13 @@ export function ServiceAbout({
             <div className="lg:w-1/2 flex justify-center">
               <img
                 ref={imgRef}
-                src={imgFacial.src}
+                src={img}
                 alt="Procedimientos faciales"
                 className="lg:max-w-[25rem] rounded-3xl hidden md:flex ml-auto lg:absolute -top-5 mt-[-5rem]"
                 style={{
                   boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
                 }}
+                draggable="false"
               />
             </div>
           </div>

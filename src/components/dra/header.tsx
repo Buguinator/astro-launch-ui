@@ -59,6 +59,7 @@ export function HeroSectionTwo() {
               src={imgDra.src}
               alt="iphone"
               className="max-w-md rounded ml-auto"
+              draggable="false"
             />
           </div>
         </div>

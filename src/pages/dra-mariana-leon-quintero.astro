@@ -8,6 +8,10 @@ import FooterFreePresentation from "../components/presentation/footerFree"
 import ServiceAbout from "../components/dra/service"
 import ServiceRight from "../components/dra/serviceright"
 
+import imgDermaClinica from "../assets/dra-dermatologica.jpeg"
+import imgDermaEstetica from "../assets/dra-estetica.jpeg"
+import imgTratamientos from "../assets/dra-tratamientos.jpeg"
+
 import { servicioDermaClinica, servicioDermaEstetica, servicioTratamientos } from "../components/dra/const/services.js"
 ---
 
@@ -17,9 +21,9 @@ import { servicioDermaClinica, servicioDermaEstetica, servicioTratamientos } fro
     <HeaderAbout client:only="react" />
     <TestimonialAbout client:only="react" />
     <FeaturesAbout client:only="react" />
-    <ServiceAbout client:only="react" service={servicioDermaClinica} />
-    <ServiceRight client:only="react" service={servicioDermaEstetica} />
-    <ServiceAbout client:only="react" service={servicioTratamientos} />
+    <ServiceAbout client:only="react" service={servicioDermaClinica} img={imgDermaClinica.src} />
+    <ServiceRight client:only="react" service={servicioDermaEstetica} img={imgDermaEstetica.src} />
+    <ServiceAbout client:only="react" service={servicioTratamientos} img={imgTratamientos.src} />
     <div class="h-[150px]"></div>
     <FooterFreePresentation client:only="react" />
   </main>
