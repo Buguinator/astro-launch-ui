@@ -16,7 +16,7 @@ import {
   CubeTransparentIcon,
   UserCircleIcon,
   CodeBracketSquareIcon,
-  Square3Stack3DIcon,
+  ArrowDownIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
   InboxArrowDownIcon,
@@ -192,16 +192,12 @@ function AccountListMenu() {
 // nav list menu
 const navListMenuItems = [
   {
-    title: "About Us",
-    href: "/about",
+    title: "Dr. Javier Parada",
+    href: "/dr-javier-parada",
   },
   {
-    title: "Landing Page",
-    href: "/landing",
-  },
-  {
-    title: "404",
-    href: "/404",
+    title: "Dr. Mariana Leon Quintero",
+    href: "/dra-mariana-leon-quintero",
   },
 ];
 
@@ -241,13 +237,7 @@ function NavListMenu() {
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
-              <ChevronDownIcon
-                strokeWidth={2}
-                className={`h-3 w-3 transition-transform ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
+              Especialistas{" "} <ChevronDownIcon className="h-[18px] w-[18px]" /> 
             </MenuItem>
           </Typography>
         </MenuHandler>
@@ -261,7 +251,7 @@ function NavListMenu() {
         </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
-        <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
+        Especialistas{" "} <ChevronDownIcon className="h-[18px] w-[18px]" /> 
       </MenuItem>
       <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
         {renderItems}
@@ -281,10 +271,11 @@ const navListItems = [
 function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+      <a href="/" className="text-blue-gray-900" style={{ fontSize: "14px" }}>Inicio</a>
       <NavListMenu />
-      <AccountListMenu />
+      {/* <AccountListMenu /> */}
 
-      {navListItems.map(({ label, icon }, key) => (
+      {/* {navListItems.map(({ label, icon }, key) => (
         <Typography
           key={label}
           as="a"
@@ -298,7 +289,7 @@ function NavList() {
             {label}
           </MenuItem>
         </Typography>
-      ))}
+      ))} */}
     </ul>
   );
 }
@@ -360,24 +351,24 @@ export default function ComplexNavbar() {
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
         <a href="https://discord.gg/WCvQWMwT" target="_blank">
-          <Button size="sm" color="dark" variant="text">
+          <Button size="sm" color="blue-gray" variant="text">
             <i
               className="fab fa-discord text-lg leading-none"
               aria-hidden="true"
             ></i>
           </Button>
         </a>
-        <a
+        {/* <a
           href="https://github.com/creativetimofficial/astro-launch-ui"
           target="_blank"
         >
-          <Button size="sm" color="dark" variant="text">
+          <Button size="sm" color="blue-gray" variant="text">
             <i
               className="fab fa-github text-xl leading-none"
               aria-hidden="true"
             ></i>
           </Button>
-        </a>
+        </a> */}
         <a href="/contacto">
           <Button color="dark">Contacto</Button>
         </a>

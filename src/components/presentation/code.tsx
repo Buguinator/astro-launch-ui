@@ -1,9 +1,8 @@
-import React from "react";
-import {
-  Button,
-  Typography
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgLaser from "../../assets/p-laserVi.webp";
 
 function StatsCard({ title, desc }) {
@@ -38,12 +37,37 @@ const stats = [
 ];
 
 export function CodePresentation() {
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const el = imgRef.current;
+
+    // Animación de entrada y salida con scroll
+    gsap.fromTo(
+      el,
+      { x: 300, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",     // entra cuando el top de la imagen está al 80% del viewport
+          end: "bottom 10%",    // sale cuando el bottom llega al 20%
+          scrub: true,          // la animación sigue el scroll
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
  
   return (
     <ThemeProvider>
       <div className="h-full w-screen place-items-center px-8 pb-8 pt-24 bg-rosita">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left lg:px-20">
             <Typography
               className="flex items-center justify-center lg:justify-start font-bold text-lg mb-5 text-rose"
             >
@@ -74,6 +98,7 @@ export function CodePresentation() {
             </div>
           </div>
             <img 
+             ref={imgRef}
               src={imgLaser.src} 
               alt="Láser Vydence" 
               className="rounded-3xl hidden md:flex mx-auto max-w-[25rem]" 

@@ -25,8 +25,8 @@ export function HeroPresentation() {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
         
         <div className="container mx-auto grid items-center lg:grid-cols-2 relative z-20">
-          <div className="text-center lg:text-left pt-32">
-            <div className="mb-8 inline-flex items-center">
+          <div className="text-center lg:text-left pt-32 ">
+            <div className="mb-8 inline-flex items-center ">
               <Typography
                 color="white"
                 variant="small"

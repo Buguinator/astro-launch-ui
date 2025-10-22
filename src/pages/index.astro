@@ -3,12 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import HeaderPresentation from "../components/presentation/header"
 import FeaturePresentation from "../components/presentation/feature"
 import LogosPresentation from "../components/presentation/logos"
-import DevFreePresentation from "../components/presentation/developerFree"
 import PalettePresentationFree from "../components/presentation/palette"
 import CodePresentation from "../components/presentation/code"
 import FreeToProPresentation from "../components/presentation/freeToPro"
 import AstroPresentation from "../components/presentation/astro"
-import PagesFreePresentation from "../components/presentation/pagesFree"
 import GithubPresentation from "../components/presentation/github"
 import PricingPresentation from "../components/presentation/pricing"
 import FooterFreePresentation from "../components/presentation/footerFree"
@@ -17,17 +15,23 @@ import FooterFreePresentation from "../components/presentation/footerFree"
 
 <Layout title="Presentation Page">
 	<main>
+    <!-- Hero -->
     <HeaderPresentation client:only="react" />
-    <!-- <FeaturePresentation client:only="react" /> -->
+    <!-- Porcedimientos faciales -->
     <FreeToProPresentation client:only="react" />
+    <!-- Procedimientos corporales -->
     <PalettePresentationFree client:only="react" />
+    <!-- Tratamientos lasér -->
     <CodePresentation client:only="react" />
+    <!-- Lasér Diodo -->
     <AstroPresentation client:only="react" />
-    <!-- <DevFreePresentation client:only="react" /> -->
-    <!-- <PagesFreePresentation client:only="react" /> -->
+    <!-- Especialistas -->
     <PricingPresentation client:only="react" />
+    <!-- Logotipos carousel -->
     <LogosPresentation client:only="react" />
+    <!-- Horarios y mapa -->
     <GithubPresentation client:only="react" />
+    <!-- Footer -->
     <FooterFreePresentation client:only="react" />
   </main>
 </Layout>

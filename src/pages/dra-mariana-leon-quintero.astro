@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderAbout from "../components/dra/header"
+import FeaturesAbout from "../components/dra/features"
+import TeamAbout from "../components/dra/team"
+import TestimonialAbout from "../components/dra/testimonials"
+import FooterFreePresentation from "../components/presentation/footerFree"
+import ServiceAbout from "../components/dra/service"
+import ServiceRight from "../components/dra/serviceright"
+
+import { servicioDermaClinica, servicioDermaEstetica, servicioTratamientos } from "../components/dra/const/services.js"
+---
+
+
+<Layout title="Dr. Mariana Leon Quintero">
+	<main>
+    <HeaderAbout client:only="react" />
+    <TestimonialAbout client:only="react" />
+    <FeaturesAbout client:only="react" />
+    <ServiceAbout client:only="react" service={servicioDermaClinica} />
+    <ServiceRight client:only="react" service={servicioDermaEstetica} />
+    <ServiceAbout client:only="react" service={servicioTratamientos} />
+    <div class="h-[150px]"></div>
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

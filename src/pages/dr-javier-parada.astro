@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderAbout from "../components/dr/header"
+import FeaturesAbout from "../components/dr/features"
+import TeamAbout from "../components/dr/team"
+import TestimonialAbout from "../components/dr/testimonials"
+import FooterFreePresentation from "../components/presentation/footerFree"
+import ServiceAbout from "../components/dr/service"
+import ServiceRight from "../components/dr/serviceright"
+
+import { servicioCorporal, servicioFacial, servicioMamas, servicioHombres, servicioAparato } from "../components/dr/const/services.js"
+---
+
+
+<Layout title="Dr. Javier Parada">
+	<main>
+    <HeaderAbout client:only="react" />
+    <TestimonialAbout client:only="react" />
+    <FeaturesAbout client:only="react" />
+    <ServiceAbout client:only="react" service={servicioCorporal} />
+    <ServiceRight client:only="react" service={servicioFacial} />
+    <ServiceAbout client:only="react" service={servicioMamas} />
+    <ServiceRight client:only="react" service={servicioHombres} />
+    <ServiceAbout client:only="react" service={servicioAparato} />
+    <div class="h-[150px]"></div>
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

@@ -68,7 +68,7 @@ const HELP = [
 const RESOURCES = [
   {
     name: "Términos y Condiciones",
-    link: "https://www.creative-tim.com/learning-lab/astro/overview/astro-launch-ui?ref=astrolaunch-ui",
+    link: "#",
   },
 ];
 
