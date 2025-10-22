@@ -28,8 +28,6 @@ export function ServiceAbout({
 }) {
   const imgRef = useRef(null);
 
-  console.log(service);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 

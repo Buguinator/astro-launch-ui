@@ -25,8 +25,6 @@ export function ServiceAbout({
 }) {
   const imgRef = useRef(null);
 
-  console.log(service);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -128,6 +126,7 @@ export function ServiceAbout({
                 style={{
                   boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
                 }}
+                draggable="false"
               />
             </div>
           </div>

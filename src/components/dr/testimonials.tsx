@@ -62,6 +62,7 @@ export function TestimonialSectionTwo() {
                 src={imgPerfil.src}
                 alt="testimonial image"
                 className="h-96 w-96 rounded-full object-cover"
+                draggable="false"
               />
             </div>
           </CardBody>
