@@ -1,6 +1,6 @@
 import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import Navbar from "../navbar"
+import Navbar from "../navbar";
 import imgDr from "../../assets/dr.jpg";
 
 export function HeroSectionTwo() {
@@ -9,7 +9,7 @@ export function HeroSectionTwo() {
       <Navbar />
       <header className="h-full w-screen place-items-center bg-white px-8 pb-28 pt-5">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <div className="mb-8 inline-flex items-center rounded-lg">
               <Typography
                 variant="small"
@@ -42,12 +42,16 @@ export function HeroSectionTwo() {
               2546), con práctica en Guadalajara y Tuxtla Gutiérrez.
             </Typography>
             <Typography className="lg:pr-10 text-blue-gray-800 text-base pt-5">
-              Su enfoque personalizado y técnicas avanzadas garantizan resultados naturales y armoniosos, priorizando la seguridad y satisfacción de cada paciente.
+              Su enfoque personalizado y técnicas avanzadas garantizan
+              resultados naturales y armoniosos, priorizando la seguridad y
+              satisfacción de cada paciente.
             </Typography>
-            <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button color="blue" className="flex items-center">
-                Agendar cita
-              </Button>
+            <div className="mt-12 flex flex-wrap gap-3 justify-start">
+              <a href="/contacto">
+                <Button color="blue" className="flex items-center">
+                  Agendar cita
+                </Button>
+              </a>
             </div>
           </div>
           <div className="hidden lg:flex">

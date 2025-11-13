@@ -24,9 +24,11 @@ export const servicioDermaEstetica = {
   description: "En nuestra sección de dermatología estética, nos especializamos en realzar la belleza natural de tu piel a través de tratamientos avanzados y personalizados",
   description2: "Inyectables:",
   services: [
-    { title: "Aplicación de Toxina Botulínica " },
-    { title: "Bioestimuladores (Sculptra y Profhilo, Profhilo Structura, NCTF (hidratación para la ojera), PDRN de salmón)" },
-    { title: "Brio Remodeladores (Ácido hialurónico)" },
+    { title: "Bioestimuladores (Sculptra)" },
+    { title: "Bioremodeladores: Profhilo y Profhilo Structura" },
+    { title: "NCTF (Hidratación para la ojera)" },
+    { title: "PDRN de salmón" },
+    { title: "Ácido hialurónico (Fillers)" },
   ],
 };
 
@@ -52,7 +54,7 @@ export const servicioTratamientos = {
         {
           title: "¿De qué se trata?",
           description:
-            "En nuestra clínica, ofrecemos tratamientos láser de última generación diseñados para rejuvenecer tu piel, atenuar manchas y mejorar la apariencia de cicatrices. Nuestros especialistas utilizan tecnología láser avanzada para estimular la producción de colágeno, eliminar pigmentación no deseada y suavizar la textura de la piel, lograndoresultados visibles y duraderos.",
+            "En nuestra clínica, ofrecemos tratamientos láser de última generación diseñados para rejuvenecer tu piel, atenuar manchas y mejorar la apariencia de cicatrices. Nuestros especialistas utilizan tecnología láser avanzada para estimular la producción de colágeno, eliminar pigmentación no deseada y suavizar la textura de la piel, logrando resultados visibles y duraderos.",
         },
         {
           title: "Servicios",
@@ -70,22 +72,22 @@ export const servicioTratamientos = {
       ],
     },
     {
-      title: "Nanopore",
+      title: "NANOGLOW (Nanopore + AGF/PDRN)",
       list: [
         {
           title: "¿De qué se trata?",
           description:
-            "El tratamiento con Nanopore es una técnica avanzada de micro- punción que utiliza un dispositivo con microagujas para crear canales microscópicos en la piel. Estos microcanales facilitan la absorción de principios atractivos y estimulan la producción de colágeno y elastina, mejorando la textura de la piel, reduciendo cicatrices y arrugas, y promoviendo un aspecto rejuvenecido.",
+            "¡Descubre una piel más radiante y fresca! Revitaliza tu piel con este innovador tratamiento de microinyecciones. Estimula la producción de colágeno y mejora la textura, suavizando arrugas y líneas finas. Ayuda a unificar el tono de la piel, proporciona hidratación y genera un efecto glow.",
         },
       ],
     },
     {
-      title: "Micropunciones con exosomas",
+      title: "EXOGLOW (Nanopore + Exosomas)",
       list: [
         {
           title: "¿De qué se trata?",
           description:
-            "El tratamiento de Micro punciones con Exosomas combina la eficacia de la micropunción con el poder regenerativo de los exosomas. Los exosomas son pequeñas vesículas extracelulares liberadas por las células madre, cargadas de factores de crecimiento, proteínas y material genético. Al aplicar micropunciones en la piel. Se crean micro canales que facilitan la absorción de los exosomas, estimulando la regeneración celular, mejorando la textura de la piel y promoviendo un aspecto rejuvenecido.",
+            "¡Descubre una piel más radiante y fresca! Revitaliza tu piel con este innovador tratamiento de microinyecciones. Estimula la producción de colágeno y mejora la textura, suavizando arrugas y líneas finas. Ideal para cicatrices y rejuvenecimiento de la piel.",
         },
       ],
     },

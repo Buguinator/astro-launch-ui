@@ -34,32 +34,43 @@ export function PricingSectionOne() {
   return (
     <>
       <PaddleLoader />
-      <section id="pricing" className="py-24 px-8">
+      <section id="pricing" className="py-36 px-8">
         <div className="container mx-auto text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
             Especialistas
           </Typography>
-          <Typography className="mb-8 font-normal !text-gray-500">
+          <Typography className="mb-8 font-normal !text-gray-500 text-lg md:text-xl">
             Profesionales calificados y expertos en el campo de la medicina
             estética y el cuidado de la piel.
           </Typography>
         </div>
         <div className="mt-12">
-          <div className="container mx-auto md:flex justify-center gap-10">
-            <a href="/dra-mariana-leon-quintero" className="relative w-full max-w-1/3 mx-auto overflow-hidden rounded shadow-lg group">
+          <div className="container flex flex-col md:flex-row justify-center items-center md:mx-auto gap-10">
+            <a
+              href="/dra-mariana-leon-quintero"
+              className="relative w-full max-w-1/3 mx-auto overflow-hidden rounded shadow-lg group"
+            >
               {/* Imagen */}
-              <div className="relative h-[50rem] w-full">
+              <div className="relative h-[35rem] md:h-[50rem] w-full">
                 <img
                   src={imgDra.src}
                   alt="Dra. Mariana León-Quintero"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay con sombra (oculto por defecto) */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center justify-center"></div>
+                <div
+                  className="
+                    absolute inset-0 bg-black bg-opacity-50
+                    opacity-75 md:opacity-0
+                    md:group-hover:opacity-100
+                    transition-opacity duration-300 ease-in-out
+                    flex items-center justify-center
+                  "
+                ></div>
               </div>
 
               {/* Contenido (título y descripción) */}
-              <div className="absolute inset-0 flex items-center justify-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              <div className="absolute inset-0 flex items-end pb-20 md:pb-0 md:items-center justify-center p-4 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                 <div className="text-center">
                   <svg
                     width="300"
@@ -119,25 +130,38 @@ export function PricingSectionOne() {
                       <path d="M150.021 67.927C154.711 67.927 158.513 64.1338 158.513 59.4546C158.513 54.7754 154.711 50.9821 150.021 50.9821C145.332 50.9821 141.53 54.7754 141.53 59.4546C141.53 64.1338 145.332 67.927 150.021 67.927Z"></path>
                     </g>
                   </svg>
-                  <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-rose hover:text-white">Saber más</button>
+                  <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-rose hover:text-white">
+                    Saber más
+                  </button>
                 </div>
               </div>
             </a>
 
-            <a href="/dr-javier-parada" className="relative w-full max-w-1/3 mx-auto overflow-hidden rounded shadow-lg group">
+            <a
+              href="/dr-javier-parada"
+              className="relative w-full max-w-1/3 mx-auto overflow-hidden rounded shadow-lg group"
+            >
               {/* Imagen */}
-              <div className="relative h-[50rem] w-full">
+              <div className="relative h-[35rem] md:h-[50rem] w-full">
                 <img
                   src={imgDr.src}
                   alt="Dr. Javier Parada"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay con sombra (oculto por defecto) */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-center justify-center"></div>
+                <div
+                  className="
+                  absolute inset-0 bg-black bg-opacity-50
+                  opacity-75 md:opacity-0
+                  md:group-hover:opacity-100
+                  transition-opacity duration-300 ease-in-out
+                  flex items-center justify-center
+                "
+                ></div>
               </div>
 
               {/* Contenido (título y descripción) */}
-              <div className="absolute inset-0 flex items-center justify-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              <div className="absolute inset-0 flex pb-20 md:pb-0 md:items-center items-end justify-center p-4 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                 <div className="text-center">
                   <svg
                     width="300"
@@ -182,7 +206,9 @@ export function PricingSectionOne() {
                       <path d="M166.339 54.401C167.249 54.401 167.986 53.6637 167.986 52.7542C167.986 51.8447 167.249 51.1075 166.339 51.1075C165.43 51.1075 164.692 51.8447 164.692 52.7542C164.692 53.6637 165.43 54.401 166.339 54.401Z"></path>
                     </g>
                   </svg>
-                  <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-slate hover:text-white">Saber más</button>
+                  <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-slate hover:text-white">
+                    Saber más
+                  </button>
                 </div>
               </div>
             </a>

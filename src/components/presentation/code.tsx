@@ -1,11 +1,12 @@
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import imgLaser from "../../assets/p-laserVi.webp";
+import { useEffect } from "react";
 
-function StatsCard({ title, desc }) {
+import AOS from "aos";
+
+import videoLaser from "../../assets/video/vydence.webm";
+
+function StatsCard({ title }: { title: string }) {
   return (
     <li className="font-medium text-lg italic">
       {title}
@@ -14,64 +15,33 @@ function StatsCard({ title, desc }) {
 }
 
 const stats = [
-  {
-    title: "Masaje postquirúrgicos",
-    desc: "From buttons, to inputs, navbars, alerts, tabels, cards or charts.",
-  },
-  {
-    title: "Radiofrecuencia",
-    desc: "Save months of work when you use our pre-made pages.",
-  },
-  {
-    title: "Masaje linfático",
-    desc: "Mix the already made sections and unleash your creativity.",
-  },
-  {
-    title: "Ultrasonido",
-    desc: "Colors, typography system, shadows, and blur effects are ready to be used.",
-  },
-  {
-    title: "LPG-Endermologie corporal",
-    desc: "Colors, typography system, shadows, and blur effects are ready to be used.",
-  },
+  { title: "Cicatrices de acné" },
+  { title: "Cicatrices post-quirúrgicas" },
+  { title: "Estrías" },
+  { title: "Rejuvenecimiento de cara y cuello" },
+  { title: "Tratamientos para acné inflamatorio" },
+  { title: "Manchas solares" },
+  { title: "Pigmentaciones" },
+  { title: "Melasma" },
 ];
 
 export function CodePresentation() {
-  const imgRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const el = imgRef.current;
-
-    // Animación de entrada y salida con scroll
-    gsap.fromTo(
-      el,
-      { x: 300, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",     // entra cuando el top de la imagen está al 80% del viewport
-          end: "bottom 10%",    // sale cuando el bottom llega al 20%
-          scrub: true,          // la animación sigue el scroll
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    AOS.init({
+      duration: 1600,
+      easing: "ease-out-cubic",
+    });
   }, []);
- 
+
   return (
     <ThemeProvider>
       <div className="h-full w-screen place-items-center px-8 pb-8 pt-24 bg-rosita">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
-          <div className="text-center lg:text-left lg:px-20">
-            <Typography
-              className="flex items-center justify-center lg:justify-start font-bold text-lg mb-5 text-rose"
-            >
-              Láser Vydence 
+          {/* Texto */}
+          <div className="text-left lg:px-20" data-aos="fade-up">
+            <Typography className="flex items-center justify-start font-bold text-lg mb-5 text-rose">
+              Tratamiento Láser
             </Typography>
 
             <Typography
@@ -79,17 +49,18 @@ export function CodePresentation() {
               color="blue-gray"
               className="mb-8 leading-tight"
             >
-              Tratamientos Láser
+              Láser Vydence
             </Typography>
+
             <Typography color="blue-gray" className="lg:pr-20">
-              Descubre el poder de la tecnología láser Vydence, diseñada para tratar una amplia gama
-              de afecciones cutáneas con precisión y eficacia. Con Vydence, te ofrecemos soluciones
-              personalizadas para que luzcas una piel radiante y saludable.
+              Descubre el poder de la tecnología láser Vydence, diseñada para
+              tratar una amplia gama de afecciones cutáneas con precisión y
+              eficacia. Con Vydence, te ofrecemos soluciones personalizadas para
+              que luzcas una piel radiante y saludable.
             </Typography>
+
             <div className="mt-10">
-                  <h6 className="font-bold text-lg mb-5">
-                    Servicios:
-                  </h6>
+              <h6 className="font-bold text-lg mb-5">Ayuda a:</h6>
               <ul className="list-disc list-inside">
                 {stats.map((props, key) => (
                   <StatsCard key={key} {...props} />
@@ -97,13 +68,22 @@ export function CodePresentation() {
               </ul>
             </div>
           </div>
-            <img 
-             ref={imgRef}
-              src={imgLaser.src} 
-              alt="Láser Vydence" 
-              className="rounded-3xl hidden md:flex mx-auto max-w-[25rem]" 
-              style={{ boxShadow: '0 4px 12px -2px rgba(248, 187, 217, 0.5)' }}
-            />
+
+          {/* Video animado */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="rounded-3xl hidden md:flex mx-auto max-w-[25rem] object-cover"
+            data-aos="fade-left"
+            style={{
+              boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
+            }}
+          >
+            <source src={videoLaser} type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
         </div>
       </div>
     </ThemeProvider>

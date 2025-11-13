@@ -1,8 +1,10 @@
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
+
+import AOS from "aos";
+
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 import {
   Accordion,
@@ -13,7 +15,7 @@ import {
 
 export function ServiceAbout({
   service,
-  img,
+  images,
 }: {
   service: {
     title: string;
@@ -21,40 +23,37 @@ export function ServiceAbout({
     subtitle: string;
     services: Array<any>;
   };
-  img: string;
+  images: Array<any>;
 }) {
-  const imgRef = useRef(null);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const el = imgRef.current;
-
-    // Animación de entrada y salida con scroll
-    gsap.fromTo(
-      el,
-      { x: 300, opacity: 0 },
-      {
-        x: 50,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%", // entra cuando el top de la imagen está al 80% del viewport
-          end: "bottom 10%", // sale cuando el bottom llega al 20%
-          scrub: true, // la animación sigue el scroll
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    AOS.init({
+      duration: 1200,
+      easing: 'linear',
+      delay: 100,
+    });
   }, []);
+
+  // Carrusel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Controles manuales
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
     <ThemeProvider>
       <div className="h-full w-screen place-items-center bg-white px-8 pb-20">
         <div className="container mx-auto relative">
-          <div className="text-left lg:px-20">
-            <Typography className="font-bold text-lg mb-5 text-blue">
+          <div className="text-left lg:px-20" data-aos="fade-up">
+            <Typography className="font-bold text-lg mb-5 text-rose">
               {service.subtitle}
             </Typography>
             <Typography
@@ -69,65 +68,84 @@ export function ServiceAbout({
           <div className="lg:flex relative lg:px-20">
             <div className="lg:w-1/2">
               <div className="p-2 lg:p-0 mb-8">
-                <div>
+                <div data-aos="fade-up">
                   <h6 className="font-medium text-base mb-5 text-gray-800">
                     Servicios:
                   </h6>
                   <Accordion type="single" collapsible defaultValue="item-0">
-                    {service?.services[0]?.list ? (
-                      <>
-                        {service?.services?.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
+                    {service.services.map((props: any, key: number) => {
+                      return (
+                        <AccordionItem key={key} value={`item-${key + 1}`}>
+                          {props?.list ? (
                             <AccordionTrigger className="text-lg">
                               {key + 1}. {props.title}
                             </AccordionTrigger>
-                            <AccordionContent>
-                              {props?.list?.map((item: any, key: number) => (
-                                <p key={key} className="pl-4 pb-3">
-                                  <span className="font-semibold block">
-                                    {item.title}:
-                                  </span>
-                                  <span className="pb-3">
-                                    {item.description}
-                                  </span>
-                                  {item?.benefits?.map((benefit: any, key: number) => (
-                                    <span key={key} className="pb-3">
-                                      {benefit}
-                                    </span>
-                                  ))}
-                                </p>
-                              ))}
-                            </AccordionContent>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    ) : (
-                      <>
-                        {service?.services.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
-                            <p className="text-lg py-2">
+                          ) : (
+                            <p className="text-lg py-4">
                               {key + 1}. {props.title}{" "}
                             </p>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    )}
+                          )}
+                          {props?.list?.map((item: any, key: number) => (
+                            <AccordionContent>
+                              <p key={key} className="pl-4 pb-3">
+                                <span className="font-semibold block pb-2">
+                                  {item.title}:
+                                </span>
+                                <span className="pb-3">{item.description}</span>
+                                {props?.benefits?.length > 0 && (
+                                  <p className="font-semibold pt-5 pb-2">
+                                    Beneficios
+                                  </p>
+                                )}
+                                <ul className="list-disc pl-4">
+                                  {props?.benefits?.map(
+                                    (benefit: any, key: number) => (
+                                      <li key={key} className="pb-1">
+                                        {benefit}
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              </p>
+                            </AccordionContent>
+                          ))}
+                        </AccordionItem>
+                      );
+                    })}
                   </Accordion>
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-1/2 flex justify-center">
-              <img
-                ref={imgRef}
-                src={img}
-                alt="Procedimientos faciales"
-                className="lg:max-w-[25rem] rounded-3xl hidden md:flex ml-auto lg:absolute -top-5 mt-[-10rem]"
-                style={{
-                  boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
-                }}
-                draggable="false"
-              />
+            <div
+              className="w-full lg:w-1/2 order-2 relative flex justify-center items-center"
+            >
+              <div className="relative w-full h-[30rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem]" data-aos="fade-left">
+                {images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img.src}
+                    alt={`Procedimiento corporal ${index + 1}`}
+                    className={`absolute inset-0 object-cover rounded-3xl transition-opacity duration-[1200ms] ease-in-out
+                    ${index === current ? "opacity-100" : "opacity-0"}
+                    w-full h-full`}
+                  />
+                ))}
+
+                {/* Botones de navegación */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+                >
+                  <ChevronLeftIcon className="h-5 w-5 text-rose-400" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+                >
+                  <ChevronRightIcon className="h-5 w-5 text-rose-400" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

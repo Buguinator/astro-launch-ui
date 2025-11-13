@@ -1,17 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import imgCorporal from "../../assets/p-corporal.webp";
+import AOS from "aos";
 
-function StatsCard({ title }) {
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import imgCorporal1 from "../../assets/p-corporales/1.webp";
+import imgCorporal2 from "../../assets/p-corporales/2.webp";
+import imgCorporal3 from "../../assets/p-corporales/3.webp";
+
+function StatsCard({ title }: { title: string }) {
   return <li className="font-medium text-lg italic">{title}</li>;
 }
 
 const stats = [
-  { title: "Masaje postquirúrgicos" },
+  { title: "Masajes postquirúrgicos" },
   { title: "Radiofrecuencia" },
   { title: "Masaje linfático" },
   { title: "Ultrasonido" },
@@ -19,51 +22,71 @@ const stats = [
 ];
 
 export function PalettePresentation() {
-  const imgRef = useRef(null);
+  const [current, setCurrent] = useState(0);
+  const images = [imgCorporal1, imgCorporal2, imgCorporal3];
 
+  // Inicializa AOS
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const el = imgRef.current;
-
-    gsap.fromTo(
-      el,
-      { x: -300, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",     // entra cuando la parte superior de la imagen está al 80% del viewport
-          end: "bottom 10%",    // sale cuando el bottom llega al 20%
-          scrub: true,          // vincula la animación al scroll
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    AOS.init({
+      duration: 1600, // duración de la animación
+      easing: "ease-out-cubic",
+    });
   }, []);
+
+  // Carrusel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Controles manuales
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-20">
-        <div className="container mx-auto grid items-center relative lg:grid-cols-2">
-          {/* Imagen animada */}
-          <div className="hidden lg:flex">
-            <img
-              ref={imgRef}
-              src={imgCorporal.src}
-              alt="Procedimientos corporales"
-              className="rounded-3xl mx-auto max-w-[25rem]"
-              style={{
-                boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
-              }}
-            />
+      <div className="relative w-screen bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden">
+        <div
+          className="container mx-auto grid gap-10 items-center lg:grid-cols-2 relative lg:flex-row flex flex-col-reverse"
+        >
+          {/* Imagen */}
+          <div
+            className="order-2 lg:order-1 relative flex justify-center items-center"
+          >
+            <div className="relative w-full h-[30rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem]" data-aos="fade-right">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={`Procedimiento corporal ${index + 1}`}
+                  className={`absolute inset-0 object-cover rounded-3xl transition-opacity duration-[1200ms] ease-in-out
+                    ${index === current ? "opacity-100" : "opacity-0"}
+                    w-full h-full`}
+                />
+              ))}
+
+              {/* Botones de navegación */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronLeftIcon className="h-5 w-5 text-rose-400" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronRightIcon className="h-5 w-5 text-rose-400" />
+              </button>
+            </div>
           </div>
 
           {/* Texto */}
-          <div className="text-center lg:text-left lg:px-20">
-            <Typography className="flex items-center justify-center lg:justify-start !font-bold text-lg mb-5 text-rose">
+          <div className="order-1 lg:order-2 text-left lg:px-10 z-10" data-aos="fade-up">
+            <Typography className="font-bold text-lg mb-5 text-rose">
               Moldea, tonifica y armoniza tu figura.
             </Typography>
 
@@ -75,13 +98,13 @@ export function PalettePresentation() {
               Procedimientos Corporales
             </Typography>
 
-            <Typography color="gray" className="lg:pr-20">
+            <Typography color="gray" className="mb-8 text-lg">
               En nuestra área de procedimientos corporales, nos enfocamos en brindarte tratamientos
               especializados para moldear y mejorar tu figura, así como para optimizar tu recuperación
               postquirúrgica.
             </Typography>
 
-            <div className="mt-10">
+            <div>
               <h6 className="font-bold text-lg mb-5">Servicios:</h6>
               <ul className="list-disc list-inside">
                 {stats.map((props, key) => (

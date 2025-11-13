@@ -5,19 +5,23 @@ import imgLogo from "../../assets/logoSkinAndShape.svg";
 const YEAR = new Date().getFullYear();
 
 const SOCIAL_MEDIA = [
-  
   {
-    icon: "fab fa-facebook-square",
+    icon: "fab fa-instagram",
     name: "Instagram",
-    link: "https://www.instagram.com/skinandshape.hsj/",
+    link: "https://www.instagram.com/skinandshape",
   },
   {
-    icon: "fab fa-dribbble",
+    icon: "fab fa-facebook",
+    name: "Facebook",
+    link: "https://www.facebook.com/people/Skin-Shape/61558026122566/",
+  },
+  {
+    icon: "fab fa-tiktok",
     name: "TikTok",
     link: "https://www.tiktok.com/@skinandshape.hsj",
   },
   {
-    icon: "fab fa-twitter",
+    icon: "fab fa-whatsapp",
     name: "Whatsapp",
     link: "https://wa.me/message/QH47HMISN25GH1",
   },
@@ -67,8 +71,12 @@ const HELP = [
 
 const RESOURCES = [
   {
-    name: "Términos y Condiciones",
-    link: "#",
+    name: "Términos y Condiciones Dra. Mariana León",
+    link: "/terminos-y-condiciones-dra",
+  },
+  {
+    name: "Términos y Condiciones Dr. Javier Parada",
+    link: "/terminos-y-condiciones-dr",
   },
 ];
 

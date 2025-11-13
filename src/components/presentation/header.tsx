@@ -3,6 +3,10 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Navbar from "../navbar";
+import imgCover from "../../assets/cover.jpg";
+import videoInstalaciones1 from "../../assets/video/instalaciones.webm";
+import videoInstalaciones2 from "../../assets/video/instalaciones.mp4";
+
 
 export function HeroPresentation() {
 
@@ -14,15 +18,19 @@ export function HeroPresentation() {
         <video
           autoPlay
           muted
+          playsInline
           loop
+          poster={imgCover.src}  
+          preload="none"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/videos/instalaciones.mp4" type="video/mp4" />
+          <source src={videoInstalaciones1} type="video/webm" />
+          <source src={videoInstalaciones2} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
 
         {/* Overlay para mejorar la legibilidad del texto */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25 z-10"></div>
         
         <div className="container mx-auto grid items-center lg:grid-cols-2 relative z-20">
           <div className="text-center lg:text-left pt-32 ">
@@ -32,7 +40,7 @@ export function HeroPresentation() {
                 variant="small"
                 className="flex items-center font-bold uppercase"
               >
-                Tu piel y tu forma, en manos de profesionales.
+                Tu figura y tu forma, en manos de profesionales.
               </Typography>
             </div>
             <Typography
@@ -47,7 +55,7 @@ export function HeroPresentation() {
               quirúrgicos estéticos y reconstructivos.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <a href="/contact">
+              <a href="/contacto">
                 <Button className="flex items-center  bg-rose text-white">
                   Contacto
                 </Button>

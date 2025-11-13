@@ -16,13 +16,14 @@ import {
   CubeTransparentIcon,
   UserCircleIcon,
   CodeBracketSquareIcon,
-  ArrowDownIcon,
+  DocumentArrowDownIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
   InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
   Bars2Icon,
+  ArrowDownTrayIcon
 } from "@heroicons/react/24/outline";
 
 
@@ -196,7 +197,7 @@ const navListMenuItems = [
     href: "/dr-javier-parada",
   },
   {
-    title: "Dr. Mariana Leon Quintero",
+    title: "Dra. Mariana Leon Quintero",
     href: "/dra-mariana-leon-quintero",
   },
 ];
@@ -249,9 +250,13 @@ function NavListMenu() {
             {renderItems}
           </ul>
         </MenuList>
+        <a href="/menu-skin&shape.pdf" target="_blank" className="text-blue-gray-900 flex gap-1 items-center hover:rounded-full hover:bg-gray-100 py-2 px-3" style={{ fontSize: "14px" }}>
+          Descargar menú
+          <DocumentArrowDownIcon className="h-[18px] w-[18px]" />
+        </a>
       </Menu>
       <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
-        Especialistas{" "} <ChevronDownIcon className="h-[18px] w-[18px]" /> 
+        Especialistas{" "} <ChevronDownIcon className="h-[12px] w-[12px]" /> 
       </MenuItem>
       <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
         {renderItems}
@@ -273,6 +278,7 @@ function NavList() {
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <a href="/" className="text-blue-gray-900" style={{ fontSize: "14px" }}>Inicio</a>
       <NavListMenu />
+      
       {/* <AccountListMenu /> */}
 
       {/* {navListItems.map(({ label, icon }, key) => (
@@ -370,7 +376,7 @@ export default function ComplexNavbar() {
           </Button>
         </a> */}
         <a href="/contacto">
-          <Button color="dark">Contacto</Button>
+          <Button>Contacto</Button>
         </a>
       </div>
       <Collapse open={isNavOpen} className="overflow-scroll">

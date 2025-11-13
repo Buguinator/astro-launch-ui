@@ -9,8 +9,8 @@ export function AstroSection() {
           shadow={false}
           className="flex-col-reverse overflow-hidden rounded-3xl md:flex-row md:gap-8 bg-rose"
         >
-          <CardBody className="py-20 px-14 md:w-7/12">
-            <Typography color="white" className="font-normal opacity-70">
+          <CardBody className="py-10 md:py-20 px-12 md:px-14 md:w-7/12">
+            <Typography color="white" className="font-normal opacity-70 text-lg md:text-xl">
               Visitanos
             </Typography>
             <Typography
@@ -20,19 +20,19 @@ export function AstroSection() {
             >
               Horarios:
             </Typography>
-            <Typography variant="lead" color="white">
+            <Typography variant="lead" color="white" className="text-lg md:text-xl">
               Lunes a Viernes 9:00 a 14:00 hrs y de 16:00 a 20:00 hrs
             </Typography>
-            <Typography variant="lead" color="white">
+            <Typography variant="lead" color="white" className="text-lg md:text-xl">
               Sábados 9:00 hrs a 14:00 hrs
             </Typography>
-            <span className="text-white pt-5 block text-sm">
+            <span className="text-white pt-5 block text-lg md:text-base font-light">
               Torre Médica 2 Hospital San Javier. Consultorio 812 <br />
               C. José María Heredia 2960,
               Prados Providencia, 44670, <br />
               Guadalajara, Jalisco, México.
             </span>
-            <a href="https://github.com/creativetimofficial/astro-launch-ui">
+            <a href="/contacto">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">
                 Contáctanos
               </Button>

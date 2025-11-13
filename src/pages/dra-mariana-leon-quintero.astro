@@ -1,30 +1,49 @@
 ---
+import "aos/dist/aos.css";
+
 import Layout from '../layouts/Layout.astro';
 import HeaderAbout from "../components/dra/header"
 import FeaturesAbout from "../components/dra/features"
-import TeamAbout from "../components/dra/team"
 import TestimonialAbout from "../components/dra/testimonials"
 import FooterFreePresentation from "../components/presentation/footerFree"
 import ServiceAbout from "../components/dra/service"
 import ServiceRight from "../components/dra/serviceright"
+import Feed from "../components/presentation/feed"
+import Certificados from "../components/dra/certificados"
 
-import imgDermaClinica from "../assets/dra-dermatologica.jpeg"
-import imgDermaEstetica from "../assets/dra-estetica.jpeg"
-import imgTratamientos from "../assets/dra-tratamientos.jpeg"
+import imgClinica1 from "../assets/dra-clinica/1.webp"
+import imgClinica2 from "../assets/dra-clinica/2.webp"
+import imgClinica3 from "../assets/dra-clinica/3.webp"
+import imgClinica4 from "../assets/dra-clinica/4.webp"
+import imgClinica5 from "../assets/dra-clinica/5.webp"
+import imgClinica6 from "../assets/dra-clinica/6.webp"
 
-import { servicioDermaClinica, servicioDermaEstetica, servicioTratamientos } from "../components/dra/const/services.js"
+import imgEstetica1 from "../assets/dra-estetica/1.webp"
+import imgEstetica2 from "../assets/dra-estetica/2.webp"
+import imgEstetica3 from "../assets/dra-estetica/3.webp"
+import imgEstetica4 from "../assets/dra-estetica/4.webp"
+import imgEstetica5 from "../assets/dra-estetica/5.webp"
+
+import { servicioDermaClinica, servicioDermaEstetica } from "../components/dra/const/services.js"
 ---
 
 
-<Layout title="Dr. Mariana Leon Quintero">
+<Layout title="Dra. Mariana Leon Quintero">
 	<main>
     <HeaderAbout client:only="react" />
+    <!-- About -->
     <TestimonialAbout client:only="react" />
+    <!-- Certificados -->
+    <Certificados client:only="react" />
+    <!-- Servicios -->
     <FeaturesAbout client:only="react" />
-    <ServiceAbout client:only="react" service={servicioDermaClinica} img={imgDermaClinica.src} />
-    <ServiceRight client:only="react" service={servicioDermaEstetica} img={imgDermaEstetica.src} />
-    <ServiceAbout client:only="react" service={servicioTratamientos} img={imgTratamientos.src} />
-    <div class="h-[150px]"></div>
+    <ServiceAbout client:only="react" service={servicioDermaClinica} images={[imgClinica1, imgClinica2, imgClinica3, imgClinica4, imgClinica5, imgClinica6]} />
+    <ServiceRight client:only="react" service={servicioDermaEstetica} images={[imgEstetica1, imgEstetica2, imgEstetica3, imgEstetica4, imgEstetica5]} />
+    <div class="h-[50px]"></div>
+    <!-- Google e Instagram -->
+    <Feed client:only="react" id="elfsight-app-79890867-dbdd-48c7-9347-003f828dd6e4" />
+    <Feed client:only="react" id="elfsight-app-4a74c6a9-f329-4e61-bcd4-66dee6bdc192" />
+    <div class="h-[100px]"></div>
     <FooterFreePresentation client:only="react" />
   </main>
 </Layout>

@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import AOS from "aos";
 
 import {
   Accordion,
@@ -11,9 +11,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
 export function ServiceRight({
   service,
-  img,
+  images,
 }: {
   service: {
     title: string;
@@ -21,54 +23,74 @@ export function ServiceRight({
     subtitle: string;
     services: Array<any>;
   };
-  img: string;
+  images: Array<any>;
 }) {
   const imgRef = useRef(null);
+  const [current, setCurrent] = useState(0);
 
+  // GSAP Scroll Animation (solo en desktop)
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const el = imgRef.current;
-
-    gsap.fromTo(
-      el,
-      { x: -300, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",     // entra cuando la parte superior de la imagen está al 80% del viewport
-          end: "bottom 10%",    // sale cuando el bottom llega al 20%
-          scrub: true,          // vincula la animación al scroll
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    AOS.init({
+      duration: 1200,
+      easing: "linear",
+      delay: 100,
+    });
   }, []);
+
+  // Carrusel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Controles manuales
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
     <ThemeProvider>
       <div className="h-full w-screen place-items-center bg-white px-8 py-20">
-        <div className="container mx-auto grid items-center relative lg:grid-cols-2">
-          {/* Imagen animada */}
-          <div className="hidden lg:flex">
-            <img
-              ref={imgRef}
-              src={img}
-              alt="Procedimientos corporales"
-              className="rounded-3xl mx-auto max-w-[25rem]"
-              style={{
-                boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
-              }}
-              draggable="false"
-            />
+        {/* 📱 flex-col (textos arriba / imagen abajo) 💻 flex-row (imagen izquierda / textos derecha) */}
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 lg:px-16">
+          {/* 💻 Imagen a la izquierda */}
+          <div
+            ref={imgRef}
+            className="w-full lg:w-1/2 order-2 lg:order-1 relative flex justify-center items-center"
+          >
+            <div className="relative w-full h-[26rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem]" data-aos="fade-right">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={`Procedimiento corporal ${index + 1}`}
+                  className={`absolute inset-0 object-cover rounded-3xl transition-opacity duration-[1200ms] ease-in-out shadow-xl
+                    ${index === current ? "opacity-100" : "opacity-0"}
+                    w-full h-full`}
+                />
+              ))}
+
+              {/* Botones de navegación */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronLeftIcon className="h-5 w-5 text-rose-400" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronRightIcon className="h-5 w-5 text-rose-400" />
+              </button>
+            </div>
           </div>
 
-          {/* Texto */}
-          <div className="text-center lg:text-left lg:px-10">
-            <Typography className="flex items-center justify-center lg:justify-start !font-bold text-lg mb-5 text-rose">
+          {/* 📱 Textos arriba / 💻 Textos derecha */}
+          <div className="w-full lg:w-1/2 text-left order-1 lg:order-2" >
+            <Typography className="flex items-center justify-start !font-bold text-lg mb-5 text-rose" data-aos="fade-up">
               {service.subtitle}
             </Typography>
 
@@ -76,60 +98,62 @@ export function ServiceRight({
               variant="h2"
               color="blue-gray"
               className="mb-8 leading-tight"
+              data-aos="fade-up"
             >
               {service.title}
             </Typography>
 
-            <Typography color="gray" className="pb-5">
+            <Typography color="gray" className="pb-5" data-aos="fade-up">
               {service.description}
             </Typography>
 
-            <div>
-                  <h6 className="font-medium text-base mb-5 text-gray-800">
-                    Servicios:
-                  </h6>
-                  <Accordion type="single" collapsible defaultValue="item-0">
-                    {service?.services[0]?.list ? (
-                      <>
-                        {service?.services?.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
-                            <AccordionTrigger className="text-lg">
-                              {key + 1}. {props.title}
-                            </AccordionTrigger>
-                            <AccordionContent>
-                              {props?.list?.map((item: any, key: number) => (
-                                <p key={key} className="pl-4 pb-3">
-                                  <span className="font-semibold block">
-                                    {item.title}:
+            <div data-aos="fade-up">
+              <h6 className="font-medium text-base mb-5 text-gray-800">
+                Servicios:
+              </h6>
+              <Accordion type="single" collapsible defaultValue="item-0">
+                {service?.services[0]?.list ? (
+                  <>
+                    {service?.services?.map((props: any, key: number) => (
+                      <AccordionItem key={key} value={`item-${key + 1}`}>
+                        <AccordionTrigger className="text-lg">
+                          {key + 1}. {props.title}
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          {props?.list?.map((item: any, key: number) => (
+                            <p key={key} className="pl-4 pb-3">
+                              <span className="font-semibold block">
+                                {item.title}:
+                              </span>
+                              <span className="pb-3">
+                                {item.description}
+                              </span>
+                              {item?.benefits?.map(
+                                (benefit: any, key: number) => (
+                                  <span key={key} className="pb-3 block">
+                                    {benefit}
                                   </span>
-                                  <span className="pb-3">
-                                    {item.description}
-                                  </span>
-                                  {item?.benefits?.map((benefit: any, key: number) => (
-                                    <span key={key} className="pb-3">
-                                      {benefit}
-                                    </span>
-                                  ))}
-                                </p>
-                              ))}
-                            </AccordionContent>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    ) : (
-                      <>
-                        {service?.services.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
-                            <p className="text-lg py-3">
-                              {key + 1}. {props.title}{" "}
+                                )
+                              )}
                             </p>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    )}
-                  </Accordion>
-                </div>
-
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {service?.services.map((props: any, key: number) => (
+                      <AccordionItem key={key} value={`item-${key + 1}`}>
+                        <p className="text-lg py-3">
+                          {key + 1}. {props.title}
+                        </p>
+                      </AccordionItem>
+                    ))}
+                  </>
+                )}
+              </Accordion>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GithubPresentation from "../components/presentation/github"
+import FooterFreePresentation from "../components/presentation/footerFree"
+import Navbar from "../components/navbar"
+import TerminosDr from '@/components/terminos-dr.astro';
+---
+
+<Layout title="Presentation Page">
+	<main>
+    <Navbar client:only="react" />
+    <TerminosDr />
+    <!-- Horarios y mapa -->
+    <GithubPresentation client:only="react" />
+    <!-- Footer -->
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

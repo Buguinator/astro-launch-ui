@@ -87,7 +87,7 @@ export function FeatureSectionOne() {
         <Typography color="dark" className="mb-2 font-medium text-base">
           Resultados naturales, atención experta.
         </Typography>
-        <Typography variant="h2" color="blue-gray" className="mb-4">
+        <Typography variant="h2" color="blue-gray" className="mb-4 text-[2rem] md:text-[2.5rem]">
           Servicios principales
         </Typography>
       </div>

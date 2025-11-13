@@ -9,7 +9,7 @@ export function HeroSectionTwo() {
       <Navbar />
       <header className="h-full w-screen place-items-center bg-white px-8 pb-28 pt-5">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <div className="mb-8 inline-flex items-center rounded-lg">
               <Typography
                 variant="small"
@@ -17,24 +17,13 @@ export function HeroSectionTwo() {
               >
                 Conoce a
               </Typography>
-              {/* <Typography
-                color="dark"
-                variant="small"
-                className="!flex !items-center !font-semibold"
-              >
-                Personalized coaching in-app
-                <ArrowSmallRightIcon
-                  className="ml-1.5 h-4 w-4"
-                  strokeWidth={3}
-                />
-              </Typography> */}
             </div>
             <Typography
               variant="h1"
               color="blue-gray"
               className="mb-8 leading-tight lg:text-6xl"
             >
-              Dra. Mariana León-Quintero
+              Dra. Mariana <br />León-Quintero
             </Typography>
             <Typography variant="lead" className="lg:pr-10 text-blue-gray-800">
               La Dra. Mariana León-Quintero es una dermatóloga experta en el
@@ -48,10 +37,12 @@ export function HeroSectionTwo() {
               dermatología clínica y estética garantizan resultados óptimos y
               seguros para cada paciente.
             </Typography>
-            <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <div className="mt-12 flex flex-wrap gap-3 justify-start">
+              <a href="/contacto">
               <Button className="flex items-center bg-rose">
                 Agendar cita
               </Button>
+              </a>
             </div>
           </div>
           <div className="hidden lg:flex">

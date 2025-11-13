@@ -235,7 +235,7 @@ rejuvenecimiento facial para una apariencia más fresca y masculina.`,
 
 export const servicioAparato = {
   title: "Aparatología",
-  subtitle: "Tecnología estética avanzada para realzar tu belleza natural.”",
+  subtitle: "Tecnología estética avanzada para realzar tu belleza natural.",
   description: ``,
   services: [
     {
@@ -245,16 +245,13 @@ export const servicioAparato = {
           title: "¿De qué se trata?",
           description:
             "El LPG Endermologie es un tratamiento de estimulación mecánica no invasiva que ayuda a acelerar la recuperación postoperatoria después de una cirugía plástica. Favorece el drenaje linfático, reduce la retención de líquidos y la inflamación, mejora la circulación y contribuye a una reafirmación más uniforme de la piel, ayudando a disminuir fibrosis y mejorar la apariencia del tejido tratado.",
-        },
-        {
-          title: "Beneficios",
-          benefits: [
-            "Drena líquidos y reduce la inflamación, acelerando la recuperación.",
-            "Previene y trata la fibrosis, evitando irregularidades en la piel.",
-            "Activa la circulación sanguínea y linfática, favoreciendo la oxigenación de los tejidos.",
-            "Disminuye el dolor y la sensación de tirantez después de la cirugía.",
-          ],
-        },
+        }
+      ],
+      benefits: [
+        "Drena líquidos y reduce la inflamación, acelerando la recuperación.",
+        "Previene y trata la fibrosis, evitando irregularidades en la piel.",
+        "Activa la circulación sanguínea y linfática, favoreciendo la oxigenación de los tejidos.",
+        "Disminuye el dolor y la sensación de tirantez después de la cirugía.",
       ],
     },
     {
@@ -265,19 +262,79 @@ export const servicioAparato = {
           description:
             "La radiofrecuencia es un tratamiento estético no invasivo que utiliza ondas electromagnéticas de alta frecuencia para generar calor controlado en las capas profundas de la piel. Este calor estimula la producción de colágeno y elastina, las proteínas responsables de la firmeza y elasticidad de la piel. El resultado es una piel más tersa, firme y joven.",
         },
-        {
-          title: "Beneficios",
-          benefits: [
-            "Reafirmación de la piel: Estimula la producción de colágeno y elastina, tensando la piel flácida",
-            "Reducción de arrugas y líneas de expresión: Ayuda a suavizar las líneas finas y las arrugas.",
-            "Mejora del contorno facial y corporal: Puede ayudar a definir el óvalo facial y reducir la flacidez en áreas como el abdomen, los brazos y los muslos.",
-            "Reducción de la celulitis: El calor generado puede ayudar a romper los depósitos de grasa y mejorar la apariencia de la celulitis.",
-          ],
-        },
+      ],
+      benefits: [
+        "Reafirmación de la piel: Estimula la producción de colágeno y elastina, tensando la piel flácida",
+        "Reducción de arrugas y líneas de expresión: Ayuda a suavizar las líneas finas y las arrugas.",
+        "Mejora del contorno facial y corporal: Puede ayudar a definir el óvalo facial y reducir la flacidez en áreas como el abdomen, los brazos y los muslos.",
+        "Reducción de la celulitis: El calor generado puede ayudar a romper los depósitos de grasa y mejorar la apariencia de la celulitis.",
       ],
     },
     {
       title: "Ultrasonido",
+      list: [
+        {
+          title: "¿De qué se trata?",
+          description:
+            "El ultrasonido utiliza ondas sonoras de alta frecuencia para penetrar en las capas de la piel. Estas ondas generan vibraciones y calor suave en los tejidos, produciendo diversos efectos beneficiosos según la aplicación y la intensidad utilizada. Puede emplearse para estimular la circulación, facilitar la penetración de activos, tensar la piel (en el caso del ultrasonido focalizado de alta intensidad – HIFU), o incluso para ayudar en la reducción de grasa localizada (en ciertas modalidades).",
+        },
+      ],
+      benefits: [
+        "Estimulación de la circulación: Mejora el flujo sanguíneo en la zona tratada, lo que puede favorecer la oxigenación y la nutrición de los tejidos.",
+        "Facilitación de la penetración de activos: Las ondas de ultrasonido pueden ayudar a que los productos cosméticos y los principios activos penetren más profundamente en la piel, potenciando sus efectos.",
+        "Tensado de la piel (HIFU): Ciertas tecnologías de ultrasonido focalizado de alta intensidad (HIFU) pueden estimular la producción de colágeno en las capas profundas, lo que lleva a un efecto de lifting y tensado de la piel.",
+        "Reducción de grasa localizada: Algunas tecnologías de ultrasonido específicas están diseñadas para romper las células de grasa, ayudando a reducir la adiposidad en áreas concretas.",
+      ],
+    },
+    {
+      title: "Masaje postquirúrgico",
+      list: [
+        {
+          title: "¿De qué se trata?",
+          description:
+            "Los masajes postquirúrgicos son un tratamiento terapéutico diseñado para favorecer una recuperación más rápida y cómoda después de una cirugía estética o reconstructiva. Mediante técnicas suaves y específicas, se reduce la inflamación, se mejora la circulación linfática y se evitan complicaciones como fibrosis o endurecimiento del tejido. Este tipo de masaje también ayuda a disminuir el dolor y facilita que los tejidos sanen de forma uniforme.",
+        },
+      ],
+      benefits: [
+        "Favorece la recuperación postquirúrgica.",
+        "Mejora la circulación linfática.",
+        "Evita complicaciones como fibrosis o endurecimiento del tejido.",
+        "Disminuye el dolor y facilita que los tejidos sanen de forma uniforme.",
+      ],
+    },
+    {
+      title: "Masajes linfático",
+      list: [
+        {
+          title: "¿De qué se trata?",
+          description:
+            "El masaje linfático es una técnica manual suave que estimula el sistema linfático para mejorar la eliminación de toxinas, líquidos retenidos y desechos metabólicos. Es ideal para personas con inflamación, piernas cansadas, retención de líquidos o como complemento de tratamientos estéticos y postoperatorios. La técnica se realiza con movimientos lentos y precisos que activan el flujo linfático sin causar dolor.",
+        },
+      ],
+      benefits: [
+        "Reduce la retención de líquidos y mejora la circulación.",
+        "Disminuye inflamación en cuerpo y rostro.",
+        "Ayuda a eliminar toxinas de forma natural.",
+        "Alivia la sensación de pesadez y cansancio.",
+        "Complementa tratamientos estéticos y postoperatorios.",
+      ],
+    },
+    {
+      title: "LPG-Endermologie Facial",
+      list: [
+        {
+          title: "¿De qué se trata?",
+          description:
+            "LPG Endermologie Facial es un tratamiento estético no invasivo que utiliza estimulación mecánica motorizada para reactivar de manera natural la producción de colágeno, elastina y ácido hialurónico. A través de un cabezal especializado, se realiza una succión controlada y precisa que mejora la firmeza de la piel, redefine contornos y aporta un efecto lifting inmediato.",
+        }
+      ],
+      benefits: [
+        "Reafirma la piel y mejora su elasticidad.",
+        "Reduce líneas de expresión y arrugas finas.",
+        "Aporta luminosidad y homogeneidad al rostro.",
+        "Redefine el óvalo facial de manera natural.",
+        "Estimula la producción de colágeno sin dolor ni tiempo de recuperación.",
+      ],
     },
   ],
 };

@@ -1,8 +1,9 @@
+import AOS from "aos";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
+
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 import {
   Accordion,
@@ -15,7 +16,7 @@ import imgFacial from "../../assets/p-facial.jpg";
 
 export function ServiceAbout({
   service,
-  img,
+  images,
 }: {
   service: {
     title: string;
@@ -24,55 +25,56 @@ export function ServiceAbout({
     description2: string;
     services: Array<any>;
   };
-  img: string;
+  images: Array<any>;
 }) {
-  const imgRef = useRef(null);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const el = imgRef.current;
-
-    // Animación de entrada y salida con scroll
-    gsap.fromTo(
-      el,
-      { x: 300, opacity: 0 },
-      {
-        x: 50,
-        opacity: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%", // entra cuando el top de la imagen está al 80% del viewport
-          end: "bottom 10%", // sale cuando el bottom llega al 20%
-          scrub: true, // la animación sigue el scroll
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    AOS.init({
+      duration: 1200,
+      easing: "linear",
+      delay: 100,
+    });
   }, []);
+
+  // Carrusel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Controles manuales
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
     <ThemeProvider>
       <div className="h-full w-screen place-items-center bg-white px-8 pb-20">
         <div className="container mx-auto relative">
           <div className="text-left lg:px-20">
-            <Typography className="font-bold text-lg mb-5 text-rose">
+            <Typography className="font-bold text-lg mb-5 text-rose" data-aos="fade-up">
               {service.subtitle}
             </Typography>
             <Typography
               variant="h2"
               color="blue-gray"
               className="mb-5 leading-tight"
+              data-aos="fade-up"
             >
               {service.title}
+            </Typography>
+            <Typography color="gray" className="pb-5 lg:w-1/2" data-aos="fade-up">
+              {service.description}
             </Typography>
           </div>
 
           <div className="lg:flex relative lg:px-20">
             <div className="lg:w-1/2">
               <div className="p-2 lg:p-0 mb-8">
-                <div>
+                <div data-aos="fade-up">
                   <h6 className="font-medium text-base mb-5 text-gray-800">
                     {service.description2}
                   </h6>
@@ -94,8 +96,8 @@ export function ServiceAbout({
                                     {item.description}
                                   </span>
                                   {item?.benefits?.map((benefit: any, key: number) => (
-                                    <span key={key} className="pb-3">
-                                      {benefit}
+                                    <span key={key} className="pb-4">
+                                      {benefit} <br />
                                     </span>
                                   ))}
                                 </p>
@@ -120,18 +122,36 @@ export function ServiceAbout({
               </div>
             </div>
 
-            <div className="lg:w-1/2 flex justify-center">
-              <img
-                ref={imgRef}
-                src={img}
-                alt="Procedimientos faciales"
-                className="lg:max-w-[25rem] rounded-3xl hidden md:flex ml-auto lg:absolute -top-5 mt-[-5rem]"
-                style={{
-                  boxShadow: "0 4px 12px -2px rgba(248, 187, 217, 0.5)",
-                }}
-                draggable="false"
-              />
+            <div
+            className="w-full lg:w-1/2 order-2 lg:order-1 relative flex justify-center items-center"
+          >
+            <div className="relative w-full h-[26rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem]" data-aos="fade-left">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={`Procedimiento corporal ${index + 1}`}
+                  className={`absolute inset-0 object-cover rounded-3xl transition-opacity duration-[1200ms] ease-in-out shadow-xl
+                    ${index === current ? "opacity-100" : "opacity-0"}
+                    w-full h-full`}
+                />
+              ))}
+
+              {/* Botones de navegación */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronLeftIcon className="h-5 w-5 text-rose-400" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 bottom-4 bg-white/70 hover:bg-white rounded-full p-2 shadow-md backdrop-blur-sm transition"
+              >
+                <ChevronRightIcon className="h-5 w-5 text-rose-400" />
+              </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
