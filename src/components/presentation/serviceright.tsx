@@ -120,10 +120,10 @@ export function ServiceRight({
                         <AccordionContent>
                           {props?.list?.map((item: any, key: number) => (
                             <div key={key} className="pl-4 pb-3">
-                              <p className="font-semibold pb-3 text-lg lg:text-base">{item.title}:</p>
+                              <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{item.title}:</p>
                               <p className="pb-2 text-lg lg:text-base">{item.description}</p>
                               {item?.benefits?.map((benefit: any, idx: number) => (
-                                <p key={idx} className="text-lg lg:text-base text-gray-600">
+                                <p key={idx} className="text-lg lg:text-base">
                                   • {benefit}
                                 </p>
                               ))}

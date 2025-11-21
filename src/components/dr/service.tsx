@@ -53,7 +53,7 @@ export function ServiceAbout({
       <div className="h-full w-screen place-items-center bg-white px-8 pb-20">
         <div className="container mx-auto relative">
           <div className="text-left lg:px-20" data-aos="fade-up">
-            <Typography className="font-bold text-lg mb-5 text-rose">
+            <Typography className="font-bold text-lg mb-5 text-[#365D78]">
               {service.subtitle}
             </Typography>
             <Typography
@@ -88,24 +88,21 @@ export function ServiceAbout({
                           {props?.list?.map((item: any, key: number) => (
                             <AccordionContent>
                               <p key={key} className="pl-4 pb-3">
-                                <span className="font-semibold block pb-2">
+                                <span className="font-semibold block pb-2 text-[#365D78]">
                                   {item.title}:
                                 </span>
                                 <span className="pb-3">{item.description}</span>
-                                {props?.benefits?.length > 0 && (
-                                  <p className="font-semibold pt-5 pb-2">
-                                    Beneficios
-                                  </p>
+                                {item?.benefits?.length > 0 && (
+                                  <>
+                                    {item?.benefits?.map(
+                                      (benefit: any, key: number) => (
+                                        <li key={key} className="pb-1">
+                                          {benefit}
+                                        </li>
+                                      )
+                                    )}
+                                  </>
                                 )}
-                                <ul className="list-disc pl-4">
-                                  {props?.benefits?.map(
-                                    (benefit: any, key: number) => (
-                                      <li key={key} className="pb-1">
-                                        {benefit}
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
                               </p>
                             </AccordionContent>
                           ))}

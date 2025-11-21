@@ -77,7 +77,7 @@ export function ServiceAbout({
               {service.title}
             </Typography>
 
-            <h6 className="font-medium text-base mb-5 text-gray-800">
+            <h6 className="font-medium text-lg mb-5">
               Servicios:
             </h6>
 

@@ -90,7 +90,7 @@ export function ServiceRight({
 
           {/* 📱 Textos arriba / 💻 Textos derecha */}
           <div className="w-full lg:w-1/2 text-left order-1 lg:order-2" >
-            <Typography className="flex items-center justify-start !font-bold text-lg mb-5 text-rose" data-aos="fade-up">
+            <Typography className="flex items-center justify-start !font-bold text-lg mb-5 text-[#365D78]" data-aos="fade-up">
               {service.subtitle}
             </Typography>
 

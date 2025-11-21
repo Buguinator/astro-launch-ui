@@ -1,22 +1,29 @@
 ---
+export async function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'en' } }
+  ];
+}
+
 import "aos/dist/aos.css";
 
-import Layout from '../layouts/Layout.astro';
-import HeaderPresentation from "../components/presentation/header"
-import LogosPresentation from "../components/presentation/logos"
-import PalettePresentationFree from "../components/presentation/palette"
-import CodePresentation from "../components/presentation/code"
-import FreeToProPresentation from "../components/presentation/freeToPro"
-import AstroPresentation from "../components/presentation/astro"
-import GithubPresentation from "../components/presentation/github"
-import PricingPresentation from "../components/presentation/pricing"
-import FooterFreePresentation from "../components/presentation/footerFree"
-import Feed from "../components/presentation/feed"
-import ServiceAbout from "../components/presentation/service"
-import ServiceRight from "../components/presentation/serviceright"
+import Layout from '../../layouts/Layout.astro';
+import HeaderPresentation from "../../components/presentation/header"
+import LogosPresentation from "../../components/presentation/logos"
+import PalettePresentationFree from "../../components/presentation/palette"
+import CodePresentation from "../../components/presentation/code"
+import FreeToProPresentation from "../../components/presentation/freeToPro"
+import AstroPresentation from "../../components/presentation/astro"
+import GithubPresentation from "../../components/presentation/github"
+import PricingPresentation from "../../components/presentation/pricing"
+import FooterFreePresentation from "../../components/presentation/footerFree"
+import Feed from "../../components/presentation/feed"
+import ServiceAbout from "../../components/presentation/service"
+import ServiceRight from "../../components/presentation/serviceright"
 
-import { servicioAparato } from "../components/dr/const/services.js";
-import { servicioTratamientos } from "../components/dra/const/services.js";
+import { servicioAparato } from "../../components/dr/const/services.js";
+import { servicioTratamientos } from "../../components/dra/const/services.js";
 
 ---
 

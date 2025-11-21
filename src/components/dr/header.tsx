@@ -13,7 +13,7 @@ export function HeroSectionTwo() {
             <div className="mb-8 inline-flex items-center rounded-lg">
               <Typography
                 variant="small"
-                className="rounded-md bg-blue py-0.5 px-3 font-medium text-white"
+                className="rounded-md bg-[#365D78] py-0.5 px-3 font-medium text-white"
               >
                 Conoce a
               </Typography>
@@ -48,7 +48,7 @@ export function HeroSectionTwo() {
             </Typography>
             <div className="mt-12 flex flex-wrap gap-3 justify-start">
               <a href="/contacto">
-                <Button color="blue" className="flex items-center">
+                <Button className="flex items-center bg-[#365D78]">
                   Agendar cita
                 </Button>
               </a>

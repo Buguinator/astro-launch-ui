@@ -94,7 +94,7 @@ export function FigmaPresentation() {
             </Typography>
 
             <div>
-              <h6 className="font-bold text-lg mb-5">Servicios:</h6>
+              <h6 className="font-medium text-lg mb-5">Servicios:</h6>
               <ul className="list-disc list-inside">
                 {stats.map((props, key) => (
                   <StatsCard key={key} {...props} />

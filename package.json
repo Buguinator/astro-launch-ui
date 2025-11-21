@@ -42,6 +42,7 @@
     "@types/react-dom": "^18.0.6",
     "aos": "^3.0.0-beta.6",
     "astro": "^5.5.5",
+    "astro-react-i18next": "^0.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "forward-ref": "^1.0.0",

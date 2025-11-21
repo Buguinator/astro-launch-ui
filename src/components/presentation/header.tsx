@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import {
   Button,
   Typography,
@@ -9,10 +11,12 @@ import videoInstalaciones2 from "../../assets/video/instalaciones.mp4";
 
 
 export function HeroPresentation() {
+  const { t } = useTranslation();
 
   return (
     <>
       <Navbar />
+
       <header className="h-full w-screen place-items-center relative px-8 pt-8 py-12 lg:mb-36 overflow-hidden">
         {/* Video de fondo */}
         <video
@@ -34,30 +38,20 @@ export function HeroPresentation() {
         
         <div className="container mx-auto grid items-center lg:grid-cols-2 relative z-20">
           <div className="text-center lg:text-left pt-32 ">
-            <div className="mb-8 inline-flex items-center ">
-              <Typography
-                color="white"
-                variant="small"
-                className="flex items-center font-bold uppercase"
-              >
-                Tu figura y tu forma, en manos de profesionales.
-              </Typography>
-            </div>
             <Typography
               variant="h1"
               color="white"
               className="mb-8 lg:mr-32 leading-tight font-black"
             >
-              <span className="italic">Skin & Shape </span><span className="font-thin">|</span> Clínica Dermatológica y Cirugía Plástica
+              <span className="italic">{t("home.hero.brand")} </span><span className="font-thin">|</span> {t("home.hero.title")}
             </Typography>
             <Typography variant="lead" color="white" className="lg:pr-32">
-              Clínica médica especializada en el cuidado de la piel, así como en procedimientos
-              quirúrgicos estéticos y reconstructivos.
+              {t("home.hero.description")}
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
               <a href="/contacto">
                 <Button className="flex items-center  bg-rose text-white">
-                  Contacto
+                  {t("home.hero.button")}
                 </Button>
               </a>
             </div>

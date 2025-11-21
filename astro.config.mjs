@@ -1,14 +1,17 @@
 import { defineConfig } from "astro/config";
-
 import react from "@astrojs/react";
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
+import i18next from "astro-react-i18next";
 
-const isProd = process.env.NODE_ENV === "production";
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(),
+    tailwind(),
+    i18next({
+      defaultLocale: "es",
+      locales: ["es", "en"],
+    }),
+  ],
+  // output: "server",
   base: "/",
 });
