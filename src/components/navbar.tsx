@@ -33,7 +33,8 @@ const navListMenuItems = [
 ];
 
 function NavListMenu() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === "en" ? "/en" : "";
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const triggers = {
@@ -42,7 +43,7 @@ function NavListMenu() {
   };
 
   const renderItems = navListMenuItems.map(({ title, href }) => (
-    <a href={href} key={title}>
+    <a href={`${langPrefix}${href}`} key={title}>
       <MenuItem>
         <Typography
           variant="paragraph"
@@ -103,10 +104,11 @@ function NavListMenu() {
 }
 
 function NavList() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === "en" ? "/en" : "";
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-      <a href="/" className="text-blue-gray-900" style={{ fontSize: "14px" }}>
+      <a href={`${langPrefix}/`} className="text-blue-gray-900" style={{ fontSize: "14px" }}>
         {t("nav.home")}
       </a>
       <NavListMenu />
@@ -115,7 +117,8 @@ function NavList() {
 }
 
 export default function ComplexNavbar() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === "en" ? "/en" : "";
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [shouldShowBorder, setShouldShowBorder] = React.useState(false);
 
@@ -153,7 +156,7 @@ export default function ComplexNavbar() {
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <Typography
           as="a"
-          href="/"
+          href={`${langPrefix}/`}
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
           <img src={imgLogo.src} alt="logo" className="h-[35px]" />
@@ -164,7 +167,7 @@ export default function ComplexNavbar() {
         <div className="ml-auto">
           <LanguageSelector />
         </div>
-        <a href="/contacto" className="hidden lg:block">
+        <a href={`${langPrefix}/contacto`} className="hidden lg:block">
           <Button className="bg-[#8d5f5b] hover:bg-[#d2938c]">{t("nav.contact")}</Button>
         </a>
         <IconButton
@@ -179,7 +182,7 @@ export default function ComplexNavbar() {
       </div>
       <Collapse open={isNavOpen} className="overflow-scroll">
         <NavList />
-        <a href="/contacto">
+        <a href={`${langPrefix}/contacto`}>
           <Button className="bg-[#8d5f5b] hover:bg-[#d2938c]">{t("nav.contact")}</Button>
         </a>
       </Collapse>

@@ -374,5 +374,67 @@
         "7. Facial rejuvenation"
       ]
     }
+  },
+  "dra":{
+    "hero":{
+      "title": "Dr. Mariano León-Quintero",
+      "up": "Meet",
+      "subtitle": "Dr. Mariano León-Quintero is a dermatologist expert in the comprehensive care of skin, hair and nails, with practice in Guadalajara.",
+      "description": "Covering from clinical treatments for acne and spots, to aesthetic procedures that highlight natural beauty. His personalized approach and updated knowledge in clinical and aesthetic dermatology ensure optimal and safe results for each patient.",
+      "button": "Schedule appointment"
+    },
+    "about":{
+      "fList":{
+        "1":"Medical Doctor, Tecnológico de Monterrey, Guadalajara Campus",
+        "2":"1 year of Internal Medicine at the Hospital San Javier",
+        "3":"3 years of Dermatology at the Instituto Dermatologíco de Jalisco “Dr. José Barba Rubio",
+        "4":"1 year of Dermatology Estética - Grupo Pedro Jaén by the University of Madrid in collaboration with the University of Alcalá",
+        "5":"Trichology Diploma – CILAD"
+      },
+      "mTitle":"Clinical Rotations:",
+      "mList":{
+        "1":"Ramón y Cajal University Hospital, Madrid"
+      }
+    },
+    "certificates":{ "title":"With the confidence of the best allies" },
+    "features":{
+      "subtitle":"Natural results, expert care.",
+      "title":"Main services"
+    },
+    "dermatologyService":{
+      "title":"Clinical Dermatology Consultation",
+      "subtitle":"The clinical dermatology that transforms your well-being.",
+      "description": "In our clinical dermatology consultation, we offer a comprehensive approach to the care of your skin, hair, and nails, addressing a wide range of dermatological conditions with precision and expertise.",
+      "text":"Dermatological conditions:",
+      "list":[
+          "1. Acne" ,
+          "2. Melasma",
+          "3. Atopic dermatitis",
+          "4. Skin cancer",
+          "5. Onicomicosis",
+          "6. Warts",
+          "7. Sun spots",
+          "8. Nail diseases",
+          "9. Alopecia (hair loss)",
+          "10. Mole check",
+          "11. Among others…"
+      ]
+    },
+    "aestheticService":{
+      "title":"Aesthetic Dermatology",
+      "subtitle":"Professional diagnosis for radiant and healthy skin.",
+      "description": "In our aesthetic dermatology section, we specialize in enhancing the natural beauty of your skin through advanced and personalized treatments.",
+      "text":"Services:",
+      "list":[
+          "1. Biostimulators (Sculptra)" ,
+          "2. Bioremodelers: Profhilo and Profhilo Structura",
+          "3. NCTF (Hydration for wrinkles)",
+          "4. Salmon PDRN",
+          "5. Hyaluronic acid (Fillers)"
+      ]
+    },
+    "contact":{
+      "title":"Visit Our Clinic"    
+    }
   }
 }

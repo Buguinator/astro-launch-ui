@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import { useEffect } from "react";
 
@@ -7,6 +8,7 @@ import imgPerfil from "../../assets/dra-perfil.png";
 
 
 export function TestimonialSectionTwo() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -31,21 +33,13 @@ export function TestimonialSectionTwo() {
                 className="mb-5 font-medium md:font-semibold leading-normal text-lg md:text-base"
                 data-aos="fade-up"
               >
-                Médico Cirujano Tecnologico de Monterrey campus Guadalajara 
-                <br/>1 año de Medicina interna en el Hospital San Javier 
-                <br/>3 años de Dermatología en Instituto Dermatologíco de Jalisco “Dr. José
-                Barba Rubio” 
-                <br/>1 año de Dermatología Estética - Grupo Pedro Jaén
-                por la Universidad de Madrid en colaboración con la Universidad
-                de Alcalá
-              </Typography>
-              <Typography
-                variant="lead"
-                color="white"
-                className="my-5 font-medium md:font-semibold leading-normal text-lg md:text-base"
-                data-aos="fade-up"
-              >
-                Dipolmado en tricología por el CILAD
+                <ul className="list-disc list-inside text-white font-semibold pt-5 text-base" >
+                  <li data-aos="fade-up">{t("dra.about.fList.1")}</li>
+                  <li data-aos="fade-up">{t("dra.about.fList.2")}</li>
+                  <li data-aos="fade-up">{t("dra.about.fList.3")}</li>
+                  <li data-aos="fade-up">{t("dra.about.fList.4")}</li>
+                  <li data-aos="fade-up">{t("dra.about.fList.5")}</li>
+                </ul>
               </Typography>
               <Typography
                 variant="lead"
@@ -53,11 +47,11 @@ export function TestimonialSectionTwo() {
                 className="mb-5 font-medium md:font-semibold leading-normal text-lg md:text-base"
                 data-aos="fade-up"
               >
-                Rotaciones
+                {t("dra.about.mTitle")}
               </Typography>
               <ol className="list-disc list-inside text-white font-light pt-5 text-base md:text-sm">
                 <li data-aos="fade-up">
-                  Hospital Universitario Ramón y Cajal de Madrid 
+                  {t("dra.about.mList.1")}
                 </li>
               </ol>
             </div>

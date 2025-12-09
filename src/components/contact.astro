@@ -1,0 +1,167 @@
+<section class="relative isolate overflow-hidden bg-white py-16 px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center mb-10">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      Contact
+    </h2>
+    <p class="mt-2 text-lg text-gray-700">
+      If you want to schedule an appointment, request information or receive a
+      personalized evaluation, complete the form and our team will attend you
+      with pleasure.
+    </p>
+  </div>
+
+  <form class="mx-auto max-w-xl space-y-6" id="emailForm">
+    <!-- Nombre -->
+    <div>
+      <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">
+        Full name
+      </label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        required
+        class="w-full rounded-2xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose focus:border-transparent transition"
+        placeholder="Your name"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="correo" class="block text-sm font-medium text-gray-700 mb-1">
+        Email
+      </label>
+      <input
+        type="email"
+        name="correo"
+        id="correo"
+        required
+        class="w-full rounded-2xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose focus:border-transparent transition"
+        placeholder="your.email@example.com"
+      />
+    </div>
+
+    <!-- Nombre -->
+    <div>
+      <label
+        for="telefono"
+        class="block text-sm font-medium text-gray-700 mb-1"
+      >
+        Phone
+      </label>
+      <input
+        type="tel"
+        name="telefono"
+        id="telefono"
+        required
+        class="w-full rounded-2xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose focus:border-transparent transition"
+        placeholder="33 1234 5678"
+      />
+    </div>
+
+    <!-- Mensaje -->
+    <div>
+      <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">
+        Message
+      </label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="5"
+        required
+        class="w-full rounded-2xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose focus:border-transparent transition"
+        placeholder="Tell us more about your questions..."></textarea>
+    </div>
+
+    <!-- Botón -->
+    <div class="pt-4">
+      <button
+        type="submit"
+        class="w-full rounded-2xl bg-rose-500 px-6 py-3 text-white font-semibold shadow-sm hover:bg-rose focus:outline-none focus:ring-2 focus:ring-rose focus:ring-offset-2 transition"
+      >
+        Send message
+      </button>
+      <!-- Mensaje de respuesta -->
+      <p
+        id="responseMessage"
+        class="mt-2 text-sm py-2 px-4 rounded-2xl visible"
+      >
+      </p>
+    </div>
+  </form>
+
+  <!-- Fondo decorativo minimalista -->
+  <div
+    class="absolute inset-x-0 top-0 -z-10 h-1/2 bg-gradient-to-b from-[#d7a49a50] to-transparent"
+  >
+  </div>
+</section>
+
+<script is:inline>
+  document.getElementById("emailForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    try {
+      const response = await fetch(
+        "https://theskinandshape.com/send-email.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: `nombre=${encodeURIComponent(nombre)}&correo=${encodeURIComponent(correo)}&telefono=${encodeURIComponent(telefono)}&mensaje=${encodeURIComponent(mensaje)}`,
+        },
+      );
+
+      const result = await response.text();
+      showToast(result, response.ok);
+    } catch (error) {
+      showToast("Error de conexión", false);
+    }
+  });
+
+  function showToast(message, isSuccess = true) {
+    const toast = document.getElementById("responseMessage");
+    toast.textContent = message;
+    toast.classList.remove("bg-green-400", "bg-red-400");
+    toast.classList.add(isSuccess ? "bg-green-400" : "bg-red-400");
+
+    // Mostrar toast
+    toast.classList.remove("opacity-0", "invisible", "toast-hide");
+    toast.classList.add("opacity-100", "visible", "toast-show");
+
+    // Ocultar toast después de 3 segundos
+    setTimeout(() => {
+      toast.classList.remove("toast-show");
+      toast.classList.add("toast-hide");
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "invisible");
+      }, 300);
+    }, 3000);
+  }
+</script>
+
+<style>
+  /* Animación para el toast */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+</style>

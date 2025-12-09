@@ -56,9 +56,6 @@ export function HeroPresentation() {
             </div>
           </div>
         </div>
-        {/* <div className="hidden lg:flex">
-          <img src="header.png" alt="components" className="absolute -top-10 right-0 w-1/2" />
-        </div> */}
       </header>
     </>
   );

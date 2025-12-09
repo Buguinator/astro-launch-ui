@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar";
 import imgDra from "../../assets/dra.jpeg";
 
 export function HeroSectionTwo() {
+  const { t } = useTranslation();
+
   return (
     <ThemeProvider>
       <Navbar />
@@ -15,7 +19,7 @@ export function HeroSectionTwo() {
                 variant="small"
                 className="rounded-md bg-rose py-0.5 px-3 font-medium text-white"
               >
-                Conoce a
+                {t("dra.hero.up")}
               </Typography>
             </div>
             <Typography
@@ -23,24 +27,18 @@ export function HeroSectionTwo() {
               color="blue-gray"
               className="mb-8 leading-tight lg:text-6xl"
             >
-              Dra. Mariana <br />León-Quintero
+              {t("dra.hero.title")}
             </Typography>
             <Typography variant="lead" className="lg:pr-10 text-blue-gray-800">
-              La Dra. Mariana León-Quintero es una dermatóloga experta en el
-              cuidado integral de la piel, pelo y uñas, con práctica en
-              Guadalajara.
+              {t("dra.hero.subtitle")}
             </Typography>
             <Typography className="lg:pr-10 text-blue-gray-800 text-base pt-5">
-              Abarcando desde tratamientos clínicos para el acné y las manchas,
-              hasta procedimientos estéticos que realzan la belleza natural. Su
-              enfoque personalizado y su conocimiento actualizado en
-              dermatología clínica y estética garantizan resultados óptimos y
-              seguros para cada paciente.
+              {t("dra.hero.description")}
             </Typography>
             <div className="mt-12 flex flex-wrap gap-3 justify-start">
               <a href="/contacto">
               <Button className="flex items-center bg-rose">
-                Agendar cita
+                {t("dra.hero.button")}
               </Button>
               </a>
             </div>

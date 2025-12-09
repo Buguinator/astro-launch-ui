@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
@@ -27,6 +28,7 @@ export function ServiceAbout({
   };
   images: Array<any>;
 }) {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -56,7 +58,7 @@ export function ServiceAbout({
         <div className="container mx-auto relative">
           <div className="text-left lg:px-20">
             <Typography className="font-bold text-lg mb-5 text-rose" data-aos="fade-up">
-              {service.subtitle}
+              {t("dra.dermatologyService.subtitle")}
             </Typography>
             <Typography
               variant="h2"
@@ -64,10 +66,10 @@ export function ServiceAbout({
               className="mb-5 leading-tight"
               data-aos="fade-up"
             >
-              {service.title}
+              {t("dra.dermatologyService.title")}
             </Typography>
             <Typography color="gray" className="pb-5 lg:w-1/2" data-aos="fade-up">
-              {service.description}
+              {t("dra.dermatologyService.description")}
             </Typography>
           </div>
 
@@ -76,47 +78,64 @@ export function ServiceAbout({
               <div className="p-2 lg:p-0 mb-8">
                 <div data-aos="fade-up">
                   <h6 className="font-medium text-base mb-5 text-gray-800">
-                    {service.description2}
+                    {t("dra.dermatologyService.text")}
                   </h6>
                   <Accordion type="single" collapsible defaultValue="item-0">
-                    {service?.services[0]?.list ? (
-                      <>
-                        {service?.services?.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
-                            <AccordionTrigger className="text-lg">
-                              {key + 1}. {props.title}
-                            </AccordionTrigger>
-                            <AccordionContent>
-                              {props?.list?.map((item: any, key: number) => (
-                                <p key={key} className="pl-4 pb-3">
-                                  <span className="font-semibold block">
-                                    {item.title}:
-                                  </span>
-                                  <span className="pb-3">
-                                    {item.description}
-                                  </span>
-                                  {item?.benefits?.map((benefit: any, key: number) => (
-                                    <span key={key} className="pb-4">
-                                      {benefit} <br />
-                                    </span>
-                                  ))}
-                                </p>
-                              ))}
-                            </AccordionContent>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    ) : (
-                      <>
-                        {service?.services.map((props: any, key: number) => (
-                          <AccordionItem key={key} value={`item-${key + 1}`}>
-                            <p className="text-lg py-2">
-                              {key + 1}. {props.title}{" "}
-                            </p>
-                          </AccordionItem>
-                        ))}
-                      </>
-                    )}
+                      <AccordionItem value="item-1">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.0")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-2">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.1")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-3">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.2")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-4">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.3")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-5">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.4")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-6">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.5")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-7">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.6")}
+                        </p>
+                      </AccordionItem>
+                      <AccordionItem value="item-8">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.7")}
+                        </p>
+                      </AccordionItem>
+                       <AccordionItem value="item-9">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.8")}
+                        </p>
+                      </AccordionItem>
+                       <AccordionItem value="item-10">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.9")}
+                        </p>
+                      </AccordionItem>
+                       <AccordionItem value="item-11">
+                        <p className="text-lg py-2">
+                          {t("dra.dermatologyService.list.10")}
+                        </p>
+                      </AccordionItem>
                   </Accordion>
                 </div>
               </div>
@@ -125,7 +144,7 @@ export function ServiceAbout({
             <div
             className="w-full lg:w-1/2 order-2 lg:order-1 relative flex justify-center items-center"
           >
-            <div className="relative w-full h-[26rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem]" data-aos="fade-left">
+            <div className="relative w-full h-[26rem] sm:h-[30rem] lg:h-[34rem] lg:max-w-[25rem] lg:mt-[-10rem]" data-aos="fade-left">
               {images.map((img, index) => (
                 <img
                   key={index}

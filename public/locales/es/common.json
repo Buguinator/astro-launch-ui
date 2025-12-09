@@ -371,5 +371,67 @@
         "7. Rejuvenecimiento facial"
       ]
     }
+  },
+  "dra":{
+    "hero":{
+      "title": "Dra. Mariana León-Quintero",
+      "up": "Conoce a",
+      "subtitle": "La Dra. Mariana León-Quintero es una dermatóloga experta en el cuidado integral de la piel, pelo y uñas, con práctica en Guadalajara.",
+      "description": "Abarcando desde tratamientos clínicos para el acné y las manchas, hasta procedim ientos estéticos que realzan la belleza natural. Su enfoque personalizado y su conocimiento actualizado en dermatología clínica y estética garantizan resultados óptimos y seguros para cada paciente.",
+      "button": "Agenda cita"
+    },
+    "about":{
+      "fList":{
+        "1":"Médico Cirujano Tecnologico de Monterrey campus Guadalajara",
+        "2":"1 año de Medicina interna en el Hospital San Javier",
+        "3":"3 años de Dermatología en Instituto Dermatologíco de Jalisco “Dr. José Barba Rubio",
+        "4":"1 año de Dermatología Estética - Grupo Pedro Jaén por la Universidad de Madrid en colaboración con la Universidad de Alcalá",
+        "5":"Dipolmado en tricología por el CILAD"
+      },
+      "mTitle":"Rotaciones:",
+      "mList":{
+        "1":"Hospital Universitario Ramón y Cajal de Madrid"
+      }
+    },
+    "certificates":{ "title":"Con la confianza de los mejores aliados" },
+    "features":{
+      "subtitle":"Resultados naturales, atención experta.",
+      "title":"Servicios principales"
+    },
+    "dermatologyService":{
+      "title":"Consulta Dermatológica Clínica",
+      "subtitle":"La dermatología clínica que transforma tu bienestar.",
+      "description": "En nuestra consulta dermatológica clínica, ofrecemos un enfoque integral para el cuidado de tu piel, pelo y uñas. Abordando una amplia gama de condiciones dermatológicas con precisión y experiencia.",
+      "text":"Padecimientos dermatológicos:",
+      "list":[
+          "1. Acné" ,
+          "2. Melasma",
+          "3. Dermatitis atópica",
+          "4. Cáncer de piel",
+          "5. Onicomicosis",
+          "6. Verrugas",
+          "7. Manchas de sol",
+          "8. Enfermedades en uñas",
+          "9. Alopecia (problema de pelo)",
+          "10. Revisión de lunares",
+          "11. Entre otros"
+      ]
+    },
+    "aestheticService":{
+      "title":"Dermatología Estética",
+      "subtitle":"Diagnóstico profesional para una piel radiante y saludable.",
+      "description": "En nuestra sección de dermatología estética, nos especializamos en realzar la belleza natural de tu piel a través de tratamientos avanzados y personalizados.",
+      "text":"Servicios:",
+      "list":[
+          "1. Bioestimuladores (Sculptra)" ,
+          "2. Bioremodeladores: Profhilo y Profhilo Structura",
+          "3. NCTF (Hidratación para la ojera)",
+          "4. PDRN de salmón",
+          "5. Ácido hialurónico (Fillers)"
+      ]
+    }
+  },
+  "contact":{
+    "title":"Visita Nuestra Clínica"
   }
 }
