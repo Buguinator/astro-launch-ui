@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar";
 import imgDr from "../../assets/dr.jpg";
 
 export function HeroSectionTwo() {
+  const { t } = useTranslation();
   return (
     <ThemeProvider>
       <Navbar />
@@ -15,7 +17,7 @@ export function HeroSectionTwo() {
                 variant="small"
                 className="rounded-md bg-[#365D78] py-0.5 px-3 font-medium text-white"
               >
-                Conoce a
+                {t("dr.hero.up")}
               </Typography>
               {/* <Typography
                 color="dark"
@@ -34,22 +36,18 @@ export function HeroSectionTwo() {
               color="blue-gray"
               className="mb-8 leading-tight lg:text-6xl"
             >
-              Dr. Javier Parada Armonía en Cirugía Plástica
+              {t("dr.hero.title")}
             </Typography>
             <Typography variant="lead" className="lg:pr-10 text-blue-gray-800">
-              El Dr. Parada es un Cirujano Plástico Certificado por el Consejo
-              Mexicano de Cirugía Plástica, Estética y Reconstructiva (No.
-              2546), con práctica en Guadalajara y Tuxtla Gutiérrez.
+              {t("dr.hero.subtitle")}
             </Typography>
             <Typography className="lg:pr-10 text-blue-gray-800 text-base pt-5">
-              Su enfoque personalizado y técnicas avanzadas garantizan
-              resultados naturales y armoniosos, priorizando la seguridad y
-              satisfacción de cada paciente.
+              {t("dr.hero.description")}
             </Typography>
             <div className="mt-12 flex flex-wrap gap-3 justify-start">
               <a href="/contacto">
                 <Button className="flex items-center bg-[#365D78]">
-                  Agendar cita
+                  {t("dr.hero.button")}
                 </Button>
               </a>
             </div>

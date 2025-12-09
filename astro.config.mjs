@@ -8,8 +8,9 @@ export default defineConfig({
     react(),
     tailwind(),
     reactI18next({
-      defaultLocale: "en-US",
-      locales: ["en-US", "es-MX"],
+      defaultLocale: "es",
+      locales: ["es", "en"], // "es" primero ya que es el default
+      prefixDefaultLocale: false, // Esto hará que el español use /es/
     }),
   ],
 });

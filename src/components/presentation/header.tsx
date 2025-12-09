@@ -9,7 +9,6 @@ import imgCover from "../../assets/cover.jpg";
 import videoInstalaciones1 from "../../assets/video/instalaciones.webm";
 import videoInstalaciones2 from "../../assets/video/instalaciones.mp4";
 
-
 export function HeroPresentation() {
   const { t } = useTranslation();
 

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar"
 
@@ -7,6 +9,9 @@ import {
 } from "@material-tailwind/react";
 
 export function HeroSectionFour() {
+
+  const { t } = useTranslation();
+
   return (
     <ThemeProvider>
       <Navbar />
@@ -16,22 +21,15 @@ export function HeroSectionFour() {
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 !leading-tight lg:text-7xl z-20"
+            className="mb-4 !leading-tight lg:text-5xl z-20"
           >
-            Error 404
-          </Typography>
-          <Typography
-            variant="lead"
-            color="white"
-            className="mb-12 w-full opacity-80 md:w-10/12 lg:w-7/12 mx-auto px-28 z-10"
-          >
-            Próximamente
+            {t("404.title")}
           </Typography>
           <div className="w-auto mx-auto">
             <div className="flex items-center">
               <a className="z-10" href="./">
                 <Button className="w-full px-4 bg-rose">
-                  Ir a inicio
+                  {t("404.button")}
                 </Button>
               </a>
             </div>

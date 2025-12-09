@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useEffect, useState } from "react";
 import AOS from "aos";
 
@@ -11,7 +13,8 @@ import imgDiodo3 from "../../assets/p-diodo/3.webp";
 import imgDiodo4 from "../../assets/p-diodo/4.webp";
 import imgDiodo5 from "../../assets/p-diodo/5.webp";
 
-export function AstroSection() {
+export function DiodoService() {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const images = [imgDiodo1, imgDiodo2, imgDiodo3, imgDiodo4, imgDiodo5];
 
@@ -44,19 +47,13 @@ export function AstroSection() {
         >
           <CardBody className="md:py-20 md:px-14 md:w-12/12 lg:w-7/12" data-aos="fade-up">
             <Typography color="white" className="font-semibold text-lg">
-              Depilación Láser Diodo
+              {t("home.diodoService.subtitle")}
             </Typography>
             <Typography variant="h2" color="white" className="mb-5 font-semibold pt-4">
-              ¿En que consiste?
+              {t("home.diodoService.title")}
             </Typography>
             <Typography color="white">
-              La depilación láser diodo es un tratamiento seguro y eficaz para
-              la eliminación permanente del vello no deseado. Utilizando
-              tecnología de luz laser de diodo, se dirige selectivamente a la
-              melanina del folículo piloso, destruyéndolo y previniendo el
-              crecimiento futuro del vello. Este procedimiento es adecuado para
-              una amplia gama de tipo de piel y vello, y ofrece resultados
-              duraderos con mínimas molestias y tiempo de inactividad.
+              {t("home.diodoService.description")}
             </Typography>
             <a href="/contacto">
               <Button
@@ -65,7 +62,7 @@ export function AstroSection() {
                 variant="outlined"
                 className="flex items-center mt-12"
               >
-                Contacto
+                {t("home.diodoService.button")}
               </Button>
             </a>
           </CardBody>
@@ -108,4 +105,4 @@ export function AstroSection() {
   );
 }
 
-export default AstroSection;
+export default DiodoService;

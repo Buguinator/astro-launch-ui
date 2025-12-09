@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useEffect, useRef } from "react";
 import { Typography } from "@material-tailwind/react";
 import img1 from "../../assets/certificados-dr/1.webp";
@@ -9,6 +11,8 @@ import img5 from "../../assets/certificados-dr/5.png";
 const logos = [img1, img2, img3, img4, img5];
 
 export function LogoSectionOne() {
+  const { t } = useTranslation();
+
   const marqueeRef = useRef(null);
 
   useEffect(() => {
@@ -36,7 +40,7 @@ export function LogoSectionOne() {
           color="blue-gray"
           className="mb-12 text-2xl md:text-3xl font-semibold"
         >
-          Con la confianza de los mejores aliados
+          {t("dr.certificates.title")}
         </Typography>
         <div className="relative w-full overflow-hidden h-[140px] flex items-center">
           {/* Contenedor del marquee */}

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { useEffect, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
@@ -9,19 +11,9 @@ import imgCorporal1 from "../../assets/p-corporales/1.webp";
 import imgCorporal2 from "../../assets/p-corporales/2.webp";
 import imgCorporal3 from "../../assets/p-corporales/3.webp";
 
-function StatsCard({ title }: { title: string }) {
-  return <li className="font-medium text-lg italic">{title}</li>;
-}
+export function ServicioCorporal() {
+  const { t } = useTranslation();
 
-const stats = [
-  { title: "Masajes postquirúrgicos" },
-  { title: "Radiofrecuencia" },
-  { title: "Masaje linfático" },
-  { title: "Ultrasonido" },
-  { title: "LPG-Endermologie corporal" },
-];
-
-export function PalettePresentation() {
   const [current, setCurrent] = useState(0);
   const images = [imgCorporal1, imgCorporal2, imgCorporal3];
 
@@ -50,7 +42,7 @@ export function PalettePresentation() {
     <ThemeProvider>
       <div className="relative w-screen bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden">
         <div
-          className="container mx-auto grid gap-10 items-center lg:grid-cols-2 relative lg:flex-row flex flex-col-reverse"
+          className="container grid mx-auto gap-10 items-center lg:grid-cols-2 relative lg:flex-row flex flex-col-reverse"
         >
           {/* Imagen */}
           <div
@@ -87,7 +79,7 @@ export function PalettePresentation() {
           {/* Texto */}
           <div className="order-1 lg:order-2 text-left lg:px-10 z-10" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-rose">
-              Moldea, tonifica y armoniza tu figura.
+              {t("home.bodyService.subtitle")}
             </Typography>
 
             <Typography
@@ -95,21 +87,21 @@ export function PalettePresentation() {
               color="blue-gray"
               className="mb-8 leading-tight"
             >
-              Procedimientos Corporales
+              {t("home.bodyService.title")}
             </Typography>
 
             <Typography color="gray" className="mb-8 text-lg">
-              En nuestra área de procedimientos corporales, nos enfocamos en brindarte tratamientos
-              especializados para moldear y mejorar tu figura, así como para optimizar tu recuperación
-              postquirúrgica.
+              {t("home.bodyService.description")}
             </Typography>
 
             <div>
-              <h6 className="font-medium text-lg mb-5">Servicios:</h6>
+              <h6 className="font-medium text-lg mb-5">{t("home.bodyService.sTitle")}</h6>
               <ul className="list-disc list-inside">
-                {stats.map((props, key) => (
-                  <StatsCard key={key} {...props} />
-                ))}
+                <li className="font-medium text-lg italic">{t("home.bodyService.1")}</li>
+                <li className="font-medium text-lg italic">{t("home.bodyService.2")}</li>
+                <li className="font-medium text-lg italic">{t("home.bodyService.3")}</li>
+                <li className="font-medium text-lg italic">{t("home.bodyService.4")}</li>
+                <li className="font-medium text-lg italic">{t("home.bodyService.5")}</li>
               </ul>
             </div>
           </div>
@@ -119,4 +111,4 @@ export function PalettePresentation() {
   );
 }
 
-export default PalettePresentation;
+export default ServicioCorporal;

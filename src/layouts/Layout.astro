@@ -1,16 +1,12 @@
 ---
-import { buildStaticPaths } from "astro-react-i18next/utils";
 import i18n from "i18next";
+
 import WhatsappBtn from "../components/WhatsappBtn.astro";
 export interface Props {
   title: string;
   metaDescription?: string;
 }
 const { title, metaDescription } = Astro.props;
-
-export function getStaticPaths() {
-  return buildStaticPaths();
-}
 ---
 <!DOCTYPE html>
 <html lang={i18n.language}>
@@ -41,7 +37,7 @@ export function getStaticPaths() {
     </script> -->
     <!-- End Google Tag Manager -->
   </head>
-  <body class="overflow-x-hidden">
+  <body>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript>
       <iframe

@@ -18,6 +18,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import imgLogo from "../assets/logoSkinAndShape.svg";
+import LanguageSelector from "./LanguageSelector";
 
 // nav list menu
 const navListMenuItems = [
@@ -114,15 +115,9 @@ function NavList() {
 }
 
 export default function ComplexNavbar() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [shouldShowBorder, setShouldShowBorder] = React.useState(false);
-
-  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/es";
-  console.log(currentPath);
-
-  const pathWithoutLang = currentPath.replace(/^\/es/, "");
-  console.log(pathWithoutLang);
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
@@ -166,37 +161,27 @@ export default function ComplexNavbar() {
         <div className="hidden lg:flex ml-auto">
           <NavList />
         </div>
+        <div className="ml-auto">
+          <LanguageSelector />
+        </div>
+        <a href="/contacto" className="hidden lg:block">
+          <Button className="bg-[#8d5f5b] hover:bg-[#d2938c]">{t("nav.contact")}</Button>
+        </a>
         <IconButton
           size="sm"
           color="blue-gray"
           variant="text"
           onClick={toggleIsNavOpen}
-          className="ml-auto mr-2 lg:hidden"
+          className="mr-2 lg:hidden"
         >
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
-        <div className="flex gap-2 mx-2">
-          <a
-            href={pathWithoutLang}
-            onClick={() => i18n.changeLanguage("es")}
-            className={i18n.language === "es" ? "text-black font-medium bg-gray-100 p-2 rounded" : "text-black p-2 rounded"}
-          >
-            ES
-          </a>
-          <a
-            href={pathWithoutLang}
-            onClick={() => i18n.changeLanguage("en")}
-            className={i18n.language === "en" ? "text-black font-medium bg-gray-100 p-2 rounded" : "text-black p-2 rounded"}
-          >
-            EN
-          </a>
-        </div>
-        <a href="/contacto">
-          <Button className="bg-[#8d5f5b] hover:bg-[#d2938c]">{t("nav.contact")}</Button>
-        </a>
       </div>
       <Collapse open={isNavOpen} className="overflow-scroll">
         <NavList />
+        <a href="/contacto">
+          <Button className="bg-[#8d5f5b] hover:bg-[#d2938c]">{t("nav.contact")}</Button>
+        </a>
       </Collapse>
     </Navbar>
   );

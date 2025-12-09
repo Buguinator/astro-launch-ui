@@ -1,47 +1,22 @@
-import React, { useEffect } from "react";
-// import Script from "next/script";
+import { useTranslation } from "react-i18next";
+
 import imgDr from "../../assets/dr.jpg";
 import imgDra from "../../assets/dra.jpeg";
 
-import {
-  Typography,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 
-function PaddleLoader() {
-  useEffect(() => {
-    // Check if we are in the browser environment
-    if (typeof window !== "undefined") {
-      const script = document.createElement("script");
-      script.src = "https://cdn.paddle.com/paddle/paddle.js";
-      script.onload = () => {
-        // Access the Paddle global object from the script
-        window.Paddle.Setup({
-          vendor: Number(102023),
-        });
-      };
-      document.body.appendChild(script);
-    }
-  }, []);
-
-  return null;
-}
-
-export function PricingSectionOne() {
+export function Especialistas() {
+  const { t } = useTranslation();
+  
   return (
     <>
-      <PaddleLoader />
       <section id="pricing" className="py-36 px-8">
         <div className="container mx-auto text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
-            Especialistas
+            { t("home.specialist.title")}
           </Typography>
           <Typography className="mb-8 font-normal !text-gray-500 text-lg md:text-xl">
-            Profesionales calificados y expertos en el campo de la medicina
-            estética y el cuidado de la piel.
+            { t("home.specialist.description")}
           </Typography>
         </div>
         <div className="mt-12">
@@ -131,7 +106,7 @@ export function PricingSectionOne() {
                     </g>
                   </svg>
                   <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-rose hover:text-white">
-                    Saber más
+                    { t("home.specialist.buttonDra")}
                   </button>
                 </div>
               </div>
@@ -207,7 +182,7 @@ export function PricingSectionOne() {
                     </g>
                   </svg>
                   <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-slate hover:text-white">
-                    Saber más
+                    { t("home.specialist.buttonDr")}
                   </button>
                 </div>
               </div>
@@ -219,4 +194,4 @@ export function PricingSectionOne() {
   );
 }
 
-export default PricingSectionOne;
+export default Especialistas;

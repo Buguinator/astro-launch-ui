@@ -1,7 +1,9 @@
-import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
-import { StarIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from "react-i18next";
 
-export function AstroSection() {
+import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
+
+export function Mapa() {
+  const { t } = useTranslation();
   return (
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
@@ -11,30 +13,24 @@ export function AstroSection() {
         >
           <CardBody className="py-10 md:py-20 px-12 md:px-14 md:w-7/12">
             <Typography color="white" className="font-normal opacity-70 text-lg md:text-xl">
-              Visitanos
+              {t("home.schedules.subtitle")}
             </Typography>
             <Typography
               variant="h2"
               color="white"
               className="mb-5 font-normal"
             >
-              Horarios:
+              {t("home.schedules.title")}
             </Typography>
             <Typography variant="lead" color="white" className="text-lg md:text-xl">
-              Lunes a Viernes 9:00 a 14:00 hrs y de 16:00 a 20:00 hrs
+              {t("home.schedules.hours")}
             </Typography>
-            <Typography variant="lead" color="white" className="text-lg md:text-xl">
-              Sábados 9:00 hrs a 14:00 hrs
-            </Typography>
-            <span className="text-white pt-5 block text-lg md:text-base font-light">
-              Torre Médica 2 Hospital San Javier. Consultorio 812 <br />
-              C. José María Heredia 2960,
-              Prados Providencia, 44670, <br />
-              Guadalajara, Jalisco, México.
+            <span className="text-white pt-5 block text-lg md:text-base font-light w-[100%] md:w-[75%]">
+              {t("home.schedules.location")}
             </span>
             <a href="/contacto">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">
-                Contáctanos
+                {t("home.schedules.button")}
               </Button>
             </a>
           </CardBody>
@@ -47,4 +43,4 @@ export function AstroSection() {
   );
 }
 
-export default AstroSection;
+export default Mapa;

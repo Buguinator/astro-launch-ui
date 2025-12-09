@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GithubPresentation from "../components/presentation/github"
+import FooterFreePresentation from "../components/presentation/footerFree"
+import Navbar from "../components/navbar"
+import TerminosDra from '@/components/terminos-dra.astro';
+export async function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'en' } }
+  ];
+}
+---
+
+<Layout title="Presentation Page">
+	<main>
+    <Navbar client:only="react" />
+    <TerminosDra />
+    <!-- Horarios y mapa -->
+    <GithubPresentation client:only="react" />
+    <!-- Footer -->
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

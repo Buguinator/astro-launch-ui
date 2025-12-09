@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import React from "react";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import {
@@ -81,14 +82,15 @@ const features = [
 ];
 
 export function FeatureSectionOne() {
+  const { t } = useTranslation();
   return (
     <section className="pt-28 pb-12 px-4">
       <div className="container mx-auto mb-20 text-center">
         <Typography color="dark" className="mb-2 font-medium text-base">
-          Resultados naturales, atención experta.
+          {t("dr.features.subtitle")}
         </Typography>
         <Typography variant="h2" color="blue-gray" className="mb-4">
-          Servicios principales
+          {t("dr.features.title")}
         </Typography>
       </div>
     </section>

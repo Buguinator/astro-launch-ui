@@ -1,0 +1,60 @@
+---
+export async function getStaticPaths() {
+  return [{ params: { locale: undefined } }, { params: { locale: "en" } }];
+}
+
+import "aos/dist/aos.css";
+
+import Layout from "../layouts/Layout.astro";
+import HeaderPresentation from "../components/presentation/header";
+import LogosPresentation from "../components/presentation/logos";
+import ServicioCorporal from "../components/presentation/ServicioCorporal";
+import ServicioVydence from "../components/presentation/ServicioVydence";
+import ServicioFacial from "../components/presentation/ServicioFacial";
+import DiodoService from "../components/presentation/DiodoService";
+import Mapa from "../components/presentation/Mapa";
+import Especialistas from "../components/presentation/Especialistas";
+import FooterFreePresentation from "../components/presentation/footerFree";
+import Feed from "../components/presentation/feed";
+import Aparatologia from "../components/presentation/Aparatologia";
+import ServicioTratamientos from "../components/presentation/ServicioTratamientos";
+---
+
+<Layout title="Presentation Page">
+  <main>
+    <!-- Hero -->
+    <HeaderPresentation client:only="react" />
+    <!-- Porcedimientos faciales -->
+    <ServicioFacial client:only="react" />
+    <!-- Procedimientos corporales -->
+    <ServicioCorporal client:only="react" />
+    <!-- Aparatologia -->
+    <div class="h-[150px]"></div>
+    <Aparatologia client:only="react" />
+    <div class="h-[100px]"></div>
+    <!-- Tratamientos -->
+    <ServicioTratamientos client:only="react" />
+    <!-- Tratamientos lasér -->
+    <ServicioVydence client:only="react" />
+    <!-- Lasér Diodo -->
+    <DiodoService client:only="react" />
+    <!-- Especialistas -->
+    <Especialistas client:only="react" />
+    <!-- Logotipos carousel -->
+    <LogosPresentation client:only="react" />
+    <!-- Google e Instagram -->
+    <Feed
+      client:only="react"
+      id="elfsight-app-004455a3-ae7a-4b8f-b476-71b32fc12a2f"
+    />
+    <Feed
+      client:only="react"
+      id="elfsight-app-4a74c6a9-f329-4e61-bcd4-66dee6bdc192"
+    />
+
+    <!-- Horarios y mapa -->
+    <Mapa client:only="react" />
+    <!-- Footer -->
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

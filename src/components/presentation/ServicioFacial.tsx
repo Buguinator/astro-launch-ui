@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { useEffect, useState } from "react";
@@ -17,23 +18,9 @@ import imgFacial9 from "../../assets/p-faciales/10.webp";
 import imgFacial10 from "../../assets/p-faciales/11.webp";
 import imgFacial11 from "../../assets/p-faciales/12.webp";
 
-function StatsCard({ title }: { title: string }) {
-  return <li className="font-medium text-lg italic">{title}</li>;
-}
+export function ServicioFacial() {
+  const { t } = useTranslation();
 
-const stats = [
-  { title: "Peelings" },
-  { title: "Fillers" },
-  { title: "Toxina Botulínica" },
-  { title: "Bioestimuladores" },
-  { title: "Bioremodeladores" },
-  { title: "Faciales" },
-  { title: "Hydrafaciales" },
-  { title: "Microneedling" },
-  { title: "LPG-Endermologie facial" },
-];
-
-export function FigmaPresentation() {
   const [current, setCurrent] = useState(0);
   const images = [
     imgFacial1,
@@ -75,30 +62,33 @@ export function FigmaPresentation() {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="lg:w-1/2" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-rose">
-              Armonía facial sin perder tu esencia.
-            </Typography>
+              {t("home.facialService.subtitle")}
+            </Typography> 
 
             <Typography
               variant="h2"
               color="blue-gray"
               className="mb-5 leading-tight"
             >
-              Procedimientos Faciales
+              {t("home.facialService.title")}
             </Typography>
 
             <Typography color="blue-gray" className="mb-10 lg:w-[30rem]">
-              En nuestra área de procedimientos faciales, nos dedicamos a realzar tu belleza natural
-              y rejuvenecer tu rostro con una amplia gama de tratamientos avanzados y personalizados.
-              Nuestro equipo de expertos te brindará una atención integral y te guiará en la elección
-              de los procedimientos más adecuados para tus necesidades y objetivos estéticos.
+              {t("home.facialService.description")}
             </Typography>
 
             <div>
-              <h6 className="font-medium text-lg mb-5">Servicios:</h6>
+              <h6 className="font-medium text-lg mb-5">{t("home.facialService.sTitle")}</h6>
               <ul className="list-disc list-inside">
-                {stats.map((props, key) => (
-                  <StatsCard key={key} {...props} />
-                ))}
+                <li className="font-medium text-lg italic">{t("home.facialService.1")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.2")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.3")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.4")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.5")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.6")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.7")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.8")}</li>
+                <li className="font-medium text-lg italic">{t("home.facialService.9")}</li>
               </ul>
             </div>
           </div>
@@ -138,4 +128,4 @@ export function FigmaPresentation() {
   );
 }
 
-export default FigmaPresentation;
+export default ServicioFacial;

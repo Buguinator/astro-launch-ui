@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Typography } from "@material-tailwind/react";
 
 import img1 from "../../assets/aliance/1.webp";
@@ -22,11 +24,12 @@ const logos = [
 ];
 
 export function LogoSectionOne() {
+  const { t } = useTranslation();
   return (
     <section className="py-8 px-8 lg:py-20 overflow-hidden">
       <div className="container mx-auto text-center">
         <Typography variant="h2" color="blue-gray" className="mb-8 text-[1.5rem] md:text-[2rem] pt-20 md:pt-10">
-          Con la confianza de los mejores aliados
+          {t("home.aliance")}
         </Typography>
 
         {/* Carrusel continuo */}

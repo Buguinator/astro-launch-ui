@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { useEffect } from "react";
@@ -6,26 +8,8 @@ import AOS from "aos";
 
 import videoLaser from "../../assets/video/vydence.webm";
 
-function StatsCard({ title }: { title: string }) {
-  return (
-    <li className="font-medium text-lg italic">
-      {title}
-    </li>
-  );
-}
-
-const stats = [
-  { title: "Cicatrices de acné" },
-  { title: "Cicatrices post-quirúrgicas" },
-  { title: "Estrías" },
-  { title: "Rejuvenecimiento de cara y cuello" },
-  { title: "Tratamientos para acné inflamatorio" },
-  { title: "Manchas solares" },
-  { title: "Pigmentaciones" },
-  { title: "Melasma" },
-];
-
-export function CodePresentation() {
+export function ServicioVydence() {
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({
@@ -41,7 +25,7 @@ export function CodePresentation() {
           {/* Texto */}
           <div className="text-left lg:px-20" data-aos="fade-up">
             <Typography className="flex items-center justify-start font-bold text-lg mb-5 text-rose">
-              Tratamiento Láser
+              {t("home.vydenceService.subtitle")}
             </Typography>
 
             <Typography
@@ -49,22 +33,24 @@ export function CodePresentation() {
               color="blue-gray"
               className="mb-8 leading-tight"
             >
-              Láser Vydence
+              {t("home.vydenceService.title")}
             </Typography>
 
             <Typography color="blue-gray" className="lg:pr-20">
-              Descubre el poder de la tecnología láser Vydence, diseñada para
-              tratar una amplia gama de afecciones cutáneas con precisión y
-              eficacia. Con Vydence, te ofrecemos soluciones personalizadas para
-              que luzcas una piel radiante y saludable.
+              {t("home.vydenceService.description")}
             </Typography>
 
             <div className="mt-10">
-              <h6 className="font-bold text-lg mb-5">Ayuda a:</h6>
+              <h6 className="font-bold text-lg mb-5">{t("home.vydenceService.sTitle")}</h6>
               <ul className="list-disc list-inside">
-                {stats.map((props, key) => (
-                  <StatsCard key={key} {...props} />
-                ))}
+                <li className="font-medium text-lg italic">{t("home.vydenceService.1")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.2")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.3")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.4")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.5")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.6")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.7")}</li>
+                <li className="font-medium text-lg italic">{t("home.vydenceService.8")}</li>
               </ul>
             </div>
           </div>
@@ -90,4 +76,4 @@ export function CodePresentation() {
   );
 }
 
-export default CodePresentation;
+export default ServicioVydence;

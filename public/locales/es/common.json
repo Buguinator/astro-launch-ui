@@ -1,0 +1,375 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "specialist": "Especialistas",
+    "dr": "Dr. Javier Parada",
+    "dra": "Dra. Mariana Leon Quintero",
+    "download": "Descargar menú",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Tu figura y tu forma, en manos de profesionales.",
+      "brand": "Skin & Shape",
+      "title": "Clínica Dermatológica y Cirugía Plástica",
+      "description": "Clínica médica especializada en el cuidado de la piel, así como en procedimientos quirúrgicos estéticos y reconstructivos.",
+      "button": "Contacto"
+    },
+    "facialService": {
+      "subtitle": "Armonía facial sin perder tu esencia.",
+      "title": "Procedimientos Faciales",
+      "description": "En nuestra área de procedimientos faciales, nos dedicamos a realzar tu belleza natural y rejuvenecer tu rostro con una amplia gama de tratamientos avanzados y personalizados. Nuestro equipo de expertos te brindará una atención integral y te guiará en la elección de los procedimientos más adecuados para tus necesidades y objetivos estéticos.",
+      "sTitle": "Servicios",
+      "1": "Peelings",
+      "2": "Fillers",
+      "3": "Toxina Botulínica",
+      "4": "Bioestimuladores",
+      "5": "Bioremodeladores",
+      "6": "Faciales",
+      "7": "Hydrafaciales",
+      "8": "Microneedling",
+      "9": "LPG-Endermologie Facial"
+    },
+    "bodyService": {
+      "subtitle": "Moldea, tonifica y armoniza tu figura.",
+      "title": "Procedimientos Corporales",
+      "description": "En nuestra área de procedimientos corporales, nos enfocamos en brindarte tratamientos especializados para moldear y mejorar tu figura, así como para optimizar tu recuperación postquirúrgica.",
+      "sTitle": "Servicios",
+      "1": "Masajes postquirúrgicos",
+      "2": "Radiofrecuencia",
+      "3": "Masaje linfático",
+      "4": "Ultrasonido",
+      "5": "LPG-Endermologie Corporal"
+    },
+    "deviceService": {
+      "subtitle": "Tecnología estética avanzada para realzar tu belleza natural.",
+      "title": "Aparatología",
+      "sTitle": "Servicios:",
+      "service": {
+        "1": {
+          "title": "1. LPG - Endermologie",
+          "subtitle": "¿De qué se trata?",
+          "description": "El LPG Endermologie es un tratamiento de estimulación mecánica no invasiva que ayuda a acelerar la recuperación postoperatoria después de una cirugía plástica. Favorece el drenaje linfático, reduce la retención de líquidos y la inflamación, mejora la circulación y contribuye a una reafirmación más uniforme de la piel, ayudando a disminuir fibrosis y mejorar la apariencia del tejido tratado.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Drena líquidos y reduce la inflamación, acelerando la recuperación.",
+            "2": "Previene y trata la fibrosis, evitando irregularidades en la piel.",
+            "3": "Activa la circulación sanguínea y linfática, favoreciendo la oxigenación de los tejidos.",
+            "4": "Disminuye el dolor y la sensación de tirantez después de la cirugía."
+          }
+        },
+        "2": {
+          "title": "2. Radiofrecuencia",
+          "subtitle": "¿De qué se trata?",
+          "description": "La radiofrecuencia es un tratamiento estético no invasivo que utiliza ondas electromagnéticas de alta frecuencia para generar calor controlado en las capas profundas de la piel. Este calor estimula la producción de colágeno y elastina, las proteínas responsables de la firmeza y elasticidad de la piel. El resultado es una piel más tersa, firme y joven.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Reafirmación de la piel: Estimula la producción de colágeno y elastina, tensando la piel flácida",
+            "2": "Mejora del contorno facial y corporal: Puede ayudar a definir el óvalo facial y reducir la flacidez en áreas como el abdomen, los brazos y los muslos.",
+            "3": "Reducción de la celulitis: El calor generado puede ayudar a romper los depósitos de grasa y mejorar la apariencia de la celulitis."
+          }
+        },
+        "3": {
+          "title": "3. Ultrasonido",
+          "subtitle": "¿De qué se trata?",
+          "description": "El ultrasonido utiliza ondas sonoras de alta frecuencia para penetrar en las capas de la piel. Estas ondas generan vibraciones y calor suave en los tejidos, produciendo diversos efectos beneficiosos según la aplicación y la intensidad utilizada. Puede emplearse para estimular la circulación, facilitar la penetración de activos, tensar la piel (en el caso del ultrasonido focalizado de alta intensidad – HIFU), o incluso para ayudar en la reducción de grasa localizada (en ciertas modalidades).",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Estimulación de la circulación: Mejora el flujo sanguíneo en la zona tratada, lo que puede favorecer la oxigenación y la nutrición de los tejidos.",
+            "2": "Facilitación de la penetración de activos: Las ondas de ultrasonido pueden ayudar a que los productos cosméticos y los principios activos penetren más profundamente en la piel, potenciando sus efectos.",
+            "3": "Tensado de la piel (HIFU): Ciertas tecnologías de ultrasonido focalizado de alta intensidad (HIFU) pueden estimular la producción de colágeno en las capas profundas, lo que lleva a un efecto de lifting y tensado de la piel.",
+            "4": "Reducción de grasa localizada: Algunas tecnologías de ultrasonido específicas están diseñadas para romper las células de grasa, ayudando a reducir la adiposidad en áreas concretas."
+          }
+        },
+        "4": {
+          "title": "4. Masaje postquirúrgico",
+          "subtitle": "¿De qué se trata?",
+          "description": "Los masajes postquirúrgicos son un tratamiento terapéutico diseñado para favorecer una recuperación más rápida y cómoda después de una cirugía estética o reconstructiva. Mediante técnicas suaves y específicas, se reduce la inflamación, se mejora la circulación linfática y se evitan complicaciones como fibrosis o endurecimiento del tejido. Este tipo de masaje también ayuda a disminuir el dolor y facilita que los tejidos sanen de forma uniforme.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Favorece la recuperación postquirúrgica.",
+            "2": "Mejora la circulación linfática.",
+            "3": "Evita complicaciones como fibrosis o endurecimiento del tejido.",
+            "4": "Disminuye el dolor y facilita que los tejidos sanen de forma uniforme."
+          }
+        },
+        "5": {
+          "title": "5. Masajes linfático",
+          "subtitle": "¿De qué se trata?",
+          "description": "El masaje linfático es una técnica manual suave que estimula el sistema linfático para mejorar la eliminación de toxinas, líquidos retenidos y desechos metabólicos. Es ideal para personas con inflamación, piernas cansadas, retención de líquidos o como complemento de tratamientos estéticos y postoperatorios. La técnica se realiza con movimientos lentos y precisos que activan el flujo linfático sin causar dolor.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Reduce la retención de líquidos y mejora la circulación.",
+            "2": "Disminuye inflamación en cuerpo y rostro.",
+            "3": "Ayuda a eliminar toxinas de forma natural.",
+            "4": "Alivia la sensación de pesadez y cansancio.",
+            "5": "Complementa tratamientos estéticos y postoperatorios."
+          }
+        },
+        "6": {
+          "title": "6. LPG-Endermologie Facial",
+          "subtitle": "¿De qué se trata?",
+          "description": "LPG Endermologie Facial es un tratamiento estético no invasivo que utiliza estimulación mecánica motorizada para reactivar de manera natural la producción de colágeno, elastina y ácido hialurónico. A través de un cabezal especializado, se realiza una succión controlada y precisa que mejora la firmeza de la piel, redefine contornos y aporta un efecto lifting inmediato.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1": "Reafirma la piel y mejora su elasticidad.",
+            "2": "Reduce líneas de expresión y arrugas finas.",
+            "3": "Aporta luminosidad y homogeneidad al rostro.",
+            "4": "Redefine el óvalo facial de manera natural.",
+            "5": "Estimula la producción de colágeno sin dolor ni tiempo de recuperación."
+          }
+        }
+      }
+    },
+    "treatmentsService": {
+      "subtitle": "Confía en la experiencia, luce una piel renovada.",
+      "title": "Tratamientos",
+      "sTitle": "Servicios:",
+      "service": {
+        "1": {
+          "title": "1. IPL",
+          "subtitle": "¿De qué se trata?",
+          "description": "El tratamiento con IPL, o Luz Pulsada Intensa, es una innovadora solución estética que utiliza pulsos de luz de alta intensidad para tratar diversas afecciones de la piel. A diferencia del láser, que emplea una sola longitud de onda de luz, el IPL emite un amplio espectro de luz que se dirige a múltiples cromóforos en la piel como la melanina y la hemoglobina. Esto permite tratar eficazmente manchas oscuras, rojeces y signos de envejecimiento, logrando una piel más uniforme, luminosa y rejuvenecida."
+        },
+        "2": {
+          "title": "2. Tratamiento con láser",
+          "subtitle": "¿De qué se trata?",
+          "description": "En nuestra clínica, ofrecemos tratamientos láser de última generación diseñados para rejuvenecer tu piel, atenuar manchas y mejorar la apariencia de cicatrices. Nuestros especialistas utilizan tecnología láser avanzada para estimular la producción de colágeno, eliminar pigmentación no deseada y suavizar la textura de la piel, logrando resultados visibles y duraderos.",
+          "benefits": "Servicios:",
+          "benefitsList": {
+            "1": "Cicatrices de acné.",
+            "2": "Cicatrices post-quirúrgicas.",
+            "3": "Estrías.",
+            "4": "Rejuvenecimiento de cara y cuello.",
+            "5": "Tratamientos para acné inflamatorio.",
+            "6": "Manchas solares.",
+            "7": "Pigmentaciones.",
+            "8": "Melasma."
+          }
+        },
+        "3": {
+          "title": "3. NANOGLOW (Nanopore + AGF/PDRN)",
+          "subtitle": "¿De qué se trata?",
+          "description": "¡Descubre una piel más radiante y fresca! Revitaliza tu piel con este innovador tratamiento de microinyecciones. Estimula la producción de colágeno y mejora la textura, suavizando arrugas y líneas finas. Ayuda a unificar el tono de la piel, proporciona hidratación y genera un efecto glow."
+        },
+        "4": {
+          "title": "4. EXOGLOW (Nanopore + Exosomas)",
+          "subtitle": "¿De qué se trata?",
+          "description": "¡Descubre una piel más radiante y fresca! Revitaliza tu piel con este innovador tratamiento de microinyecciones. Estimula la producción de colágeno y mejora la textura, suavizando arrugas y líneas finas. Ideal para cicatrices y rejuvenecimiento de la piel."
+        }
+      }
+    },
+    "vydenceService": {
+      "subtitle": "Tratamiento Láser",
+      "title": "Láser Vydence",
+      "description": "Descubre el poder de la tecnología láser Vydence, diseñada para tratar una amplia gama de afecciones cutáneas con precisión y eficacia. Con Vydence, te ofrecemos soluciones personalizadas para que luzcas una piel radiante y saludable.",
+      "sTitle": "Ayuda a:",
+      "1": "Cicatrices de acné",
+      "2": "Cicatrices post-quirúrgicas",
+      "3": "Estrías",
+      "4": "Rejuvenecimiento de cara y cuello",
+      "5": "Tratamientos para acné inflamatorio",
+      "6": "Manchas solares",
+      "7": "Pigmentaciones",
+      "8": "Melasma"
+    },
+    "diodoService": {
+      "subtitle": "¿En que consiste?",
+      "title": "Depilación Láser Diodo",
+      "description": "La depilación láser diodo es un tratamiento seguro y eficaz para la eliminación permanente del vello no deseado. Utilizando tecnología de luz laser de diodo, se dirige selectivamente a la melanina del folículo piloso, destruyéndolo y previniendo el crecimiento futuro del vello. Este procedimiento es adecuado para una amplia gama de tipo de piel y vello, y ofrece resultados duraderos con mínimas molestias y tiempo de inactividad.",
+      "button": "Agenda tu consulta"
+    },
+    "specialist": {
+      "title": "Especialistas",
+      "description": "Profesionales calificados y expertos en el campo de la medicina estética y el cuidado de la piel.",
+      "buttonDr": "Saber más",
+      "buttonDra": "Saber más"
+    },
+    "aliance": "Con la confianza de los mejores aliados",
+    "customers": "Lo que dicen nuestros clientes",
+    "schedules": {
+      "title": "Horarios:",
+      "subtitle": "Visitanos",
+      "hours": "Lunes a Viernes 9:00 a 14:00 hrs y de 16:00 a 20:00 hrs\n\nSábados 9:00 hrs a 14:00 hrs",
+      "location": "Torre Médica 2 Hospital San Javier. Consultorio 812\n\nC. José María Heredia 2960, Prados Providencia, 44670,\n\nGuadalajara, Jalisco, México.",
+      "button": "Contáctanos"
+    }
+  },
+  "404": {
+    "title": "Página no encontrada",
+    "button": "Volver al inicio"
+  },
+  "footer": {
+    "quickLinks": "Enlaces rápidos",
+    "home": "Inicio",
+    "contact": "Contacto",
+    "draTems": "Términos y Condiciones Dra. Mariana León-Quintero",
+    "drTems": "Términos y Condiciones Dr. Javier Parada"
+  },
+  "dr":{
+    "hero":{
+      "title": "Dr. Javier Parada Armonía en Cirugía Plástica",
+      "up": "Conoce a",
+      "subtitle": "El Dr. Parada es un Cirujano Plástico Certificado por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva (No. 2546), con práctica en Guadalajara y Tuxtla Gutiérrez.",
+      "description": "Su enfoque personalizado y técnicas avanzadas garantizan resultados naturales y armoniosos, priorizando la seguridad y satisfacción de cada paciente.",
+      "button": "Agenda tu consulta"
+    },
+    "about":{
+      "description":"Graduado con honores de la Universidad Autónoma de Guadalajara, realizó su entrenamiento en Cirugía General en el Centro Médico Siglo XXI (CDMX) y posteriormente la subespecialidad en Cirugía Plástica, Estética y Reconstructiva en el Hospital Civil de Guadalajara, uno de los más prestigiosos del país.",
+      "fTitle":"Su formación internacional incluye rotaciones en cirugía de contorno corporal, mamaria y facial en:",
+      "fList":{
+        "1":"Clínica Dhara, Bogotá (Dr. Alfredo Hoyos – creador de Total Definer®).",
+        "2":"Clínica Sensabell, Valencia, España (Dr. Jesús Centeno).",
+        "3":"Beverly Hills Center for Plastic & Laser Surgery, California, USA (Dr. Ben Talei)."
+      },
+      "mTitle":"Actualmente es miembro de:",
+      "mList":{
+        "1":"Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva (AMCPER).",
+        "2":"The International Society of Aesthetic Plastic Surgery (ISAPS).",
+        "3":"TOTAL DEFINER® by Dr. Alfredo Hoyos."
+      }
+    },
+    "certificates":{ "title":"Con la confianza de los mejores aliados" },
+    "features":{
+      "subtitle":"Resultados naturales, atención experta.",
+      "title":"Servicios principales"
+    },
+    "corporalService":{
+      "title":"Contorno Corporal",
+      "subtitle":"Moldea, tonifica y armoniza tu figura.",
+      "text":"Servicios:",
+      "list":{
+        "1":{
+          "title":"1. Lipoinyección Glútea",
+          "process":"Procedimiento seguro:",
+          "processDescription":"Realizado por cirujanos plásticos certificados, con tecnología de vanguardia y los más altos estándares de calidad.",
+          "benefits":"Doble beneficio:",
+          "benefitsDescription":"Eliminamos la grasa no deseada de áreas como el abdomen, los músculos o la espalda, ¡y la transformamos en la figura que siempre has deseado!",
+          "results":"Resultados inmediatos:",
+          "resultsDescription":"Utilizamos tu propia grasa, lo que garantiza resultados armónicos y duraderos."
+        },
+        "2":{
+          "title":"2. Abdominoplastía",
+          "process":"Cirujanos expertos:",
+          "processDescription":"Nuestro equipo de cirujanos plásticos certificados cuenta con apla experiencia en abdominoplastia.",
+          "benefits":"Tecnología de vanguardia:",
+          "benefitsDescription":"Utilizamos las técnicas más avanzadas para garantizar resultados óptimos y seguros.",
+          "results":"Atención personalizada:",
+          "resultsDescription":"Te acompañamos en cada paso del proceso, desde la consulta inicial hasta el seguimiento post-operatorio."
+        },
+        "3":{
+          "title":"3. Remodelación Costal",
+          "process":"Evaluación y Planificación:",
+          "processDescription":"Se realiza una evaluación detallada del paciente para determinar la viabilidad del procedimiento y establecer un plan quirúrgico personalizado.",
+          "benefits":"Técnica Quirúrgica:",
+          "benefitsDescription":"La intervención consiste en la modificación de las costillas, ya sea mediante resección parcial o remodelación del cartílago, buscando una reducción en la circunferencia de la cintura.",
+          "results":"Consideraciones Médicas:",
+          "resultsDescription":"La remodelación costal es un procedimiento que requiere una evaluación médica rigurosa debido a sus implicaciones. Se discuten en detalle los riesgos y beneficios con el paciente."
+        },
+        "4":{
+          "title":"4. Lipoescultura",
+          "process":"Evaluación y Marcaje:",
+          "processDescription":"Se realiza una evaluación detallada del paciente para identificar las áreas con acumulación de grasa y se procede al marcaje preoperatorio.",
+          "benefits":"Técnica Quirúrgica:",
+          "benefitsDescription":"Se emplean cánulas finas para la aspiración del tejido adiposo, permitiendo un modelado preciso del contorno corporal. Se pueden utilizar técnicas complementarias.",
+          "results":"Transferencia de grasa:",
+          "resultsDescription":"En algunos casos, la grasa extraída se procesa y se utiliza para aumentar el volumen de otras áreas del cuerpo, como los glúteos o el rostro."
+        }
+      }
+    },
+    "facialService":{
+      "title":"Cirugía Facial",
+      "subtitle":"Equilibrio, proporción y confianza.",
+      "description":"La cirugía facial es una opción para quienes desean resaltar su expresión natural, refrescar su apariencia o mejorar ciertos rasgos de manera sutil y armoniosa. A través de procedimientos seguros y personalizados, es posible suavizar signos de envejecimiento, equilibrar proporciones faciales o corregir aspectos que puedan generar incomodidad. Nuestro equipo médico te asesorará en cada paso, brindando un enfoque profesional y personalizado para que tomes la mejor decisión para ti. Conoce más sobre nuestros procedimientos y cómo podemos acompañarte en este proceso.",
+      "text":"Servicios:",
+      "list":[
+        "1. Lipopapada",
+        "2. Face Lift",
+        "3. Brow Lift",
+        "4. Neck Lift",
+        "5. Lip lift",
+        "6. Otoplastia",
+        "7. Aumento de mentón",
+        "8. Blefaroplastia",
+        "9. Rinoplastia"
+      ]
+    },
+    "breastService":{
+      "title":"Procedimientos de Mama",
+      "subtitle":"Equilibrio, feminidad y seguridad en cada detalle.",
+      "text":"Servicios:",
+      "list":{
+        "1":{
+          "title":"1. Mamoplastia de Aumento",
+          "what":"¿De qué se trata?",
+          "whatDescription":"Es un procedimiento que aumenta el tamaño y mejora la forma de los senos mediante implantes de silicona, adaptándose a la anatomía y deseos de cada persona.",
+          "benefits":"Beneficios:",
+          "benefitsDescription": [
+            "Mayor volumen y simetría.",
+            "Resultados naturales y personalizados.",
+            "Aumento de confianza y satisfacción personal."
+          ]
+        },
+        "2":{
+          "title":"2. Mastopexia",
+          "what":"¿De qué se trata?",
+          "whatDescription":"Este procedimiento eleva y reafirma los senos, eliminando el exceso de piel y reposicionando el tejido mamario. Puede realizarse con o sin implantes, según las necesidades de cada paciente.",
+          "benefits":"Beneficios:",
+          "benefitsDescription": [
+            "Mejora la forma y firmeza de los senos.",
+            "Ideal después del embarazo, lactancia o pérdida de peso.",
+            "Puede combinarse con implantes para mayor volumen."
+          ]
+        },
+        "3":{
+          "title":"3. Explantación",
+          "what":"¿De qué se trata?",
+          "whatDescription": "Es la extracción de implantes mamarios por decisión personal o razones médicas, restaurando el aspecto natural del busto. Puede combinarse con un levantamiento mamario para mejores resultados.",
+          "benefits":"Beneficios:",
+          "benefitsDescription": [
+            "Recuperación del tejido natural.",
+            "Opción segura para quienes ya no desearon los implantes.",
+            "Posibilidad de combinar con mastopexia para mayor firmeza"
+          ]
+        },
+        "4":{
+          "title":"4. Reducción Mamaría",
+          "what":"¿De qué se trata?",
+          "whatDescription":"Consiste en reducir el tamaño y peso de los senos, eliminando exceso de grasa, piel y tejido mamario para mejorar la proporción del cuerpo y aliviar molestías físicas.",
+          "benefits":"Beneficios:",
+          "benefitsDescription": [
+            "Alivio de dolores de espalda y cuello.",
+            "Mayor comodidad y movilidad.",
+            "Proporción más equilibrada del busto"
+          ]
+        },
+        "5":{
+          "title":"5. Reconstrucción Mamaría",
+          "what":"¿De qué se trata?",
+          "whatDescription": "Es un procedimiento para restaurar la forma del seno después de una mastectomía o lesión, utilizando implantes o tejido propio.",
+          "benefits":"Beneficios:",
+          "benefitsDescription": [
+            "Restaura la simetría y apariencia natural.",
+            "Mejora la autoestima y confianza.",
+            "Puede realizarse en diferentes etapas según cada paciente"
+          ]
+        }
+      }
+    },
+    "menService":{
+      "title":"Hombres",
+      "subtitle":"Tratamientos estéticos pensados para el hombre actual.",
+      "description":"Para el público masculino que busca realzar su apariencia y bienestar, ofrecemos una gama de procedimientos de cirugía plástica diseñados especialmente para sus necesidades. En el área de contorno corporal, contamos con la ginecomastia para reducir el exceso e tejido mamario, y la liposucción de alta definición para esculpir una figura atlética y definida, así como abdominoplastía para quienes desean un abdomen más firme y plano. Para el rostro, brindamos rinoplastía para armonizar la nariz, blefaroplastia para rejuvenecer los párpados, otoplastia para corregir las orejas prominentes y el rejuvenecimiento facial para una apariencia más fresca y masculina.",
+      "text":"Servicios:",
+      "list":[
+        "1. Ginecomastia",
+        "2. Liposucción de alta definición",
+        "3. Rinoplastia",
+        "4. Blefaroplastia",
+        "5. Otoplastia",
+        "6. Abdominoplastia",
+        "7. Rejuvenecimiento facial"
+      ]
+    }
+  }
+}

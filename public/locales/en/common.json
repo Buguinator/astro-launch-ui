@@ -1,0 +1,378 @@
+{
+  "nav": {
+    "home": "Home",
+    "specialist": "Specialists",
+    "dr": "Dr. Javier Parada",
+    "dra": "Dra. Mariana Leon Quintero",
+    "download": "Download menu",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Your figure and your shape, in the hands of professionals.",
+      "brand": "Skin & Shape",
+      "title": "Dermatology and Plastic Surgery Clinic",
+      "description": "Medical clinic specialized in the care of the skin, as well as in aesthetic and reconstructive surgical procedures.",
+      "button": "Contact"
+    },
+    "facialService": {
+      "subtitle": "Facial harmony without losing your essence.",
+      "title": "Facial procedures",
+      "description": "In our facial procedures area, we focus on enhancing your natural beauty and rejuvenating your face with a wide range of advanced and personalized treatments. Our team of experts provides comprehensive care and guides you in selecting the most appropriate procedures for your needs and aesthetic goals.",
+      "sTitle": "Services",
+      "1": "Peels",
+      "2": "Fillers",
+      "3": "Botulinum Toxin",
+      "4": "Biostimulators",
+      "5": "Bioremodelers",
+      "6": "Facials",
+      "7": "Hydrafacials",
+      "8": "Microneedling",
+      "9": "LPG–Endermologie Facial"
+    },
+    "bodyService": {
+      "subtitle": "Sculpt, tone, and harmonize your figure",
+      "title": "Body procedures",
+      "description": "In our body procedures area, we focus on offering specialized treatments to shape and enhance your figure, as well as optimize your postoperative recovery.",
+      "sTitle": "Services",
+      "1": "Post-surgical massage",
+      "2": "Radiofrequency",
+      "3": "Lymphatic massage",
+      "4": "Biostimulators",
+      "5": "Ultrasound",
+      "6": "LPG–Endermologie Body"
+    },
+    "deviceService": {
+      "subtitle": "Advanced aesthetic technology to enhance your beauty.",
+      "title": "Aesthetic Devices",
+      "sTitle": "Services:",
+      "service": {
+        "1": {
+          "title": "1. LPG Endermologie",
+          "subtitle": "What is it?",
+          "description": "LPG Endermologie is a non-invasive mechanical stimulation treatment that helps accelerate postoperative recovery after plastic surgery. It promotes lymphatic drainage, reduces fluid retention and inflammation, improves circulation, and contributes to more uniform skin tightening, helping decrease fibrosis and improve the appearance of treated tissue.",
+          "benefits": "Benefits",
+          "benefitsList": {
+            "1": "Drains fluids and reduces inflammation, accelerating recovery.",
+            "2": "Prevents and treats fibrosis, avoiding skin irregularities.",
+            "3": "Activates blood and lymphatic circulation, enhancing tissue oxygenation.",
+            "4": "Decreases pain and the sensation of tightness after surgery."
+          }
+        },
+        "2": {
+          "title": "2. Radiofrequency",
+          "subtitle": "What is it?",
+          "description": "Radiofrequency is a non-invasive aesthetic treatment that uses high-frequency electromagnetic waves to generate controlled heat in the deeper layers of the skin. This heat stimulates the production of collagen and elastin—the proteins responsible for skin firmness and elasticity. The result is smoother, firmer, and more youthful-looking skin.",
+          "benefits": "Beneficios",
+          "benefitsList": {
+            "1":"Skin tightening: Stimulates collagen and elastin production, tightening loose skin.",
+            "2":"Reduction of wrinkles and fine lines: Helps soften fine lines and wrinkles.",
+            "3":"Improves facial and body contour: Helps define the facial contour and reduce laxity in areas such as the abdomen, arms, and thighs.",
+            "4":"Reduction of cellulite: Heat can help break down fat deposits and improve the appearance of cellulite."
+          }
+        },
+        "3": {
+          "title": "3. Ultrasound",
+          "subtitle": "What is it?",
+          "description": "Ultrasound uses high-frequency sound waves to penetrate the layers of the skin. These waves generate gentle tissue vibrations and heat, producing various beneficial effects depending on the application and intensity used. It may be used to stimulate circulation, enhance product penetration, tighten the skin (such as with High-Intensity Focused Ultrasound – HIFU), or even assist in reducing localized fat (in certain modalities).",
+          "benefits": "Benefits",
+          "benefitsList": {
+            "1":"Circulation stimulation: Improves blood flow in the treated area, enhancing oxygenation and tissue nutrition.",
+            "2":"Enhanced penetration of active ingredients: Ultrasound waves can help cosmetic and active products penetrate deeper into the skin, boosting their effects.",
+            "3":"Skin tightening (HIFU): Certain high-intensity focused ultrasound technologies stimulate collagen production in deeper layers, providing a lifting and tightening effect.",
+            "4":"Reduction of localized fat: Some specific ultrasound technologies are designed to break down adipose cells, helping reduce fat in targeted areas."
+          }
+        },
+        "4": {  
+          "title": "4. Post-Surgical Massage",
+          "subtitle": "What is it?",
+          "description": "Post-surgical massages are a therapeutic treatment designed to support a faster and more comfortable recovery after cosmetic or reconstructive surgery. Using gentle and specialized techniques, they help reduce inflammation, improve lymphatic circulation, and prevent complications such as fibrosis or tissue hardening. This type of massage also helps decrease pain and promotes uniform healing of the tissues.",
+          "benefits": "Benefits",
+          "benefitsList": {
+            "1":"Reduces inflammation and edema.",
+            "2":"Prevents and treats fibrosis.",
+            "3":"Relieves pain and tension.",
+            "4":"Optimizes the healing process.",
+            "5":"Speeds up recovery and enhances aesthetic results."
+          }
+        },
+        "5": {  
+          "title": "5. Lymphatic Massage",
+          "subtitle": "What is it?",
+          "description": "Lymphatic massage is a gentle manual technique that stimulates the lymphatic system to improve the elimination of toxins, retained fluids, and metabolic waste. It is ideal for individuals experiencing inflammation, tired legs, fluid retention, or as a complement to aesthetic and post-surgical treatments. The technique is performed with slow, precise movements that activate lymphatic flow without causing pain.",
+          "benefits": "Benefits",
+          "benefitsList": {
+            "1":"Reduces fluid retention and improves circulation.",
+            "2":"Decreases inflammation in the body and face.",
+            "3":"Helps naturally eliminate toxins.",
+            "4":"Relieves feelings of heaviness and fatigue.",
+            "5":"Complements aesthetic and post-surgical treatments."
+          }
+        },
+        "6": {  
+          "title": "6. LPG Endermologie Facial",
+          "subtitle": "What is it?",
+          "description": "LPG Endermologie Facial is a non-invasive aesthetic treatment that uses motorized mechanical stimulation to naturally reactivate the production of collagen, elastin, and hyaluronic acid. Through a specialized treatment head, controlled and precise suction is applied to improve skin firmness, redefine contours, and deliver an immediate lifting effect.",
+          "benefits": "Benefits",
+          "benefitsList": {
+            "1":"Firms the skin and improves elasticity.",
+            "2":"Reduces fine lines and wrinkles.",
+            "3":"Enhances skin luminosity and evenness.",
+            "4":"Naturally redefines the facial contour.",
+            "5":"Stimulates collagen production without pain or downtime."
+          }
+        }
+      }
+    },
+    "treatmentsService": {
+      "subtitle": "Trust experience. Reveal renewed skin.",
+      "title": "Treatments",
+      "sTitle": "Services:",
+      "service": {
+        "1": {
+          "title": "1. IPL",
+          "subtitle": "What is it?",
+          "description": "The IPL treatment, or Intense Pulsed Light, is an innovative aesthetic solution that uses high-intensity light pulses to treat various skin conditions. Unlike laser treatment, which uses a single wavelength of light, IPL emits a broad spectrum of light that targets multiple chromophores in the skin, such as melanin and hemoglobin. This allows for effective treatment of dark spots, redness, and signs of aging, resulting in a more uniform, brighter, and rejuvenated skin."
+        },
+        "2": {
+          "title": "2. Laser treatment",
+          "subtitle": "What is it?",
+          "description": "At our clinic, we offer state-of-the-art laser treatments designed to rejuvenate your skin, reduce spots, and improve the appearance of scars. Our specialists use advanced laser technology to stimulate collagen production, remove unwanted pigmentation, and smooth skin texture, delivering visible and lasting results.",
+          "benefits": "Benefits:",
+          "benefitsList": {
+            "1": "Acne scars.",
+            "2": "Post-surgical scars.",
+            "3": "Stretch marks.",
+            "4": "Face and neck rejuvenation.",
+            "5": "Acne inflammatory treatments.",
+            "6": "Solar spots.",
+            "7": "Pigmentations.",
+            "8": "Melasma."
+          }
+        },
+        "3": {
+          "title": "3. NANOGLOW (Nanopore + AGF/PDRN)",
+          "subtitle": "What is it?",
+          "description": "Discover a brighter and fresher skin! Revitalize your skin with this innovative micro-injection treatment. Stimulates collagen production and improves texture, smoothing wrinkles and fine lines. Helps unify skin tone, provides hydration, and generates a glow effect."
+        },
+        "4": {
+          "title": "4. EXOGLOW (Nanopore + Exosomas)",
+          "subtitle": "What is it?",
+          "description": "Discover a brighter and fresher skin! Revitalize your skin with this innovative micro-injection treatment. Stimulates collagen production and improves texture, smoothing wrinkles and fine lines. Ideal for scars and skin rejuvenation."
+        }
+      }
+    },
+    "vydenceService": {
+      "subtitle": "Laser Treatments",
+      "title": "Vydence Laser",
+      "description": "Discover the power of Vydence laser technology, designed to treat a wide range of skin conditions with precision and effectiveness. With Vydence, we offer customized solutions to help you achieve radiant and healthy skin.",
+      "sTitle": "Helps treat:",
+      "1": "Acne scars",
+      "2": "Post-surgical scars",
+      "3": "Stretch marks",
+      "4": "Face and neck rejuvenation",
+      "5": "Inflammatory acne",
+      "6": "Sun spots",
+      "7": "Pigmentations",
+      "8": "Melasma"
+    },
+    "diodoService": {
+      "subtitle": "What is it?",
+      "title": "Diode Laser Hair Removal",
+      "description": "Diode laser hair removal is a safe and effective treatment for the permanent removal of unwanted hair. Using diode laser light technology, it selectively targets melanin in the hair follicle, destroying it and preventing future hair growth. \nThis procedure is suitable for a wide range of skin and hair types and offers long-lasting results with minimal discomfort and downtime.",
+      "button": "Schedule your consultation"
+    },
+    "specialist": {
+      "title": "Specialists",
+      "description": "Qualified professionals and experts in aesthetic medicine and skin care.",
+      "buttonDr": "Learn more",
+      "buttonDra": "Learn more"
+    },
+    "aliance": "Trusted by the best partners.",
+    "customers": "What our clients say",
+    "schedules": {
+      "title": "Hours:",
+      "subtitle": "Visit us",
+      "hours": "Monday to Friday 9:00–14:00 and 16:00–20:00;\n\nSaturday 9:00–14:00",
+      "location": "Medical Tower 2, Hospital San Javier. Office 812.\n\nC. José María Heredia St. 2960, Prados Providencia, 44670,\n\nGuadalajara, Jalisco, Mexico.",
+      "button": "Contact us"
+    }
+  },
+  "404": {
+    "title": "Page not found",
+    "button": "Back to home"
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "home": "Home",
+    "contact": "Contact",
+    "draTems": "Terms and Conditions Dra. Mariana León-Quintero",
+    "drTems": "Terms and Conditions Dr. Javier Parada"
+  },
+  "dr":{
+    "hero":{
+      "title": "Dr. Javier Parada Harmony in Plastic Surgery",
+      "up": "Meet",
+      "subtitle": "Dr. Javier Parada is a certified Plastic Surgeon by the Mexican Society of Plastic Surgery, Aesthetics and Reconstructive Surgery (No. 2546), practicing in Guadalajara and Tuxtla Gutiérrez.",
+      "description": "His personalized approach and advanced techniques ensure natural, harmonious results, prioritizing each patient’s safety and satisfaction.",
+      "button": "Schedule your consultation"
+    },
+    "about":{
+      "description":"Graduated with honors from the  Universidad Autónoma de Guadalajara, he completed his training in General Surgery at the Medical Center XXI (CDMX) and subsequently the subspecialty in Plastic Surgery, Aesthetics and Reconstructive Surgery at the Hospital Civil de Guadalajara, one of the most prestigious in the country.",
+      "fTitle":"His international training includes rotations in body contouring, breast and facial surgery in:",
+      "fList":{
+        "1":"Clinic Dhara, Bogotá (Dr. Alfredo Hoyos – creator of Total Definer®).",
+        "2":"Clinic Sensabell, Valencia, Spain (Dr. Jesús Centeno).",
+        "3":"Beverly Hills Center for Plastic & Laser Surgery, California, USA (Dr. Ben Talei)."
+      },
+      "mTitle":"Currently a member of:",
+      "mList":{
+        "1":"Mexican Society of Plastic Surgery, Aesthetics and Reconstructive Surgery (AMCPER).",
+        "2":"The International Society of Aesthetic Plastic Surgery (ISAPS).",
+        "3":"TOTAL DEFINER® by Dr. Alfredo Hoyos."
+      }
+    },
+    "certificates":{ "title":"Whit the trust of the best allies" },
+    "features":{
+      "subtitle":"Natural results, expert care.",
+      "title":"Main services"
+    },
+    "corporalService":{
+      "title":"Body Contouring",
+      "subtitle":"Mold, tone and harmonize your figure.",
+      "text":"Services:",
+      "list":{
+        "1":{
+          "title":"1. Lipoinjection Gluteal2",
+          "process":"Safe procedure:",
+          "processDescription":"Performed by certified plastic surgeons, with cutting-edge technology and the highest quality standards.",
+          "benefits":"Double benefit:",
+          "benefitsDescription":"We eliminate the unwanted fat from areas such as the abdomen, muscles or back, and transform it into the figure you have always desired!",
+          "results":"Immediate results:",
+          "resultsDescription":"We use your own fat, which guarantees harmonic and durable results."
+        },
+        "2":{
+          "title":"2. Abdominoplasty",
+          "process":"Expert surgeons:",
+          "processDescription":"Our team of certified plastic surgeons has extensive experience in abdominoplasty.",
+          "benefits":"Advanced technology:",
+          "benefitsDescription":"We use the most advanced techniques to ensure optimal and safe results.",
+          "results":"Personalized care:",
+          "resultsDescription":"We accompany you at every step of the process, from the initial consultation to post-operative follow-up."
+        },
+        "3":{
+          "title":"3. Costal Remodelation",
+          "process":"Evaluation and planning:",
+          "processDescription":"A detailed evaluation of the patient is performed to determine the viability of the procedure and establish a personalized surgical plan.",
+          "benefits":"Surgical Technique:",
+          "benefitsDescription":"The intervention consists of modifying the ribs, either through partial resection or cartilage remodeling, seeking a reduction in the waist circumference.",
+          "results":"Medical Considerations:",
+          "resultsDescription":"Costal remodelation is a procedure that requires a rigorous medical evaluation due to its implications. Risks and benefits are discussed in detail with the patient."
+        },
+        "4":{
+          "title":"4. Liposculpture",
+          "process":"Evaluation and marking:",
+          "processDescription":"A detailed evaluation of the patient is performed to identify areas with fat accumulation and proceed to preoperative marking.",
+          "benefits":"Surgical Technique:",
+          "benefitsDescription":"We use fine cannulas for fat aspiration, allowing precise contour modeling of the body. Complementary techniques can be used.",
+          "results":"Fat Transfer:",
+          "resultsDescription":"In some cases, the extracted fat is processed and used to increase the volume of other body areas, such as the buttocks or face."
+        }
+      }
+    },
+    "facialService":{
+      "title":"Facial Surgery",
+      "subtitle":"Balance, proportion and confidence.",
+      "description":"Facial surgery is an option for those who wish to highlight their natural expression, refresh their appearance or improve certain features in a subtle and harmonious way. Through safe and personalized procedures, it is possible to smooth signs of aging, balance facial proportions or correct aspects that may cause discomfort. Our medical team will guide you at every step, providing a professional and personalized approach to help you make the best decision for you. Learn more about our procedures and how we can accompany you in this process.",
+      "text":"Services:",
+      "list":[
+        "1. Submental liposuction",
+        "2. Face Lift",
+        "3. Brow Lift",
+        "4. Neck Lift",
+        "5. Lip lift",
+        "6. Otoplasty",
+        "7. Chin Augmentation",
+        "8. Blepharoplasty",
+        "9. Rhinoplasty"
+      ]
+    },
+    "breastService":{
+      "title":"Breast Procedures",
+      "subtitle":"Balance, femininity and security in every detail.",
+      "text":"Services:",
+      "list":{
+        "1":{
+          "title":"1. Mamoplasty of Increase",
+          "what":"What is it?",
+          "whatDescription":"It is a procedure that increases the size and improves the shape of the breasts through silicone implants, adapting to the anatomy and desires of each person.",
+          "benefits":"Benefits:",
+          "benefitsDescription": [
+            "Greater volume and symmetry.",
+            "Natural and personalized results.",
+            "Increase confidence and satisfaction."
+          ]
+        },
+        "2":{
+          "title":"2. Mastopexy",
+          "what":"What is it?",
+          "whatDescription":"This procedure lifts and firms the breasts by removing excess skin and repositioning breast tissue. It can be performed with or without implants depending on each patient’s needs.",
+          "benefits":"Benefits:",
+          "benefitsDescription": [
+            "Improves the shape and firmness of the breasts.",
+            "Ideal after pregnancy, breastfeeding or weight loss.",
+            "May be combined with implants for enhanced volume"
+          ]
+        },
+        "3":{
+          "title":"3. Explant Surgery",
+          "what":"What is it?",
+          "whatDescription": "Removal of breast implants for personal or medical reasons, restoring a natural breast appearance. It may be combined with a breast lift for improved results.",
+          "benefits":"Benefits:",
+          "benefitsDescription": [
+            "Restores natural tissue.",
+            "Safe option for those who no longer desire implants.",
+            "Possibility of combining with mastopexy for greater firmness"
+          ]
+        },
+        "4":{
+          "title":"4. Breast Reduction",
+          "what":"What is it?",
+          "whatDescription":"A procedure to reduce the size and weight of the breasts by removing excess fat, skin, and breast tissue to improve body proportion and relieve physical discomfort.",
+          "benefits":"Benefits:",
+          "benefitsDescription": [
+            "Reduces back and neck pain.",
+            "Greater comfort and mobility.",
+            "More balanced breast proportions."
+          ]
+        },
+        "5":{
+          "title":"5. Breast Reconstruction",
+          "what":"What is it?",
+          "whatDescription": "A procedure to restore breast shape after mastectomy or injury, using implants or autologous tissue.",
+          "benefits":"Benefits:",
+          "benefitsDescription": [
+            "Restores symmetry and natural appearance.",
+            "Improves self-esteem and confidence.",
+            "Can be performed in stages according to each patient."
+          ]
+        }
+      }
+    },
+    "menService":{
+      "title":"Men's Service",
+      "subtitle":"Treatment options designed for today's man.",
+      "description":"For men who seek to enhance their appearance and well-being, we offer a range of plastic surgery procedures tailored to their needs. In the area of contouring, we offer gynecomastia to reduce excess mammary tissue, and high-definition liposuction to sculpt an athletic and defined figure, as well as abdominoplasty for those who desire a firmer and flatter abdomen. For the face, we offer rhinoplasty to harmonize the nose, blepharoplasty to rejuvenate the eyelids, otoplasty to correct prominent ears, and facial rejuvenation for a fresher and more masculine appearance.",
+      "text":"Services:",
+      "list":[
+        "1. Gynecomastia",
+        "2. High-definition liposuction",
+        "3. Rhinoplasty",
+        "4. Blepharoplasty",
+        "5. Otoplasty",
+        "6. Abdominoplasty",
+        "7. Facial rejuvenation"
+      ]
+    }
+  }
+}

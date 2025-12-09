@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [{ params: { locale: undefined } }, { params: { locale: "en" } }];
+}
+
+import GithubPresentation from "../components/presentation/github";
+import FooterFreePresentation from "../components/presentation/footerFree";
+import Navbar from "../components/navbar";
+import ContactoSection from "../components/contacto.astro";
+import Image from "astro/components/Image.astro";
+import imgHero from "../assets/sanjavier.jpg";
+---
+
+<Layout title="Presentation Page">
+  <main>
+    <Navbar client:only="react" />
+    <div class="h-[350px] md:h-[550px] relative flex items-center justify-center">
+      <div class="absolute top-0 left-0 w-full h-full bg-black opacity-25">
+      </div>
+
+      <Image
+        src={imgHero}
+        alt="Hero"
+        class="w-full h-full object-cover object-center"
+        draggable={false}
+      />
+
+      <!-- Título centrado -->
+      <h1
+        class="absolute text-white text-3xl md:text-5xl font-bold drop-shadow-lg tracking-wide"
+      >
+        Visita Nuestra Clínica
+      </h1>
+    </div>
+
+    <ContactoSection />
+
+    <!-- Horarios y mapa -->
+    <GithubPresentation client:only="react" />
+    <!-- Footer -->
+    <FooterFreePresentation client:only="react" />
+  </main>
+</Layout>

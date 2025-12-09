@@ -1,6 +1,7 @@
 
 import { Typography } from "@material-tailwind/react";
 import imgLogo from "../../assets/logoSkinAndShape.svg";
+import { useTranslation } from "react-i18next";
 
 const YEAR = new Date().getFullYear();
 
@@ -290,6 +291,7 @@ const LogoSVG = () => (
   );
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="relative z-50 bg-white px-8 pt-12 pb-6">
       <div className="container mx-auto">
@@ -306,20 +308,45 @@ export function Footer() {
             <div className="items-top mb-6 flex flex-wrap">
               <div className="w-6/12 pt-6 md:ml-auto md:px-4 md:pt-0 xl:w-3/12">
                 <span className="text-md mb-4 block font-medium text-primary">
-                  Enlaces rápidos
+                  {t("footer.quickLinks")}
                 </span>
                 <ul className="list-unstyled">
-                  {COMPANY.map(({ name, link }, key) => (
-                    <li key={key}>
+                    <li>
                       <a
-                        href={link}
+                        href="/"
                         rel="noreferrer"
                         className="block pb-2 text-sm font-normal leading-relaxed text-gray-600 transition-colors hover:text-primary hover:underline"
                       >
-                        {name}
+                        {t("footer.home")}
                       </a>
                     </li>
-                  ))}
+                    <li>
+                      <a
+                        href="/dra-mariana-leon-quintero"
+                        rel="noreferrer"
+                        className="block pb-2 text-sm font-normal leading-relaxed text-gray-600 transition-colors hover:text-primary hover:underline"
+                      >
+                        Dra. Mariana León-Quintero
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/dr-javier-parada"
+                        rel="noreferrer"
+                        className="block pb-2 text-sm font-normal leading-relaxed text-gray-600 transition-colors hover:text-primary hover:underline"
+                      >
+                        Dr. Javier Parada
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/contacto"
+                        rel="noreferrer"
+                        className="block pb-2 text-sm font-normal leading-relaxed text-gray-600 transition-colors hover:text-primary hover:underline"
+                      >
+                        {t("footer.contact")}
+                      </a>
+                    </li>
                 </ul>
               </div>
               <div className="ml-auto w-6/12 pt-6 md:px-4 md:pt-0 xl:w-3/12">
