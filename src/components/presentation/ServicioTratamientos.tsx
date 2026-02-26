@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 
-import AOS from "aos";
+
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
@@ -21,17 +21,11 @@ import {
 
 export function ServicioTratamientos() {
   const { t } = useTranslation();
-  
+
   const [current, setCurrent] = useState(0);
   const images = [imgTrata1, imgTrata2, imgTrata3];
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1600, // duración de la animación
-      easing: "linear",
-      
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -48,7 +42,7 @@ export function ServicioTratamientos() {
 
   return (
     <ThemeProvider>
-      <div className="relative w-screen bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden mb-24">
+      <div className="relative w-full bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden mb-24">
         <div
           className="container mx-auto grid gap-10 items-center relative
                       lg:flex-row flex flex-col-reverse lg:grid-cols-2"
@@ -98,7 +92,7 @@ export function ServicioTratamientos() {
 
             <div>
               <h6 className="font-medium mb-5 text-gray-800 text-lg lg:text-base">
-              {t("home.treatmentsService.sTitle")}
+                {t("home.treatmentsService.sTitle")}
               </h6>
               <Accordion type="single" collapsible defaultValue="item-0">
                 <AccordionItem value={`item-0`}>
@@ -107,9 +101,9 @@ export function ServicioTratamientos() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="pl-4 pb-3">
-                        <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.1.subtitle")}</p>
-                        <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.1.description")}</p>
-                      </div>
+                      <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.1.subtitle")}</p>
+                      <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.1.description")}</p>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value={`item-1`}>
@@ -142,9 +136,9 @@ export function ServicioTratamientos() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="pl-4 pb-3">
-                        <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.3.subtitle")}</p>
-                        <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.3.description")}</p>
-                      </div>
+                      <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.3.subtitle")}</p>
+                      <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.3.description")}</p>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value={`item-3`}>
@@ -153,9 +147,9 @@ export function ServicioTratamientos() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="pl-4 pb-3">
-                        <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.4.subtitle")}</p>
-                        <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.4.description")}</p>
-                      </div>
+                      <p className="font-semibold pb-3 text-lg lg:text-base" style={{ color: "#8d5f5b" }}>{t("home.treatmentsService.service.4.subtitle")}</p>
+                      <p className="pb-2 text-lg lg:text-base">{t("home.treatmentsService.service.4.description")}</p>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

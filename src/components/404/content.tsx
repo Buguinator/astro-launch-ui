@@ -15,7 +15,7 @@ export function HeroSectionFour() {
   return (
     <ThemeProvider>
       <Navbar />
-      <header className="h-screen min-h-screen w-screen bg-white">
+      <header className="h-screen min-h-screen w-full bg-white overflow-hidden">
         <div className="relative h-screen flex align-center flex-col justify-center text-center bg-cover" >
           <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800"></span>
           <Typography

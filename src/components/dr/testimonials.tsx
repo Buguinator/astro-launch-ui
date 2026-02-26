@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import AOS from "aos";
+
 import { useEffect } from "react";
 
 import { Card, CardBody, Typography } from "@material-tailwind/react";
@@ -12,15 +12,10 @@ import imgPerfil from "../../assets/dr-perfil.jpeg";
 export function TestimonialSectionTwo() {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: 'linear',
-    });
-  }, []);
+
 
   return (
-    <section className="py-8 px-8 lg:py-20">
+    <section className="py-8 px-8 lg:py-20 overflow-hidden">
       <div className="container mx-auto">
         <Card
           shadow={false}

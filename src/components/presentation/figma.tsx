@@ -46,10 +46,10 @@ const stats = [
 ];
 
 export function FigmaPresentation() {
- 
+
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-20">
+      <div className="h-full w-full place-items-center bg-white px-8 py-20 overflow-hidden">
         <div className="container mx-auto relative">
           <div className="text-left">
             <Typography

@@ -9,7 +9,7 @@ export function HeroSectionTwo() {
   return (
     <ThemeProvider>
       <Navbar />
-      <header className="h-full w-screen place-items-center bg-white px-8 pb-28 pt-5">
+      <header className="h-full w-full place-items-center bg-white px-8 pb-28 pt-5 overflow-hidden">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="text-left">
             <div className="mb-8 inline-flex items-center rounded-lg">

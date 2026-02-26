@@ -7,16 +7,16 @@ import { Typography } from "@material-tailwind/react";
 
 export function Especialistas() {
   const { t } = useTranslation();
-  
+
   return (
     <>
       <section id="pricing" className="py-36 px-8">
         <div className="container mx-auto text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
-            { t("home.specialist.title")}
+            {t("home.specialist.title")}
           </Typography>
           <Typography className="mb-8 font-normal !text-gray-500 text-lg md:text-xl">
-            { t("home.specialist.description")}
+            {t("home.specialist.description")}
           </Typography>
         </div>
         <div className="mt-12">
@@ -29,7 +29,7 @@ export function Especialistas() {
               <div className="relative h-[35rem] md:h-[50rem] w-full">
                 <img
                   src={imgDra.src}
-                  alt="Dra. Mariana León-Quintero"
+                  alt="Dra. Mariana León‑Quintero"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay con sombra (oculto por defecto) */}
@@ -106,7 +106,7 @@ export function Especialistas() {
                     </g>
                   </svg>
                   <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-rose hover:text-white">
-                    { t("home.specialist.buttonDra")}
+                    {t("home.specialist.buttonDra")}
                   </button>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function Especialistas() {
                     </g>
                   </svg>
                   <button className="mt-12 bg-white text-dark px-4 py-2 rounded hover:bg-slate hover:text-white">
-                    { t("home.specialist.buttonDr")}
+                    {t("home.specialist.buttonDr")}
                   </button>
                 </div>
               </div>

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 
-import AOS from "aos";
+
 
 import {
   Accordion,
@@ -28,14 +28,7 @@ export function ServiceRight({
   const imgRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-  // GSAP Scroll Animation (solo en desktop)
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: "linear",
-      delay: 100,
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -52,7 +45,7 @@ export function ServiceRight({
 
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-20">
+      <div className="h-full w-full place-items-center bg-white px-8 py-20 overflow-hidden">
         {/* 📱 flex-col (textos arriba / imagen abajo) 💻 flex-row (imagen izquierda / textos derecha) */}
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 lg:px-16">
           {/* 💻 Imagen a la izquierda */}

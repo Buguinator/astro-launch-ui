@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useState } from "react";
-import AOS from "aos";
+
 
 import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
 
@@ -18,12 +18,7 @@ export function DiodoService() {
   const [current, setCurrent] = useState(0);
   const images = [imgDiodo1, imgDiodo2, imgDiodo3, imgDiodo4, imgDiodo5];
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1600,
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -39,7 +34,7 @@ export function DiodoService() {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
-    <section className="py-8 px-8 lg:py-20 bg-rosita">
+    <section className="py-8 px-8 lg:py-20 bg-rosita overflow-hidden">
       <div className="container mx-auto">
         <Card
           shadow={false}
@@ -66,7 +61,7 @@ export function DiodoService() {
               </Button>
             </a>
           </CardBody>
-          
+
           {/* Carrusel de imágenes */}
           <div
             // ref={imgRef}

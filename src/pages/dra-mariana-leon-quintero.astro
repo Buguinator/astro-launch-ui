@@ -2,7 +2,6 @@
 export async function getStaticPaths() {
   return [{ params: { locale: undefined } }, { params: { locale: "en" } }];
 }
-import "aos/dist/aos.css";
 
 import Layout from "../layouts/Layout.astro";
 import HeaderAbout from "../components/dra/header";
@@ -33,7 +32,7 @@ import {
 } from "../components/dra/const/services.js";
 ---
 
-<Layout title="Dra. Mariana León-Quintero">
+<Layout title="Dra. Mariana León‑Quintero">
   <main>
     <HeaderAbout client:only="react" />
     <!-- About -->

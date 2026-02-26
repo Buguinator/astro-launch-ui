@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { useEffect, useState } from "react";
-import AOS from "aos";
+
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import imgAparato1 from "../../assets/p-aparatologia/1.webp";
@@ -35,12 +35,7 @@ export function Aparatologia() {
     imgAparato7,
   ];
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1600, // duración de la animación
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -57,7 +52,7 @@ export function Aparatologia() {
 
   return (
     <ThemeProvider>
-      <section className="w-full bg-white px-6 pb-20">
+      <section className="w-full bg-white px-6 pb-20 overflow-hidden">
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:px-20">
           {/* Textos primero en desktop */}
           <div className="w-full lg:w-1/2 order-1" data-aos="fade-up">

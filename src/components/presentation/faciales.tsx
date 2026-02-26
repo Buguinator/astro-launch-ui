@@ -38,7 +38,7 @@ const stats = [
 export function Faciales() {
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-20">
+      <div className="h-full w-full place-items-center bg-white px-8 py-20 overflow-hidden">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           <div className="text-center lg:text-left bg-blue-300">
             <Typography className="flex items-center justify-center lg:justify-start !font-bold text-lg mb-5 text-rose">
@@ -59,9 +59,9 @@ export function Faciales() {
             </Typography>
 
             <div className="mt-10">
-                  <h6 className="font-bold text-lg mb-5">
-                    Servicios:
-                  </h6>
+              <h6 className="font-bold text-lg mb-5">
+                Servicios:
+              </h6>
               <ul className="list-disc list-inside">
                 {stats.map((props, key) => (
                   <StatsCard key={key} {...props} />

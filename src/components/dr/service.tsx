@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { useEffect, useRef, useState } from "react";
 
-import AOS from "aos";
+
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
@@ -27,13 +27,7 @@ export function ServiceAbout({
 }) {
   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: 'linear',
-      delay: 100,
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -50,7 +44,7 @@ export function ServiceAbout({
 
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 pb-20">
+      <div className="h-full w-full place-items-center bg-white px-8 pb-20 overflow-hidden">
         <div className="container mx-auto relative">
           <div className="text-left lg:px-20" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-[#365D78]">

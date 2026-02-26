@@ -4,23 +4,18 @@ import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { useEffect } from "react";
 
-import AOS from "aos";
+
 
 import videoLaser from "../../assets/video/vydence.webm";
 
 export function ServicioVydence() {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1600,
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center px-8 pb-8 pt-24 bg-rosita">
+      <div className="h-full w-full place-items-center px-8 pb-8 pt-24 bg-rosita overflow-hidden">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           {/* Texto */}
           <div className="text-left lg:px-20" data-aos="fade-up">

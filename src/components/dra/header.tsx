@@ -11,7 +11,7 @@ export function HeroSectionTwo() {
   return (
     <ThemeProvider>
       <Navbar />
-      <header className="h-full w-screen place-items-center bg-white px-8 pb-28 pt-5">
+      <header className="h-full w-full place-items-center bg-white px-8 pb-28 pt-5 overflow-hidden">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="text-left">
             <div className="mb-8 inline-flex items-center rounded-lg">
@@ -25,7 +25,7 @@ export function HeroSectionTwo() {
             <Typography
               variant="h1"
               color="blue-gray"
-              className="mb-8 leading-tight lg:text-6xl"
+              className="mb-8 leading-tight lg:text-6xl lg:w-2/3"
             >
               {t("dra.hero.title")}
             </Typography>
@@ -37,9 +37,9 @@ export function HeroSectionTwo() {
             </Typography>
             <div className="mt-12 flex flex-wrap gap-3 justify-start">
               <a href="/contacto">
-              <Button className="flex items-center bg-rose">
-                {t("dra.hero.button")}
-              </Button>
+                <Button className="flex items-center bg-rose">
+                  {t("dra.hero.button")}
+                </Button>
               </a>
             </div>
           </div>

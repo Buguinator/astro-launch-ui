@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 
-import AOS from "aos";
+
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import imgCorporal1 from "../../assets/p-corporales/1.webp";
@@ -17,13 +17,7 @@ export function ServicioCorporal() {
   const [current, setCurrent] = useState(0);
   const images = [imgCorporal1, imgCorporal2, imgCorporal3];
 
-  // Inicializa AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1600, // duración de la animación
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -40,7 +34,7 @@ export function ServicioCorporal() {
 
   return (
     <ThemeProvider>
-      <div className="relative w-screen bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden">
+      <div className="relative w-full bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden">
         <div
           className="container grid mx-auto gap-10 items-center lg:grid-cols-2 relative lg:flex-row flex flex-col-reverse"
         >

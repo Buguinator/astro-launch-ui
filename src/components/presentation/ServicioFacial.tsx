@@ -4,7 +4,7 @@ import ThemeProvider from "../theme-provider";
 import { useEffect, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
-import AOS from "aos";
+
 
 import imgFacial1 from "../../assets/p-faciales/2.webp";
 import imgFacial2 from "../../assets/p-faciales/3.webp";
@@ -36,13 +36,7 @@ export function ServicioFacial() {
     imgFacial11,
   ];
 
-  // Inicializa AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1600, // duración de la animación
-      easing: "ease-out-cubic",
-    });
-  }, []);
+
 
   // Carrusel automático
   useEffect(() => {
@@ -58,12 +52,12 @@ export function ServicioFacial() {
 
   return (
     <ThemeProvider>
-      <section className="h-full w-full bg-white px-6 py-16 lg:px-12 lg:py-20">
+      <section className="h-full w-full bg-white px-6 py-4 lg:px-12 lg:py-4 overflow-hidden">
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="lg:w-1/2" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-rose">
               {t("home.facialService.subtitle")}
-            </Typography> 
+            </Typography>
 
             <Typography
               variant="h2"

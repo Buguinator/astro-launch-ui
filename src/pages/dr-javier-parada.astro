@@ -3,8 +3,6 @@ export async function getStaticPaths() {
   return [{ params: { locale: undefined } }, { params: { locale: "en" } }];
 }
 
-import "aos/dist/aos.css";
-
 import Layout from "../layouts/Layout.astro";
 import HeaderAbout from "../components/dr/header";
 import FeaturesAbout from "../components/dr/features";

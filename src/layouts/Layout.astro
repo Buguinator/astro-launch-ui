@@ -1,5 +1,6 @@
 ---
 import i18n from "i18next";
+import "aos/dist/aos.css";
 
 import WhatsappBtn from "../components/WhatsappBtn.astro";
 export interface Props {
@@ -8,7 +9,8 @@ export interface Props {
 }
 const { title, metaDescription } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang={i18n.language}>
   <head>
     <meta charset="UTF-8" />
@@ -37,7 +39,7 @@ const { title, metaDescription } = Astro.props;
     </script> -->
     <!-- End Google Tag Manager -->
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript>
       <iframe
@@ -52,9 +54,24 @@ const { title, metaDescription } = Astro.props;
   </body>
   <WhatsappBtn />
 </html>
+<script>
+  import AOS from "aos";
+  AOS.init({
+    duration: 1600,
+    easing: "ease-out-cubic",
+    once: false,
+  });
+</script>
 <style is:global>
   code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
   }
 </style>
