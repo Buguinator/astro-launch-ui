@@ -397,18 +397,19 @@ export function Footer() {
             <div className="text-xs mt-2 py-1 font-normal text-gray-600">
               Copyright &copy; {YEAR}{" "}
               <a href="/" className="text-inherit transition-all">
-                Skin & Shape
+                Skin & Shape. Todos los derechos reservados.
               </a>
-              {/* {" "}
-              by{" "}
+            </div>
+            <div className="text-xs py-1 font-normal text-gray-600">
+              Desarrollado con ❤️ por{" "}
               <a
-                href="https://www.creative-tim.com?ref=astroLaunch-ui"
+                href="https://palmadecoral.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-inherit transition-all"
+                className="text-inherit transition-all text-pink-300"
               >
-                Creative Tim. Made with ❤️ for a better web.
-              </a> */}
+                Palma de Coral
+              </a>.
             </div>
           </div>
         </div>
