@@ -14,9 +14,7 @@ export function HeroPresentation() {
 
   return (
     <>
-      <Navbar />
-
-      <header className="h-full w-full place-items-center relative px-8 pt-8 py-12 lg:mb-12 overflow-hidden">
+      <header className="h-screen w-full place-items-center relative overflow-hidden">
         {/* Video de fondo */}
         <video
           autoPlay
@@ -35,7 +33,10 @@ export function HeroPresentation() {
         {/* Overlay para mejorar la legibilidad del texto */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25 z-10"></div>
 
-        <div className="container mx-auto grid items-center lg:grid-cols-2 relative z-20">
+        {/* Navbar sobre el video */}
+        <Navbar />
+
+        <div className="container mx-auto grid items-center lg:grid-cols-2 relative z-20 px-8 pt-32 pb-12">
           <div className="text-center lg:text-left pt-32 ">
             <Typography
               variant="h1"
@@ -59,6 +60,7 @@ export function HeroPresentation() {
       </header>
     </>
   );
+
 }
 
 export default HeroPresentation;

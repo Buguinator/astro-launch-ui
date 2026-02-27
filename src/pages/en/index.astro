@@ -18,12 +18,15 @@ import FooterFreePresentation from "../../components/presentation/footerFree";
 import Feed from "../../components/presentation/feed";
 import Aparatologia from "../../components/presentation/Aparatologia";
 import ServicioTratamientos from "../../components/presentation/ServicioTratamientos";
+import Slider from "../../components/presentation/Slider";
 ---
 
 <Layout title="Dermatology and Plastic Surgery">
   <main>
     <!-- Hero -->
     <HeaderPresentation client:only="react" />
+    <!-- Promociones -->
+    <Slider client:only="react" />
     <!-- Porcedimientos faciales -->
     <ServicioFacial client:only="react" />
     <!-- Procedimientos corporales -->

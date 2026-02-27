@@ -6,7 +6,6 @@ const images = [
   "/banners/3.webp",
   "/banners/4.webp",
   "/banners/5.webp",
-  "/banners/6.webp",
 ];
 
 const imagesMobile = [
@@ -15,7 +14,6 @@ const imagesMobile = [
   "/banners/3m.webp",
   "/banners/4m.webp",
   "/banners/5m.webp",
-  "/banners/6m.webp",
 ];
 
 export default function Slider() {
@@ -37,7 +35,7 @@ export default function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % currentImages.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [currentImages.length]);
