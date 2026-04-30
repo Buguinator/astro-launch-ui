@@ -1,0 +1,140 @@
+---
+---
+
+<div id="page-preloader">
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <div class="preloader-content">
+    <img src="/logo-preloader.svg" alt="The Skin and Shape" class="preloader-logo" />
+    <div class="bar-track">
+      <div id="preloader-bar" class="bar-fill"></div>
+    </div>
+    <span id="preloader-pct" class="preloader-pct">0%</span>
+  </div>
+</div>
+
+<style>
+  #page-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background:
+      radial-gradient(ellipse at 30% 20%, #c4796a 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 80%, #a85a4e 0%, transparent 50%),
+      linear-gradient(145deg, #7a2e26 0%, #4a1510 40%, #2a0c09 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.7s ease;
+  }
+
+  /* ── Grain / Noise ── */
+  .noise {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    pointer-events: none;
+    animation: grain 0.8s steps(2) infinite;
+  }
+
+  @keyframes grain {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-2%, 1%); }
+    50%  { transform: translate(1%, -2%); }
+    75%  { transform: translate(2%, 1%); }
+    100% { transform: translate(-1%, 2%); }
+  }
+
+  /* ── Contenido ── */
+  .preloader-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .preloader-logo {
+    width: 170px;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+    margin-bottom: 3rem;
+  }
+
+  /* ── Barra ── */
+  .bar-track {
+    width: 180px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 99px;
+    transition: width 0.1s linear;
+  }
+
+  .preloader-pct {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.35em;
+    margin-top: 1rem;
+  }
+</style>
+
+<script>
+  (function () {
+    const MIN_DURATION = 2000;
+    const start = Date.now();
+    const bar = document.getElementById("preloader-bar");
+    const pct = document.getElementById("preloader-pct");
+
+    let progress = 0;
+    let pageLoaded = false;
+
+    function dismiss() {
+      const preloader = document.getElementById("page-preloader");
+      if (preloader) {
+        preloader.style.opacity = "0";
+        setTimeout(() => preloader.remove(), 700);
+      }
+    }
+
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const natural = Math.min((elapsed / MIN_DURATION) * 90, 90);
+      const ready = pageLoaded && elapsed >= MIN_DURATION;
+      const target = ready ? 100 : natural;
+      progress = Math.max(progress, target);
+
+      if (bar) bar.style.width = progress + "%";
+      if (pct) pct.textContent = Math.round(progress) + "%";
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        dismiss();
+      }
+    }, 30);
+
+    window.addEventListener("load", () => {
+      pageLoaded = true;
+    });
+  })();
+</script>

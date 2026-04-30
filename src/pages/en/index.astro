@@ -19,9 +19,11 @@ import Feed from "../../components/presentation/feed";
 import Aparatologia from "../../components/presentation/Aparatologia";
 import ServicioTratamientos from "../../components/presentation/ServicioTratamientos";
 import Slider from "../../components/presentation/Slider";
+import Preloader from "../../components/Preloader.astro";
 ---
 
 <Layout title="Dermatology and Plastic Surgery">
+  <Preloader />
   <main>
     <!-- Hero -->
     <HeaderPresentation client:only="react" />

@@ -6,14 +6,18 @@ const images = [
   "/banners/3.webp",
   "/banners/4.webp",
   "/banners/5.webp",
+  "/banners/6.webp",
+  "/banners/7.webp",
 ];
 
 const imagesMobile = [
-  "/banners/1m.webp",
-  "/banners/2m.webp",
-  "/banners/3m.webp",
-  "/banners/4m.webp",
-  "/banners/5m.webp",
+  "/banners/mobile/1.webp",
+  "/banners/mobile/2.webp",
+  "/banners/mobile/3.webp",
+  "/banners/mobile/4.webp",
+  "/banners/mobile/5.webp",
+  "/banners/mobile/6.webp",
+  "/banners/mobile/7.webp",
 ];
 
 export default function Slider() {

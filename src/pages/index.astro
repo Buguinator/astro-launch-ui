@@ -18,9 +18,11 @@ import FooterFreePresentation from "../components/presentation/footerFree";
 import Feed from "../components/presentation/feed";
 import Aparatologia from "../components/presentation/Aparatologia";
 import ServicioTratamientos from "../components/presentation/ServicioTratamientos";
+import Preloader from "../components/Preloader.astro";
 ---
 
 <Layout title="Clínica Dermatológica y Cirugía Plástica">
+  <Preloader />
   <main>
     <!-- Hero -->
     <HeaderPresentation client:only="react" />
