@@ -8,6 +8,7 @@ const images = [
   "/banners/5.webp",
   "/banners/6.webp",
   "/banners/7.webp",
+  "/banners/8.webp",
 ];
 
 const imagesMobile = [
@@ -18,6 +19,7 @@ const imagesMobile = [
   "/banners/mobile/5.webp",
   "/banners/mobile/6.webp",
   "/banners/mobile/7.webp",
+  "/banners/mobile/8.webp",
 ];
 
 export default function Slider() {
