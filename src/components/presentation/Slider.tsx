@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/banners/1.webp",
-  "/banners/2.webp",
-  "/banners/3.webp",
-  "/banners/4.webp",
-  "/banners/5.webp",
-  "/banners/6.webp",
-  "/banners/7.webp",
-  "/banners/8.webp",
+  "/banners/1.jpg",
+  "/banners/2.jpg",
+  "/banners/3.jpg",
+  "/banners/4.jpg",
+  "/banners/7.jpg",
+  "/banners/8.jpg",
+  "/banners/9.jpg",
 ];
 
 const imagesMobile = [
-  "/banners/mobile/1.webp",
-  "/banners/mobile/2.webp",
-  "/banners/mobile/3.webp",
-  "/banners/mobile/4.webp",
-  "/banners/mobile/5.webp",
-  "/banners/mobile/6.webp",
-  "/banners/mobile/7.webp",
-  "/banners/mobile/8.webp",
+  "/banners/mobile/1.jpg",
+  "/banners/mobile/2.jpg",
+  "/banners/mobile/3.jpg",
+  "/banners/mobile/4.jpg",
+  "/banners/mobile/5.jpg",
+  "/banners/mobile/6.jpg",
+  "/banners/mobile/7.jpg",
+  "/banners/mobile/8.jpg",
+  "/banners/mobile/9.jpg",
 ];
 
 export default function Slider() {
