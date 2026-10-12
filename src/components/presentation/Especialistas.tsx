@@ -10,7 +10,7 @@ export function Especialistas() {
 
   return (
     <>
-      <section id="pricing" className="py-36 px-8">
+      <section id="pricing" className="py-16 lg:py-24 px-6 lg:px-12">
         <div className="container mx-auto text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
             {t("home.specialist.title")}

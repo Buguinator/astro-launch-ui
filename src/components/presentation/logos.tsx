@@ -26,7 +26,7 @@ const logos = [
 export function LogoSectionOne() {
   const { t } = useTranslation();
   return (
-    <section className="py-8 px-8 lg:py-20 overflow-hidden">
+    <section className="py-16 px-6 lg:px-12 lg:py-24 overflow-hidden">
       <div className="container mx-auto text-center">
         <Typography variant="h2" color="blue-gray" className="mb-8 text-[1.5rem] md:text-[2rem] pt-20 md:pt-10">
           {t("home.aliance")}

@@ -15,10 +15,10 @@ export function ServicioVydence() {
 
   return (
     <ThemeProvider>
-      <div className="h-full w-full place-items-center px-8 pb-8 pt-24 bg-rosita overflow-hidden">
+      <div className="h-full w-full place-items-center px-6 lg:px-12 py-16 lg:py-24 bg-rosita overflow-hidden">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           {/* Texto */}
-          <div className="text-left lg:px-20" data-aos="fade-up">
+          <div className="text-left" data-aos="fade-up">
             <Typography className="flex items-center justify-start font-bold text-lg mb-5 text-rose">
               {t("home.vydenceService.subtitle")}
             </Typography>

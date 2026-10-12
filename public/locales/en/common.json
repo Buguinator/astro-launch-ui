@@ -176,6 +176,21 @@
       "7": "Pigmentations",
       "8": "Melasma"
     },
+    "bioestimuladoresService": {
+      "subtitle": "Collagen Biostimulation",
+      "title": "Sculptra® | Collagen Biostimulation",
+      "description": "Sculptra® is an injectable treatment based on poly-L-lactic acid (PLLA) that stimulates the body's natural collagen production. Its action is progressive and helps improve skin structure, firmness, and quality, promoting a more rejuvenated and natural appearance.",
+      "sTitle": "Benefits:",
+      "1": "Stimulates collagen production.",
+      "2": "Improves skin firmness and elasticity.",
+      "3": "Helps gradually restore facial volume.",
+      "4": "Helps soften the appearance of wrinkles and fine lines.",
+      "5": "Improves skin quality and texture.",
+      "6": "Offers progressive, natural-looking results.",
+      "idealTitle": "Ideal for:",
+      "ideal": "People looking to gradually improve the signs of facial aging, without an immediate filler effect.",
+      "note": "Results and duration may vary depending on the patient, the treated area, and the protocol used."
+    },
     "diodoService": {
       "subtitle": "What is it?",
       "title": "Diode Laser Hair Removal",

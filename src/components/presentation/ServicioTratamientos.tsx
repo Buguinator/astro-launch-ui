@@ -42,7 +42,7 @@ export function ServicioTratamientos() {
 
   return (
     <ThemeProvider>
-      <div className="relative w-full bg-white px-6 py-16 md:px-10 lg:px-20 overflow-hidden mb-24">
+      <div className="relative w-full bg-white px-6 py-16 lg:px-12 lg:py-24 overflow-hidden">
         <div
           className="container mx-auto grid gap-10 items-center relative
                       lg:flex-row flex flex-col-reverse lg:grid-cols-2"
@@ -77,7 +77,7 @@ export function ServicioTratamientos() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 text-left lg:px-10 z-10" data-aos="fade-up">
+          <div className="order-1 lg:order-2 text-left z-10" data-aos="fade-up">
             <Typography className="!font-bold text-lg mb-5 text-rose flex justify-center lg:justify-start">
               {t("home.treatmentsService.subtitle")}
             </Typography>

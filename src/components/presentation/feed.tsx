@@ -13,6 +13,6 @@ export default function Feed({
   }, []);
 
   return (
-    <div className={`${id} py-8 px-12 lg:py-20`}></div>
+    <div className={`${id} py-16 px-12 lg:py-24`}></div>
   );
 }

@@ -5,7 +5,7 @@ import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
 export function Mapa() {
   const { t } = useTranslation();
   return (
-    <section className="py-8 px-8 lg:py-20">
+    <section className="py-16 px-6 lg:px-12 lg:py-24">
       <div className="container mx-auto">
         <Card
           shadow={false}

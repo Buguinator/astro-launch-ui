@@ -8,6 +8,7 @@ import HeaderPresentation from "../components/presentation/header";
 import LogosPresentation from "../components/presentation/logos";
 import ServicioCorporal from "../components/presentation/ServicioCorporal";
 import ServicioVydence from "../components/presentation/ServicioVydence";
+import ServicioBioestimuladores from "../components/presentation/ServicioBioestimuladores";
 import ServicioFacial from "../components/presentation/ServicioFacial";
 import Slider from "../components/presentation/Slider";
 
@@ -30,12 +31,12 @@ import Preloader from "../components/Preloader.astro";
     <Slider client:only="react" />
     <!-- Porcedimientos faciales -->
     <ServicioFacial client:only="react" />
+    <!-- Bioestimuladores -->
+    <ServicioBioestimuladores client:only="react" />
     <!-- Procedimientos corporales -->
     <ServicioCorporal client:only="react" />
     <!-- Aparatologia -->
-    <div class="h-[150px]"></div>
     <Aparatologia client:only="react" />
-    <div class="h-[100px]"></div>
     <!-- Tratamientos -->
     <ServicioTratamientos client:only="react" />
     <!-- Tratamientos lasér -->

@@ -34,7 +34,7 @@ export function DiodoService() {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
   return (
-    <section className="py-8 px-8 lg:py-20 bg-rosita overflow-hidden">
+    <section className="py-16 px-6 lg:px-12 lg:py-24 bg-rosita overflow-hidden">
       <div className="container mx-auto">
         <Card
           shadow={false}

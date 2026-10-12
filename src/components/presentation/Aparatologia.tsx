@@ -52,8 +52,8 @@ export function Aparatologia() {
 
   return (
     <ThemeProvider>
-      <section className="w-full bg-white px-6 pb-20 overflow-hidden">
-        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:px-20">
+      <section className="w-full bg-white px-6 py-16 lg:py-24 overflow-hidden">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Textos primero en desktop */}
           <div className="w-full lg:w-1/2 order-1" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-rose">

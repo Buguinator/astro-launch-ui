@@ -5,9 +5,6 @@ const images = [
   "/banners/2.jpg",
   "/banners/3.jpg",
   "/banners/4.jpg",
-  "/banners/7.jpg",
-  "/banners/8.jpg",
-  "/banners/9.jpg",
 ];
 
 const imagesMobile = [
@@ -15,11 +12,6 @@ const imagesMobile = [
   "/banners/mobile/2.jpg",
   "/banners/mobile/3.jpg",
   "/banners/mobile/4.jpg",
-  "/banners/mobile/5.jpg",
-  "/banners/mobile/6.jpg",
-  "/banners/mobile/7.jpg",
-  "/banners/mobile/8.jpg",
-  "/banners/mobile/9.jpg",
 ];
 
 export default function Slider() {
@@ -55,7 +47,7 @@ export default function Slider() {
   };
 
   return (
-    <section className="h-full w-full bg-white px-2 py-16 lg:px-12 lg:py-20 overflow-hidden">
+    <section className="h-full w-full bg-white px-2 py-16 lg:px-12 lg:py-24 overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="relative w-full overflow-hidden rounded-2xl group">
           <div

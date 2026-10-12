@@ -52,7 +52,7 @@ export function ServicioFacial() {
 
   return (
     <ThemeProvider>
-      <section className="h-full w-full bg-white px-6 py-4 lg:px-12 lg:py-4 overflow-hidden">
+      <section className="h-full w-full bg-white px-6 py-16 lg:px-12 lg:py-24 overflow-hidden">
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="lg:w-1/2" data-aos="fade-up">
             <Typography className="font-bold text-lg mb-5 text-rose">

@@ -173,6 +173,21 @@
       "7": "Pigmentaciones",
       "8": "Melasma"
     },
+    "bioestimuladoresService": {
+      "subtitle": "Bioestimulación de colágeno",
+      "title": "Sculptra® | Bioestimulación de colágeno",
+      "description": "Sculptra® es un tratamiento inyectable a base de ácido poli-L-láctico (PLLA) que estimula la producción natural de colágeno. Su acción es progresiva y ayuda a mejorar la estructura, firmeza y calidad de la piel, favoreciendo una apariencia más rejuvenecida y natural.",
+      "sTitle": "Beneficios:",
+      "1": "Estimula la producción de colágeno.",
+      "2": "Mejora la firmeza y elasticidad de la piel.",
+      "3": "Ayuda a recuperar volumen facial de forma gradual.",
+      "4": "Contribuye a suavizar la apariencia de arrugas y líneas.",
+      "5": "Mejora la calidad y textura de la piel.",
+      "6": "Ofrece resultados progresivos y de apariencia natural.",
+      "idealTitle": "Ideal para:",
+      "ideal": "Personas que buscan mejorar los signos de envejecimiento facial de manera gradual, sin un efecto de relleno inmediato.",
+      "note": "Los resultados y la duración pueden variar según cada paciente, la zona tratada y el protocolo utilizado."
+    },
     "diodoService": {
       "subtitle": "¿En que consiste?",
       "title": "Depilación Láser Diodo",
